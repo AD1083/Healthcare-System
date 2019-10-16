@@ -1,0 +1,9 @@
+C:\Users\Aydar\source\repos\PatientMonitoringUI\PatientMonitoringUI\bin\Debug\PatientMonitoringUI.exe.config
+C:\Users\Aydar\source\repos\PatientMonitoringUI\PatientMonitoringUI\bin\Debug\PatientMonitoringUI.exe
+C:\Users\Aydar\source\repos\PatientMonitoringUI\PatientMonitoringUI\bin\Debug\PatientMonitoringUI.pdb
+C:\Users\Aydar\source\repos\PatientMonitoringUI\PatientMonitoringUI\obj\Debug\PatientMonitoringUI.csprojAssemblyReference.cache
+C:\Users\Aydar\source\repos\PatientMonitoringUI\PatientMonitoringUI\obj\Debug\PatientMonitoringUI.Form1.resources
+C:\Users\Aydar\source\repos\PatientMonitoringUI\PatientMonitoringUI\obj\Debug\PatientMonitoringUI.Properties.Resources.resources
+C:\Users\Aydar\source\repos\PatientMonitoringUI\PatientMonitoringUI\obj\Debug\PatientMonitoringUI.csproj.GenerateResource.cache
+C:\Users\Aydar\source\repos\PatientMonitoringUI\PatientMonitoringUI\obj\Debug\PatientMonitoringUI.exe
+C:\Users\Aydar\source\repos\PatientMonitoringUI\PatientMonitoringUI\obj\Debug\PatientMonitoringUI.pdb
