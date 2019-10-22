@@ -1,0 +1,9 @@
+C:\Users\Томирис\source\repos\PatientMonitoringSystem\PatientMonitoringSystem\bin\Debug\PatientMonitoringSystem.exe.config
+C:\Users\Томирис\source\repos\PatientMonitoringSystem\PatientMonitoringSystem\bin\Debug\PatientMonitoringSystem.exe
+C:\Users\Томирис\source\repos\PatientMonitoringSystem\PatientMonitoringSystem\bin\Debug\PatientMonitoringSystem.pdb
+C:\Users\Томирис\source\repos\PatientMonitoringSystem\PatientMonitoringSystem\obj\Debug\PatientMonitoringSystem.csprojAssemblyReference.cache
+C:\Users\Томирис\source\repos\PatientMonitoringSystem\PatientMonitoringSystem\obj\Debug\PatientMonitoringSystem.LoginForm.resources
+C:\Users\Томирис\source\repos\PatientMonitoringSystem\PatientMonitoringSystem\obj\Debug\PatientMonitoringSystem.Properties.Resources.resources
+C:\Users\Томирис\source\repos\PatientMonitoringSystem\PatientMonitoringSystem\obj\Debug\PatientMonitoringSystem.csproj.GenerateResource.cache
+C:\Users\Томирис\source\repos\PatientMonitoringSystem\PatientMonitoringSystem\obj\Debug\PatientMonitoringSystem.exe
+C:\Users\Томирис\source\repos\PatientMonitoringSystem\PatientMonitoringSystem\obj\Debug\PatientMonitoringSystem.pdb
