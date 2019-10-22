@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MangerialView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MangerialView.Designer.cs">
+      <DependentUpon>MangerialView.cs</DependentUpon>
+    </Compile>
     <Compile Include="PatientViewPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MangerialView.resx">
+      <DependentUpon>MangerialView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PatientViewPage.resx">
       <DependentUpon>PatientViewPage.cs</DependentUpon>
     </EmbeddedResource>
