@@ -1,0 +1,6 @@
+C:\Users\Alex\Documents\GitHub\Healthcare-System\Healthcare-System-master\Healthcare System\Healthcare System\obj\Debug\Healthcare System.csprojAssemblyReference.cache
+C:\Users\Alex\Documents\GitHub\Healthcare-System\Healthcare-System-master\Healthcare System\Healthcare System\obj\Debug\Healthcare_System.MangerialView.resources
+C:\Users\Alex\Documents\GitHub\Healthcare-System\Healthcare-System-master\Healthcare System\Healthcare System\obj\Debug\Healthcare_System.PatientViewPage.resources
+C:\Users\Alex\Documents\GitHub\Healthcare-System\Healthcare-System-master\Healthcare System\Healthcare System\obj\Debug\Healthcare_System.LoginPage.resources
+C:\Users\Alex\Documents\GitHub\Healthcare-System\Healthcare-System-master\Healthcare System\Healthcare System\obj\Debug\Healthcare_System.PatientMonitoringPage.resources
+C:\Users\Alex\Documents\GitHub\Healthcare-System\Healthcare-System-master\Healthcare System\Healthcare System\obj\Debug\Healthcare System.csproj.GenerateResource.cache
