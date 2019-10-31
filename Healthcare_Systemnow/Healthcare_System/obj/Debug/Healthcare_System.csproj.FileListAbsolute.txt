@@ -1,0 +1,134 @@
+C:\Users\Aydar\source\repos\Healthcare_System\Healthcare_System\bin\Debug\Healthcare_System.exe.config
+C:\Users\Aydar\source\repos\Healthcare_System\Healthcare_System\bin\Debug\Healthcare_System.exe
+C:\Users\Aydar\source\repos\Healthcare_System\Healthcare_System\bin\Debug\Healthcare_System.pdb
+C:\Users\Aydar\source\repos\Healthcare_System\Healthcare_System\obj\Debug\Healthcare_System.csprojAssemblyReference.cache
+C:\Users\Aydar\source\repos\Healthcare_System\Healthcare_System\obj\Debug\Healthcare_System.Properties.Resources.resources
+C:\Users\Aydar\source\repos\Healthcare_System\Healthcare_System\obj\Debug\Healthcare_System.csproj.GenerateResource.cache
+C:\Users\Aydar\source\repos\Healthcare_System\Healthcare_System\obj\Debug\Healthcare_System.exe
+C:\Users\Aydar\source\repos\Healthcare_System\Healthcare_System\obj\Debug\Healthcare_System.pdb
+C:\Users\Aydar\source\repos\Healthcare_System\Healthcare_System\bin\Debug\Bunifu_UI_v1.52.dll
+C:\Users\Aydar\source\repos\Healthcare_System\Healthcare_System\obj\Debug\Healthcare_System.csproj.CopyComplete
+C:\Users\Aydar\source\repos\Healthcare_System\Healthcare_System\bin\Debug\MySql.Data.dll
+C:\Users\Aydar\source\repos\Healthcare_System\Healthcare_System\bin\Debug\Google.Protobuf.dll
+C:\Users\Aydar\source\repos\Healthcare_System\Healthcare_System\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Aydar\source\repos\Healthcare_System\Healthcare_System\bin\Debug\Renci.SshNet.dll
+C:\Users\Aydar\source\repos\Healthcare_System\Healthcare_System\bin\Debug\MySql.Data.xml
+C:\Users\Aydar\source\repos\Healthcare_System\Healthcare_System\bin\Debug\UsersDB.mdf
+C:\Users\Aydar\source\repos\Healthcare_System\Healthcare_System\bin\Debug\UsersDB_log.ldf
+C:\Users\Aydar\source\repos\Healthcare_System\Healthcare_System\obj\Debug\Healthcare_System.frmLogin.resources
+C:\Users\Aydar\source\repos\Healthcare_System\Healthcare_System\obj\Debug\Healthcare_System.frmManagerial.resources
+C:\Users\Aydar\source\repos\Healthcare_System\Healthcare_System\obj\Debug\Healthcare_System.frmPatientMonitoring.resources
+H:\Healthcare_System\Healthcare_System\bin\Debug\UsersDB.mdf
+H:\Healthcare_System\Healthcare_System\bin\Debug\UsersDB_log.ldf
+H:\Healthcare_System\Healthcare_System\bin\Debug\Healthcare_System.exe.config
+H:\Healthcare_System\Healthcare_System\bin\Debug\Healthcare_System.exe
+H:\Healthcare_System\Healthcare_System\bin\Debug\Healthcare_System.pdb
+H:\Healthcare_System\Healthcare_System\bin\Debug\Google.Protobuf.dll
+H:\Healthcare_System\Healthcare_System\bin\Debug\BouncyCastle.Crypto.dll
+H:\Healthcare_System\Healthcare_System\bin\Debug\Renci.SshNet.dll
+H:\Healthcare_System\Healthcare_System\bin\Debug\MySql.Data.xml
+H:\Healthcare_System\Healthcare_System\obj\Debug\Healthcare_System.csprojAssemblyReference.cache
+H:\Healthcare_System\Healthcare_System\obj\Debug\Healthcare_System.frmLogin.resources
+H:\Healthcare_System\Healthcare_System\obj\Debug\Healthcare_System.frmManagerial.resources
+H:\Healthcare_System\Healthcare_System\obj\Debug\Healthcare_System.frmPatientMonitoring.resources
+H:\Healthcare_System\Healthcare_System\obj\Debug\Healthcare_System.Properties.Resources.resources
+H:\Healthcare_System\Healthcare_System\obj\Debug\Healthcare_System.csproj.GenerateResource.cache
+H:\Healthcare_System\Healthcare_System\obj\Debug\Healthcare_System.csproj.CoreCompileInputs.cache
+H:\Healthcare_System\Healthcare_System\obj\Debug\Healthcare_System.csproj.CopyComplete
+H:\Healthcare_System\Healthcare_System\obj\Debug\Healthcare_System.exe
+H:\Healthcare_System\Healthcare_System\obj\Debug\Healthcare_System.pdb
+D:\Healthcare_System\Healthcare_System\bin\Debug\UsersDB.mdf
+D:\Healthcare_System\Healthcare_System\bin\Debug\UsersDB_log.ldf
+D:\Healthcare_System\Healthcare_System\bin\Debug\Healthcare_System.exe.config
+D:\Healthcare_System\Healthcare_System\bin\Debug\Healthcare_System.exe
+D:\Healthcare_System\Healthcare_System\bin\Debug\Healthcare_System.pdb
+D:\Healthcare_System\Healthcare_System\bin\Debug\Google.Protobuf.dll
+D:\Healthcare_System\Healthcare_System\bin\Debug\BouncyCastle.Crypto.dll
+D:\Healthcare_System\Healthcare_System\bin\Debug\Renci.SshNet.dll
+D:\Healthcare_System\Healthcare_System\bin\Debug\MySql.Data.xml
+D:\Healthcare_System\Healthcare_System\obj\Debug\Healthcare_System.csprojAssemblyReference.cache
+D:\Healthcare_System\Healthcare_System\obj\Debug\Healthcare_System.frmLogin.resources
+D:\Healthcare_System\Healthcare_System\obj\Debug\Healthcare_System.frmManagerial.resources
+D:\Healthcare_System\Healthcare_System\obj\Debug\Healthcare_System.frmPatientMonitoring.resources
+D:\Healthcare_System\Healthcare_System\obj\Debug\Healthcare_System.Properties.Resources.resources
+D:\Healthcare_System\Healthcare_System\obj\Debug\Healthcare_System.csproj.GenerateResource.cache
+D:\Healthcare_System\Healthcare_System\obj\Debug\Healthcare_System.csproj.CopyComplete
+D:\Healthcare_System\Healthcare_System\obj\Debug\Healthcare_System.exe
+D:\Healthcare_System\Healthcare_System\obj\Debug\Healthcare_System.pdb
+C:\Users\Томирис\source\repos\Healthcare_System — копия\Healthcare_System\bin\Debug\UsersDB.mdf
+C:\Users\Томирис\source\repos\Healthcare_System — копия\Healthcare_System\bin\Debug\UsersDB_log.ldf
+C:\Users\Томирис\source\repos\Healthcare_System — копия\Healthcare_System\bin\Debug\Healthcare_System.exe.config
+C:\Users\Томирис\source\repos\Healthcare_System — копия\Healthcare_System\bin\Debug\Healthcare_System.exe
+C:\Users\Томирис\source\repos\Healthcare_System — копия\Healthcare_System\bin\Debug\Healthcare_System.pdb
+C:\Users\Томирис\source\repos\Healthcare_System — копия\Healthcare_System\bin\Debug\Google.Protobuf.dll
+C:\Users\Томирис\source\repos\Healthcare_System — копия\Healthcare_System\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Томирис\source\repos\Healthcare_System — копия\Healthcare_System\bin\Debug\Renci.SshNet.dll
+C:\Users\Томирис\source\repos\Healthcare_System — копия\Healthcare_System\bin\Debug\MySql.Data.xml
+C:\Users\Томирис\source\repos\Healthcare_System — копия\Healthcare_System\obj\Debug\Healthcare_System.csprojAssemblyReference.cache
+C:\Users\Томирис\source\repos\Healthcare_System — копия\Healthcare_System\obj\Debug\Healthcare_System.frmLogin.resources
+C:\Users\Томирис\source\repos\Healthcare_System — копия\Healthcare_System\obj\Debug\Healthcare_System.frmManagerial.resources
+C:\Users\Томирис\source\repos\Healthcare_System — копия\Healthcare_System\obj\Debug\Healthcare_System.frmPatientMonitoring.resources
+C:\Users\Томирис\source\repos\Healthcare_System — копия\Healthcare_System\obj\Debug\Healthcare_System.Properties.Resources.resources
+C:\Users\Томирис\source\repos\Healthcare_System — копия\Healthcare_System\obj\Debug\Healthcare_System.csproj.GenerateResource.cache
+C:\Users\Томирис\source\repos\Healthcare_System — копия\Healthcare_System\obj\Debug\Healthcare_System.csproj.CopyComplete
+C:\Users\Томирис\source\repos\Healthcare_System — копия\Healthcare_System\obj\Debug\Healthcare_System.exe
+C:\Users\Томирис\source\repos\Healthcare_System — копия\Healthcare_System\obj\Debug\Healthcare_System.pdb
+C:\Users\Томирис\source\repos\Healthcare-System-login-with-mvp\Healthcare_System\Healthcare_System\obj\Debug\Healthcare_System.csprojAssemblyReference.cache
+C:\Users\Томирис\source\repos\Healthcare-System-login-with-mvp\Healthcare_System\Healthcare_System\obj\Debug\Healthcare_System.exe
+C:\Users\Томирис\source\repos\Healthcare-System-login-with-mvp\Healthcare_System\Healthcare_System\obj\Debug\Healthcare_System.pdb
+C:\Users\Томирис\source\repos\Healthcare-System-login-with-mvp\Healthcare_System\Healthcare_System\obj\Debug\Healthcare_System.LoginView.resources
+C:\Users\Томирис\source\repos\Healthcare-System-login-with-mvp\Healthcare_System\Healthcare_System\obj\Debug\Healthcare_System.frmManagerial.resources
+C:\Users\Томирис\source\repos\Healthcare-System-login-with-mvp\Healthcare_System\Healthcare_System\obj\Debug\Healthcare_System.CentralDeskView.resources
+C:\Users\Томирис\source\repos\Healthcare-System-login-with-mvp\Healthcare_System\Healthcare_System\obj\Debug\Healthcare_System.Properties.Resources.resources
+C:\Users\Томирис\source\repos\Healthcare-System-login-with-mvp\Healthcare_System\Healthcare_System\obj\Debug\Healthcare_System.csproj.GenerateResource.cache
+C:\Users\Томирис\source\repos\Healthcare-System-login-with-mvp\Healthcare_System\Healthcare_System\bin\Debug\UsersDB.mdf
+C:\Users\Томирис\source\repos\Healthcare-System-login-with-mvp\Healthcare_System\Healthcare_System\bin\Debug\UsersDB_log.ldf
+C:\Users\Томирис\source\repos\Healthcare-System-login-with-mvp\Healthcare_System\Healthcare_System\bin\Debug\Healthcare_System.exe.config
+C:\Users\Томирис\source\repos\Healthcare-System-login-with-mvp\Healthcare_System\Healthcare_System\bin\Debug\Healthcare_System.exe
+C:\Users\Томирис\source\repos\Healthcare-System-login-with-mvp\Healthcare_System\Healthcare_System\bin\Debug\Healthcare_System.pdb
+C:\Users\Томирис\source\repos\Healthcare-System-login-with-mvp\Healthcare_System\Healthcare_System\bin\Debug\Google.Protobuf.dll
+C:\Users\Томирис\source\repos\Healthcare-System-login-with-mvp\Healthcare_System\Healthcare_System\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Томирис\source\repos\Healthcare-System-login-with-mvp\Healthcare_System\Healthcare_System\bin\Debug\Renci.SshNet.dll
+C:\Users\Томирис\source\repos\Healthcare-System-login-with-mvp\Healthcare_System\Healthcare_System\bin\Debug\MySql.Data.xml
+C:\Users\Томирис\source\repos\Healthcare-System-login-with-mvp\Healthcare_System\Healthcare_System\obj\Debug\Healthcare_System.csproj.CopyComplete
+C:\Users\Aydar\Desktop\Masha Project-\Healthcare_System\Healthcare_System\obj\Debug\Healthcare_System.csprojAssemblyReference.cache
+C:\Users\Aydar\Desktop\Masha Project-\Healthcare_System\Healthcare_System\obj\Debug\Healthcare_System.LoginView.resources
+C:\Users\Aydar\Desktop\Masha Project-\Healthcare_System\Healthcare_System\obj\Debug\Healthcare_System.CentralDeskView.resources
+C:\Users\Aydar\Desktop\Masha Project-\Healthcare_System\Healthcare_System\obj\Debug\Healthcare_System.Properties.Resources.resources
+C:\Users\Aydar\Desktop\Masha Project-\Healthcare_System\Healthcare_System\obj\Debug\Healthcare_System.ManagerialView.resources
+C:\Users\Aydar\Desktop\Masha Project-\Healthcare_System\Healthcare_System\obj\Debug\Healthcare_System.Views.PatientModuleView.resources
+C:\Users\Aydar\Desktop\Masha Project-\Healthcare_System\Healthcare_System\obj\Debug\Healthcare_System.csproj.GenerateResource.cache
+C:\Users\Aydar\Desktop\Masha Project-\Healthcare_System\Healthcare_System\obj\Debug\Healthcare_System.exe
+C:\Users\Aydar\Desktop\Masha Project-\Healthcare_System\Healthcare_System\obj\Debug\Healthcare_System.pdb
+C:\Users\Aydar\Desktop\Masha Project-\Healthcare_System\Healthcare_System\bin\Debug\UsersDB.mdf
+C:\Users\Aydar\Desktop\Masha Project-\Healthcare_System\Healthcare_System\bin\Debug\UsersDB_log.ldf
+C:\Users\Aydar\Desktop\Masha Project-\Healthcare_System\Healthcare_System\bin\Debug\Healthcare_System.exe.config
+C:\Users\Aydar\Desktop\Masha Project-\Healthcare_System\Healthcare_System\bin\Debug\Healthcare_System.exe
+C:\Users\Aydar\Desktop\Masha Project-\Healthcare_System\Healthcare_System\bin\Debug\Healthcare_System.pdb
+C:\Users\Aydar\Desktop\Masha Project-\Healthcare_System\Healthcare_System\bin\Debug\Bunifu_UI_v1.52.dll
+C:\Users\Aydar\Desktop\Masha Project-\Healthcare_System\Healthcare_System\bin\Debug\MySql.Data.dll
+C:\Users\Aydar\Desktop\Masha Project-\Healthcare_System\Healthcare_System\bin\Debug\XanderUI.dll
+C:\Users\Aydar\Desktop\Masha Project-\Healthcare_System\Healthcare_System\bin\Debug\Google.Protobuf.dll
+C:\Users\Aydar\Desktop\Masha Project-\Healthcare_System\Healthcare_System\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Aydar\Desktop\Masha Project-\Healthcare_System\Healthcare_System\bin\Debug\Renci.SshNet.dll
+C:\Users\Aydar\Desktop\Masha Project-\Healthcare_System\Healthcare_System\bin\Debug\MySql.Data.xml
+C:\Users\Aydar\Desktop\Masha Project-\Healthcare_System\Healthcare_System\obj\Debug\Healthcare_System.csproj.CopyComplete
+H:\My Documents\Development\Healthcare_Systemnow\Healthcare_System\bin\Debug\UsersDB.mdf
+H:\My Documents\Development\Healthcare_Systemnow\Healthcare_System\bin\Debug\UsersDB_log.ldf
+H:\My Documents\Development\Healthcare_Systemnow\Healthcare_System\bin\Debug\Healthcare_System.exe
+H:\My Documents\Development\Healthcare_Systemnow\Healthcare_System\bin\Debug\Healthcare_System.pdb
+H:\My Documents\Development\Healthcare_Systemnow\Healthcare_System\bin\Debug\Google.Protobuf.dll
+H:\My Documents\Development\Healthcare_Systemnow\Healthcare_System\bin\Debug\BouncyCastle.Crypto.dll
+H:\My Documents\Development\Healthcare_Systemnow\Healthcare_System\bin\Debug\Renci.SshNet.dll
+H:\My Documents\Development\Healthcare_Systemnow\Healthcare_System\bin\Debug\MySql.Data.xml
+H:\My Documents\Development\Healthcare_Systemnow\Healthcare_System\obj\Debug\Healthcare_System.csprojAssemblyReference.cache
+H:\My Documents\Development\Healthcare_Systemnow\Healthcare_System\obj\Debug\Healthcare_System.LoginView.resources
+H:\My Documents\Development\Healthcare_Systemnow\Healthcare_System\obj\Debug\Healthcare_System.CentralDeskView.resources
+H:\My Documents\Development\Healthcare_Systemnow\Healthcare_System\obj\Debug\Healthcare_System.Properties.Resources.resources
+H:\My Documents\Development\Healthcare_Systemnow\Healthcare_System\obj\Debug\Healthcare_System.ManagerialView.resources
+H:\My Documents\Development\Healthcare_Systemnow\Healthcare_System\obj\Debug\Healthcare_System.Views.PatientModuleView.resources
+H:\My Documents\Development\Healthcare_Systemnow\Healthcare_System\obj\Debug\Healthcare_System.csproj.GenerateResource.cache
+H:\My Documents\Development\Healthcare_Systemnow\Healthcare_System\obj\Debug\Healthcare_System.csproj.CoreCompileInputs.cache
+H:\My Documents\Development\Healthcare_Systemnow\Healthcare_System\obj\Debug\Healthcare_System.csproj.CopyComplete
+H:\My Documents\Development\Healthcare_Systemnow\Healthcare_System\obj\Debug\Healthcare_System.exe
+H:\My Documents\Development\Healthcare_Systemnow\Healthcare_System\obj\Debug\Healthcare_System.pdb
