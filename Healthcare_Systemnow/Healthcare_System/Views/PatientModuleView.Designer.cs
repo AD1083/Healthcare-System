@@ -34,19 +34,23 @@
         {
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.comboBox9 = new System.Windows.Forms.ComboBox();
+            this.comboBox10 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -58,17 +62,10 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
-            this.comboBox10 = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -92,7 +89,6 @@
             this.panel1.Controls.Add(this.label16);
             this.panel1.Controls.Add(this.comboBox9);
             this.panel1.Controls.Add(this.comboBox10);
-            this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.label11);
@@ -101,18 +97,32 @@
             this.panel1.Size = new System.Drawing.Size(268, 178);
             this.panel1.TabIndex = 32;
             // 
-            // button4
+            // label16
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(73)))), ((int)(((byte)(143)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button4.Location = new System.Drawing.Point(81, 145);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(117, 27);
-            this.button4.TabIndex = 63;
-            this.button4.Text = "Rectify Alarm";
-            this.button4.UseVisualStyleBackColor = false;
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.SystemColors.Window;
+            this.label16.Location = new System.Drawing.Point(5, 105);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(97, 17);
+            this.label16.TabIndex = 61;
+            this.label16.Text = "Current Value";
+            // 
+            // comboBox9
+            // 
+            this.comboBox9.FormattingEnabled = true;
+            this.comboBox9.Location = new System.Drawing.Point(121, 71);
+            this.comboBox9.Name = "comboBox9";
+            this.comboBox9.Size = new System.Drawing.Size(39, 21);
+            this.comboBox9.TabIndex = 55;
+            // 
+            // comboBox10
+            // 
+            this.comboBox10.FormattingEnabled = true;
+            this.comboBox10.Location = new System.Drawing.Point(121, 38);
+            this.comboBox10.Name = "comboBox10";
+            this.comboBox10.Size = new System.Drawing.Size(39, 21);
+            this.comboBox10.TabIndex = 56;
             // 
             // label3
             // 
@@ -151,7 +161,6 @@
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(42)))), ((int)(((byte)(82)))));
             this.panel6.Controls.Add(this.label4);
-            this.panel6.Controls.Add(this.button3);
             this.panel6.Controls.Add(this.label2);
             this.panel6.Controls.Add(this.comboBox5);
             this.panel6.Controls.Add(this.comboBox6);
@@ -162,18 +171,16 @@
             this.panel6.Size = new System.Drawing.Size(268, 178);
             this.panel6.TabIndex = 34;
             // 
-            // button3
+            // label4
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(42)))), ((int)(((byte)(82)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button3.Location = new System.Drawing.Point(77, 145);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(117, 27);
-            this.button3.TabIndex = 58;
-            this.button3.Text = "Rectify Alarm";
-            this.button3.UseVisualStyleBackColor = false;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.Window;
+            this.label4.Location = new System.Drawing.Point(5, 105);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(97, 17);
+            this.label4.TabIndex = 59;
+            this.label4.Text = "Current Value";
             // 
             // label2
             // 
@@ -230,7 +237,6 @@
             this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.comboBox4);
             this.panel2.Controls.Add(this.comboBox3);
-            this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label7);
@@ -239,18 +245,32 @@
             this.panel2.Size = new System.Drawing.Size(268, 178);
             this.panel2.TabIndex = 35;
             // 
-            // button2
+            // label13
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(42)))), ((int)(((byte)(82)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button2.Location = new System.Drawing.Point(81, 145);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(117, 27);
-            this.button2.TabIndex = 53;
-            this.button2.Text = "Rectify Alarm";
-            this.button2.UseVisualStyleBackColor = false;
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.SystemColors.Window;
+            this.label13.Location = new System.Drawing.Point(4, 103);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(97, 17);
+            this.label13.TabIndex = 60;
+            this.label13.Text = "Current Value";
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(121, 70);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(39, 21);
+            this.comboBox4.TabIndex = 54;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(121, 38);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(39, 21);
+            this.comboBox3.TabIndex = 49;
             // 
             // label1
             // 
@@ -349,7 +369,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button1.Location = new System.Drawing.Point(77, 142);
+            this.button1.Location = new System.Drawing.Point(481, 472);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(117, 27);
             this.button1.TabIndex = 48;
@@ -360,7 +380,6 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(73)))), ((int)(((byte)(143)))));
             this.panel3.Controls.Add(this.label15);
-            this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.comboBox2);
             this.panel3.Controls.Add(this.comboBox1);
             this.panel3.Controls.Add(this.label6);
@@ -370,6 +389,17 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(268, 178);
             this.panel3.TabIndex = 33;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.SystemColors.Window;
+            this.label15.Location = new System.Drawing.Point(5, 103);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(97, 17);
+            this.label15.TabIndex = 61;
+            this.label15.Text = "Current Value";
             // 
             // bunifuCustomLabel2
             // 
@@ -401,88 +431,13 @@
             this.bunifuCustomLabel4.TabIndex = 38;
             this.bunifuCustomLabel4.Text = "Second Name";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.Window;
-            this.label4.Location = new System.Drawing.Point(5, 105);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(97, 17);
-            this.label4.TabIndex = 59;
-            this.label4.Text = "Current Value";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(121, 38);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(39, 21);
-            this.comboBox3.TabIndex = 49;
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(121, 70);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(39, 21);
-            this.comboBox4.TabIndex = 54;
-            // 
-            // comboBox9
-            // 
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Location = new System.Drawing.Point(121, 71);
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(39, 21);
-            this.comboBox9.TabIndex = 55;
-            // 
-            // comboBox10
-            // 
-            this.comboBox10.FormattingEnabled = true;
-            this.comboBox10.Location = new System.Drawing.Point(121, 38);
-            this.comboBox10.Name = "comboBox10";
-            this.comboBox10.Size = new System.Drawing.Size(39, 21);
-            this.comboBox10.TabIndex = 56;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.Window;
-            this.label13.Location = new System.Drawing.Point(4, 103);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(97, 17);
-            this.label13.TabIndex = 60;
-            this.label13.Text = "Current Value";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.SystemColors.Window;
-            this.label15.Location = new System.Drawing.Point(5, 103);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(97, 17);
-            this.label15.TabIndex = 61;
-            this.label15.Text = "Current Value";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.SystemColors.Window;
-            this.label16.Location = new System.Drawing.Point(5, 105);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(97, 17);
-            this.label16.TabIndex = 61;
-            this.label16.Text = "Current Value";
-            // 
             // PatientModuleView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(824, 539);
             this.Controls.Add(this.bunifuCustomLabel4);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.bunifuCustomLabel3);
             this.Controls.Add(this.bunifuCustomLabel2);
             this.Controls.Add(this.panel3);
@@ -518,15 +473,12 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.ComboBox comboBox6;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label14;

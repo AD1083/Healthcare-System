@@ -20,7 +20,7 @@ namespace Healthcare_System.Presenters
             _service = service;
             _staff = staff;
 
-            _view.ViewPatient += _view_ViewPatient;
+            _view.ViewPatient += () => ViewPatient(_view.Room1); ;
             _view.SignOut += _view_SignOut;
 
            //_view.StartPatientSimulation += _view_StartPatientSimulation;
@@ -31,10 +31,13 @@ namespace Healthcare_System.Presenters
             _service.RecordEndTime(_staff);
         }
 
-        private void _view_ViewPatient(object sender, EventArgs e)
-        {
-           //create the presenter and run it
-        }
+       private void ViewPatient(string roomNum)
+       {
+            Int32.TryParse(roomNum.Substring(5, 1), out int roomNumber);
+
+            //var patientModulePresenter = new PatientModulePresenter();
+            //patientModulePresenter.Run();
+       }
 
         //private void _view_StartPatientSimulation(object sender, EventArgs e)
         //{

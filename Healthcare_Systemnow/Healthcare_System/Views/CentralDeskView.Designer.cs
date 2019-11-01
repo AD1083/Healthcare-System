@@ -36,8 +36,8 @@
             this.bunifuTileButton4 = new Bunifu.Framework.UI.BunifuTileButton();
             this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
             this.bunifuTileButton5 = new Bunifu.Framework.UI.BunifuTileButton();
-            this.bunifuTileButton7 = new Bunifu.Framework.UI.BunifuTileButton();
-            this.bunifuTileButton8 = new Bunifu.Framework.UI.BunifuTileButton();
+            this.btnRoom2 = new Bunifu.Framework.UI.BunifuTileButton();
+            this.btnRoom1 = new Bunifu.Framework.UI.BunifuTileButton();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -45,7 +45,7 @@
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel9 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.btnSignIn = new System.Windows.Forms.Button();
+            this.btnSignOut = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -72,10 +72,10 @@
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
-            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblRoom1 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.lblConditionRoom1 = new System.Windows.Forms.Label();
+            this.lblLastNameRoom1 = new System.Windows.Forms.Label();
+            this.lblFirstnameRoom1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -225,43 +225,43 @@
             this.bunifuTileButton5.Size = new System.Drawing.Size(181, 165);
             this.bunifuTileButton5.TabIndex = 61;
             // 
-            // bunifuTileButton7
+            // btnRoom2
             // 
-            this.bunifuTileButton7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(61)))), ((int)(((byte)(120)))));
-            this.bunifuTileButton7.color = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(61)))), ((int)(((byte)(120)))));
-            this.bunifuTileButton7.colorActive = System.Drawing.Color.CornflowerBlue;
-            this.bunifuTileButton7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTileButton7.Font = new System.Drawing.Font("Century Gothic", 15.75F);
-            this.bunifuTileButton7.ForeColor = System.Drawing.Color.White;
-            this.bunifuTileButton7.Image = null;
-            this.bunifuTileButton7.ImagePosition = 20;
-            this.bunifuTileButton7.ImageZoom = 50;
-            this.bunifuTileButton7.LabelPosition = 120;
-            this.bunifuTileButton7.LabelText = "";
-            this.bunifuTileButton7.Location = new System.Drawing.Point(210, 163);
-            this.bunifuTileButton7.Margin = new System.Windows.Forms.Padding(6);
-            this.bunifuTileButton7.Name = "bunifuTileButton7";
-            this.bunifuTileButton7.Size = new System.Drawing.Size(181, 165);
-            this.bunifuTileButton7.TabIndex = 60;
+            this.btnRoom2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(61)))), ((int)(((byte)(120)))));
+            this.btnRoom2.color = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(61)))), ((int)(((byte)(120)))));
+            this.btnRoom2.colorActive = System.Drawing.Color.CornflowerBlue;
+            this.btnRoom2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRoom2.Font = new System.Drawing.Font("Century Gothic", 15.75F);
+            this.btnRoom2.ForeColor = System.Drawing.Color.White;
+            this.btnRoom2.Image = null;
+            this.btnRoom2.ImagePosition = 20;
+            this.btnRoom2.ImageZoom = 50;
+            this.btnRoom2.LabelPosition = 120;
+            this.btnRoom2.LabelText = "";
+            this.btnRoom2.Location = new System.Drawing.Point(210, 163);
+            this.btnRoom2.Margin = new System.Windows.Forms.Padding(6);
+            this.btnRoom2.Name = "btnRoom2";
+            this.btnRoom2.Size = new System.Drawing.Size(181, 165);
+            this.btnRoom2.TabIndex = 60;
             // 
-            // bunifuTileButton8
+            // btnRoom1
             // 
-            this.bunifuTileButton8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(42)))), ((int)(((byte)(82)))));
-            this.bunifuTileButton8.color = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(42)))), ((int)(((byte)(82)))));
-            this.bunifuTileButton8.colorActive = System.Drawing.Color.CornflowerBlue;
-            this.bunifuTileButton8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTileButton8.Font = new System.Drawing.Font("Century Gothic", 15.75F);
-            this.bunifuTileButton8.ForeColor = System.Drawing.Color.White;
-            this.bunifuTileButton8.Image = null;
-            this.bunifuTileButton8.ImagePosition = 20;
-            this.bunifuTileButton8.ImageZoom = 50;
-            this.bunifuTileButton8.LabelPosition = 110;
-            this.bunifuTileButton8.LabelText = "";
-            this.bunifuTileButton8.Location = new System.Drawing.Point(15, 163);
-            this.bunifuTileButton8.Margin = new System.Windows.Forms.Padding(6);
-            this.bunifuTileButton8.Name = "bunifuTileButton8";
-            this.bunifuTileButton8.Size = new System.Drawing.Size(190, 165);
-            this.bunifuTileButton8.TabIndex = 59;
+            this.btnRoom1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(42)))), ((int)(((byte)(82)))));
+            this.btnRoom1.color = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(42)))), ((int)(((byte)(82)))));
+            this.btnRoom1.colorActive = System.Drawing.Color.CornflowerBlue;
+            this.btnRoom1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRoom1.Font = new System.Drawing.Font("Century Gothic", 15.75F);
+            this.btnRoom1.ForeColor = System.Drawing.Color.White;
+            this.btnRoom1.Image = null;
+            this.btnRoom1.ImagePosition = 20;
+            this.btnRoom1.ImageZoom = 50;
+            this.btnRoom1.LabelPosition = 110;
+            this.btnRoom1.LabelText = "";
+            this.btnRoom1.Location = new System.Drawing.Point(15, 163);
+            this.btnRoom1.Margin = new System.Windows.Forms.Padding(6);
+            this.btnRoom1.Name = "btnRoom1";
+            this.btnRoom1.Size = new System.Drawing.Size(190, 165);
+            this.btnRoom1.TabIndex = 59;
             // 
             // bunifuCustomLabel3
             // 
@@ -347,18 +347,18 @@
             this.bunifuCustomLabel9.TabIndex = 69;
             this.bunifuCustomLabel9.Text = "Room 8";
             // 
-            // btnSignIn
+            // btnSignOut
             // 
-            this.btnSignIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(42)))), ((int)(((byte)(82)))));
-            this.btnSignIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSignIn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSignIn.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnSignIn.Location = new System.Drawing.Point(648, 105);
-            this.btnSignIn.Name = "btnSignIn";
-            this.btnSignIn.Size = new System.Drawing.Size(117, 41);
-            this.btnSignIn.TabIndex = 70;
-            this.btnSignIn.Text = "Sign out";
-            this.btnSignIn.UseVisualStyleBackColor = false;
+            this.btnSignOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(42)))), ((int)(((byte)(82)))));
+            this.btnSignOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSignOut.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSignOut.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btnSignOut.Location = new System.Drawing.Point(648, 105);
+            this.btnSignOut.Name = "btnSignOut";
+            this.btnSignOut.Size = new System.Drawing.Size(117, 41);
+            this.btnSignOut.TabIndex = 70;
+            this.btnSignOut.Text = "Sign out";
+            this.btnSignOut.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
@@ -665,53 +665,53 @@
             this.label29.TabIndex = 94;
             this.label29.Text = "First Name";
             // 
-            // bunifuCustomLabel1
+            // lblRoom1
             // 
-            this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(42)))), ((int)(((byte)(82)))));
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(22, 172);
-            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(63, 20);
-            this.bunifuCustomLabel1.TabIndex = 100;
-            this.bunifuCustomLabel1.Text = "Room 1";
+            this.lblRoom1.AutoSize = true;
+            this.lblRoom1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(42)))), ((int)(((byte)(82)))));
+            this.lblRoom1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRoom1.ForeColor = System.Drawing.Color.White;
+            this.lblRoom1.Location = new System.Drawing.Point(22, 172);
+            this.lblRoom1.Name = "lblRoom1";
+            this.lblRoom1.Size = new System.Drawing.Size(63, 20);
+            this.lblRoom1.TabIndex = 100;
+            this.lblRoom1.Text = "Room 1";
             // 
-            // label6
+            // lblConditionRoom1
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(42)))), ((int)(((byte)(82)))));
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(23, 285);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 17);
-            this.label6.TabIndex = 103;
-            this.label6.Text = "Condition";
+            this.lblConditionRoom1.AutoSize = true;
+            this.lblConditionRoom1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(42)))), ((int)(((byte)(82)))));
+            this.lblConditionRoom1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConditionRoom1.ForeColor = System.Drawing.Color.White;
+            this.lblConditionRoom1.Location = new System.Drawing.Point(23, 285);
+            this.lblConditionRoom1.Name = "lblConditionRoom1";
+            this.lblConditionRoom1.Size = new System.Drawing.Size(66, 17);
+            this.lblConditionRoom1.TabIndex = 103;
+            this.lblConditionRoom1.Text = "Condition";
             // 
-            // label7
+            // lblLastNameRoom1
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(42)))), ((int)(((byte)(82)))));
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(23, 227);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(65, 16);
-            this.label7.TabIndex = 102;
-            this.label7.Text = "Last Name";
+            this.lblLastNameRoom1.AutoSize = true;
+            this.lblLastNameRoom1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(42)))), ((int)(((byte)(82)))));
+            this.lblLastNameRoom1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLastNameRoom1.ForeColor = System.Drawing.Color.White;
+            this.lblLastNameRoom1.Location = new System.Drawing.Point(23, 227);
+            this.lblLastNameRoom1.Name = "lblLastNameRoom1";
+            this.lblLastNameRoom1.Size = new System.Drawing.Size(65, 16);
+            this.lblLastNameRoom1.TabIndex = 102;
+            this.lblLastNameRoom1.Text = "Last Name";
             // 
-            // label8
+            // lblFirstnameRoom1
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(42)))), ((int)(((byte)(82)))));
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(23, 201);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(62, 16);
-            this.label8.TabIndex = 101;
-            this.label8.Text = "First Name";
+            this.lblFirstnameRoom1.AutoSize = true;
+            this.lblFirstnameRoom1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(42)))), ((int)(((byte)(82)))));
+            this.lblFirstnameRoom1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFirstnameRoom1.ForeColor = System.Drawing.Color.White;
+            this.lblFirstnameRoom1.Location = new System.Drawing.Point(23, 201);
+            this.lblFirstnameRoom1.Name = "lblFirstnameRoom1";
+            this.lblFirstnameRoom1.Size = new System.Drawing.Size(62, 16);
+            this.lblFirstnameRoom1.TabIndex = 101;
+            this.lblFirstnameRoom1.Text = "First Name";
             // 
             // panel1
             // 
@@ -791,10 +791,10 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.bunifuCustomLabel1);
+            this.Controls.Add(this.lblConditionRoom1);
+            this.Controls.Add(this.lblLastNameRoom1);
+            this.Controls.Add(this.lblFirstnameRoom1);
+            this.Controls.Add(this.lblRoom1);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.label26);
@@ -816,7 +816,7 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.btnSignIn);
+            this.Controls.Add(this.btnSignOut);
             this.Controls.Add(this.bunifuSeparator1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -831,8 +831,8 @@
             this.Controls.Add(this.bunifuCustomLabel3);
             this.Controls.Add(this.bunifuTileButton1);
             this.Controls.Add(this.bunifuTileButton5);
-            this.Controls.Add(this.bunifuTileButton7);
-            this.Controls.Add(this.bunifuTileButton8);
+            this.Controls.Add(this.btnRoom2);
+            this.Controls.Add(this.btnRoom1);
             this.Controls.Add(this.bunifuTileButton4);
             this.Controls.Add(this.bunifuTileButton3);
             this.Controls.Add(this.bunifuTileButton2);
@@ -859,8 +859,8 @@
         private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton4;
         private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton1;
         private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton5;
-        private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton7;
-        private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton8;
+        private Bunifu.Framework.UI.BunifuTileButton btnRoom2;
+        private Bunifu.Framework.UI.BunifuTileButton btnRoom1;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
@@ -871,7 +871,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnSignIn;
+        private System.Windows.Forms.Button btnSignOut;
         private System.Windows.Forms.Label label5;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
         private System.Windows.Forms.Label label9;
@@ -895,10 +895,10 @@
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label29;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private Bunifu.Framework.UI.BunifuCustomLabel lblRoom1;
+        private System.Windows.Forms.Label lblConditionRoom1;
+        private System.Windows.Forms.Label lblLastNameRoom1;
+        private System.Windows.Forms.Label lblFirstnameRoom1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
