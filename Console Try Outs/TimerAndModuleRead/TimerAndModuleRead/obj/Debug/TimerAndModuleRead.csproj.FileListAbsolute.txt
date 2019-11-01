@@ -1,0 +1,6 @@
+C:\Users\Alex\OneDrive - Anglia Ruskin University\Software Engineering\TimerAndModuleRead\TimerAndModuleRead\bin\Debug\TimerAndModuleRead.exe.config
+C:\Users\Alex\OneDrive - Anglia Ruskin University\Software Engineering\TimerAndModuleRead\TimerAndModuleRead\bin\Debug\TimerAndModuleRead.exe
+C:\Users\Alex\OneDrive - Anglia Ruskin University\Software Engineering\TimerAndModuleRead\TimerAndModuleRead\bin\Debug\TimerAndModuleRead.pdb
+C:\Users\Alex\OneDrive - Anglia Ruskin University\Software Engineering\TimerAndModuleRead\TimerAndModuleRead\obj\Debug\TimerAndModuleRead.csprojAssemblyReference.cache
+C:\Users\Alex\OneDrive - Anglia Ruskin University\Software Engineering\TimerAndModuleRead\TimerAndModuleRead\obj\Debug\TimerAndModuleRead.exe
+C:\Users\Alex\OneDrive - Anglia Ruskin University\Software Engineering\TimerAndModuleRead\TimerAndModuleRead\obj\Debug\TimerAndModuleRead.pdb
