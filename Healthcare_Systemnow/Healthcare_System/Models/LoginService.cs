@@ -16,7 +16,7 @@ namespace Healthcare_System.Models
         /// <returns>True, if stafffID and password exist in the database, false otherwise</returns>
         public bool Login(Staff staff)
         {
-            DataSet dsStaff = DatabaseConnection.Instance.getDataSet("Select * from Staff Where StaffId = '" + staff.StaffID + "' and Password = '" + staff.Password + "'");
+            DataSet dsStaff = DatabaseConnection.Instance.getDataSet("Select * from Staff Where StaffID = '" + staff.StaffID + "' and Password = '" + staff.Password + "'");
             DataTable table = dsStaff.Tables[0];
             if (table.Rows.Count == 1)
             {

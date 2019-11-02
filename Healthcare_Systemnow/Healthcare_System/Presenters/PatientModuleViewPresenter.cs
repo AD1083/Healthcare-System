@@ -52,8 +52,8 @@ namespace Healthcare_System
         }
         public void _view_GoBack()
         {
-            var presenter = new CentralDeskPresenter(new CentralDeskView(), new RegistrationService(), new Staff());
-            presenter.Run();
+            //var presenter = new CentralDeskPresenter(new CentralDeskView(), new RegistrationService(), new Staff());
+            //presenter.Run();
         }
 
     }

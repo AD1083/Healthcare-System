@@ -11,7 +11,7 @@ using Healthcare_System.Views;
 
 namespace Healthcare_System
 {
-    public partial class CentralDeskView : Form, ICentralDeskView
+    public partial class CentralDeskView : Form//, ICentralDeskView
     {
         public CentralDeskView()
         {

@@ -33,8 +33,8 @@ namespace Healthcare_System.Presenters
             {
                 // successful authorization, next form opening (?)
                 _regService.RecordStartTime(staff);
-                var presenter = new CentralDeskPresenter(new CentralDeskView(), new RegistrationService(), staff);
-                presenter.Run();
+               // var presenter = new CentralDeskPresenter(new CentralDeskView(), new RegistrationService(), staff);
+               // presenter.Run();
                 
             }
         }
