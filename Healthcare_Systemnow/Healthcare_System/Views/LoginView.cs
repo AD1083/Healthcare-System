@@ -12,7 +12,6 @@ using Healthcare_System.Views;
 
 namespace Healthcare_System
 {
-    
     public partial class LoginView : Form, ILoginView
     {
         public LoginView()
@@ -37,7 +36,7 @@ namespace Healthcare_System
         {
             Application.Exit();
         }
-       
+
         public new void Show()
         {
             Application.Run(this);
@@ -45,5 +44,5 @@ namespace Healthcare_System
 
     }
 }
-    
+
 

@@ -27,19 +27,19 @@ namespace Healthcare_System
         public void _view_TriggerAlarm(object sender, EventArgs e)
         {
             //generate random reading within module range +- 20
-            int randomReading =_module.GeneratePatientData.Next(_module.LowerBoundary -20, _module.UpperBoundary +21);
+            //int randomReading = _module.GeneratePatientData.Next(_module.LowerBoundary - 20, _module.UpperBoundary + 21);
 
 
-            //compare generated value to the set boundary
-            if ( randomReading> _module.UpperBoundary || randomReading < _module.LowerBoundary)
-            {
-                _module.alarm.AlarmStatus = true;
-            }
+            ////compare generated value to the set boundary
+            //if (randomReading > _module.UpperBoundary || randomReading < _module.LowerBoundary)
+            //{
+            //    _module.alarm.AlarmStatus = true;
+            //}
 
-            else
-            {
-                _module.alarm.AlarmStatus = false;
-            }
+            //else
+            //{
+            //    _module.alarm.AlarmStatus = false;
+            //}
 
 
 
@@ -48,7 +48,8 @@ namespace Healthcare_System
         {
             //  true- alarm is oon false- alarm is off
             //Alarm alarm = new Alarm();
-            _module.alarm.AlarmStatus = false;
+
+            //_module.alarm.AlarmStatus = false;
         }
         public void _view_GoBack()
         {
