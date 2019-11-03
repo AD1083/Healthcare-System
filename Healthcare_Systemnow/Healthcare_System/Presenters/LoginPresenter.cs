@@ -21,7 +21,7 @@ namespace Healthcare_System.Presenters
             _view.Login += () => Login(_view.StaffID, _view.Password);
         }
 
-      
+
         private void Login(string staffID, string password)
         {
             var staff = new Staff { StaffID = staffID, Password = password };
@@ -33,9 +33,10 @@ namespace Healthcare_System.Presenters
             {
                 // successful authorization, next form opening (?)
                 _regService.RecordStartTime(staff);
-               // var presenter = new CentralDeskPresenter(new CentralDeskView(), new RegistrationService(), staff);
-               // presenter.Run();
-                
+                System.Windows.Forms.MessageBox.Show("Successful Login"); //REMOVE
+                //var presenter = new CentralDeskPresenter(new CentralDeskView(), new RegistrationService(), staff);
+                //presenter.Run();
+
             }
         }
         public void Run()

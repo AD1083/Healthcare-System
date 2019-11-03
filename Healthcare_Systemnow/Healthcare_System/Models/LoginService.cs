@@ -9,17 +9,22 @@ namespace Healthcare_System.Models
 {
     public class LoginService
     {
+        private PasswordEncryption passwordEncryption;
+
         /// <summary>
-        /// Checks if the staff exists in the database
+        /// Checks if the staff exists in the database by searching the database for the staff ID and password
         /// </summary>
-        /// <param name="staff"></param>
-        /// <returns>True, if stafffID and password exist in the database, false otherwise</returns>
+        /// <param name="staff">The staff object produced from the Login</param>
+        /// <returns>True, if stafffID and the encrypted password exist in the database, false otherwise</returns>
         public bool Login(Staff staff)
         {
-            DataSet dsStaff = DatabaseConnection.Instance.getDataSet("Select * from Staff Where StaffID = '" + staff.StaffID + "' and Password = '" + staff.Password + "'");
+            passwordEncryption = new PasswordEncryption(staff.Password);
+            string encryptedPassword = passwordEncryption.EncryptedPassword;
+            DataSet dsStaff = DatabaseConnection.Instance.getDataSet("SELECT * FROM Staff WHERE StaffID = '" + staff.StaffID + "' AND Password = '" + encryptedPassword + "'");
             DataTable table = dsStaff.Tables[0];
             if (table.Rows.Count == 1)
             {
+                
                 return true;
             }
             else
@@ -27,7 +32,5 @@ namespace Healthcare_System.Models
                 return false;
             }
         }
-
-      
     }
 }
