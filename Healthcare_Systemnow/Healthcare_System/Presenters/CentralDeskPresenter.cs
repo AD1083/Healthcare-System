@@ -13,7 +13,10 @@ namespace Healthcare_System.Presenters
         private readonly RegistrationService _service;
         private readonly ICentralDeskView _view;
         private readonly Staff _staff;
-       // private readonly PatientSimulator _simulator;
+
+        //central desk backend class in model - gets 
+
+        // private readonly PatientSimulator _simulator;
         public CentralDeskPresenter(ICentralDeskView view, RegistrationService service, Staff staff)
         {
             _view = view;
@@ -23,7 +26,7 @@ namespace Healthcare_System.Presenters
             _view.ViewPatient += () => ViewPatient(_view.Room1); ;
             _view.SignOut += _view_SignOut;
 
-           //_view.StartPatientSimulation += _view_StartPatientSimulation;
+            //_view.StartPatientSimulation += _view_StartPatientSimulation;
         }
 
         private void _view_SignOut(object sender, EventArgs e)
@@ -31,13 +34,13 @@ namespace Healthcare_System.Presenters
             _service.RecordEndTime(_staff);
         }
 
-       private void ViewPatient(string roomNum)
-       {
+        private void ViewPatient(string roomNum)
+        {
             Int32.TryParse(roomNum.Substring(5, 1), out int roomNumber);
 
             //var patientModulePresenter = new PatientModulePresenter();
             //patientModulePresenter.Run();
-       }
+        }
 
         //private void _view_StartPatientSimulation(object sender, EventArgs e)
         //{

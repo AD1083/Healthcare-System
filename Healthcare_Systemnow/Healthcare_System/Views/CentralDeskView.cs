@@ -11,8 +11,9 @@ using Healthcare_System.Views;
 
 namespace Healthcare_System
 {
-    public partial class CentralDeskView : Form//, ICentralDeskView
+    public partial class CentralDeskView : Form //, ICentralDeskView
     {
+
         public CentralDeskView()
         {
             InitializeComponent();
@@ -51,6 +52,7 @@ namespace Healthcare_System
         private void CentralDeskView_Load(object sender, EventArgs e)
         {
             if (StartSimulation != null) StartSimulation(this, EventArgs.Empty);
+
         }
 
         public new void Show()

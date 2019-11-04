@@ -31,6 +31,9 @@ namespace Healthcare_System
 
             //EVENT to update this module's display on PatientModuleView
             
+
+
+
             //compare to boundaries
             if (CompareToUpperBoundary(reading))
             {
@@ -49,7 +52,7 @@ namespace Healthcare_System
         {
             //create a reading
             int reading = GeneratePatientData.Next(LowerBoundary - 10, UpperBoundary + 21);
-            Console.WriteLine($"Current {ModuleName} Reading: {reading}");
+           
             return reading;
         }
 
