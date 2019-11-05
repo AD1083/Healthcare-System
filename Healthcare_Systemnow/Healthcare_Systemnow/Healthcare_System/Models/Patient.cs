@@ -6,25 +6,29 @@ using System.Threading.Tasks;
 
 namespace Healthcare_System.Models
 {
-    class Patient
+    public class Patient
     {
         private Alarm patientAlarm;
         private List<Module> modules = new List<Module>(4);
         private bool sendAlert;
+        private static int patientIDNumber = 1;
 
         //patient details - related to UI - from databases
         public int PatientID { get; private set; }
         public string FirstName { get; private set; }
-        public string SecondName { get; private set; }
+        public string LastName { get; private set; }
         public string Condition { get; private set; }
-        public string PatientNumber { get; private set; }
+        public string DOB { get; private set; }
 
         public Alarm PatientAlarm { get { return patientAlarm; } } //this alarm will contain all messages from each module alarm 
 
         public Patient()
         {
-            //method to fill properties of patient from DB
+            //record the patient ID each time Patient instantiated
+            PatientID = patientIDNumber;
+            patientIDNumber++;
 
+            //method to fill other properties of patient from DB
 
             //add the patients modules
             modules.Add(new Module("Pulse Rate"));

@@ -31,34 +31,34 @@ namespace Healthcare_System.Presenters
             _view.ViewPatient += () => ViewPatient(_view.Room8);
             _view.SignOut += SignOut;
 
-           _view.StartSimulation += _view_StartSimulation;
+            _view.StartSimulation += _view_StartSimulation;
+
         }
 
         private void SignOut(object sender, EventArgs e)
         {
             _service.RecordEndTime(_staff);
-           
+
             var presenter = new LoginPresenter(new LoginView(), new LoginService(), new RegistrationService());
             presenter.Run();
-            
+
         }
-       
 
-       private void ViewPatient(string roomNum)
-       {
-            Int32.TryParse(roomNum.Substring(6, 1), out int roomNumber);
 
-           // var patientModulePresenter = new PatientModuleViewPresenter(Patient(), new PatientModuleView(), new Module());
+        private void ViewPatient(string roomNum)
+        {
+            Int32.TryParse(roomNum.Substring(5, 1), out int roomNumber);
+            Patient patient = _simulator.Patients.ElementAt(roomNumber);
+
+            // var patientModulePresenter = new PatientModuleViewPresenter(Patient(), new PatientModuleView(), new Module());
             //patientModulePresenter.Run();
-       }
+        }
 
         private void _view_StartSimulation(object sender, EventArgs e)
         {
- 
+
 
         }
-
-
 
         public void Run()
         {

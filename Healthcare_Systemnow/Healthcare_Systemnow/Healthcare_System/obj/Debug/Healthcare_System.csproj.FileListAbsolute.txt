@@ -169,3 +169,12 @@ C:\Users\Alex\Documents\GitHub\Healthcare-System\Healthcare_Systemnow\Healthcare
 C:\Users\Alex\Documents\GitHub\Healthcare-System\Healthcare_Systemnow\Healthcare_System\bin\Debug\Healthcare_System.exe.config
 C:\Users\Alex\Documents\GitHub\Healthcare-System\Healthcare_Systemnow\Healthcare_System\bin\Debug\Healthcare_System.exe
 C:\Users\Alex\Documents\GitHub\Healthcare-System\Healthcare_Systemnow\Healthcare_System\bin\Debug\Healthcare_System.pdb
+C:\Users\Alex\Documents\GitHub\Healthcare-System\Healthcare_Systemnow\Healthcare_Systemnow\Healthcare_System\obj\Debug\Healthcare_System.csprojAssemblyReference.cache
+C:\Users\Alex\Documents\GitHub\Healthcare-System\Healthcare_Systemnow\Healthcare_Systemnow\Healthcare_System\obj\Debug\Healthcare_System.LoginView.resources
+C:\Users\Alex\Documents\GitHub\Healthcare-System\Healthcare_Systemnow\Healthcare_Systemnow\Healthcare_System\obj\Debug\Healthcare_System.CentralDeskView.resources
+C:\Users\Alex\Documents\GitHub\Healthcare-System\Healthcare_Systemnow\Healthcare_Systemnow\Healthcare_System\obj\Debug\Healthcare_System.Properties.Resources.resources
+C:\Users\Alex\Documents\GitHub\Healthcare-System\Healthcare_Systemnow\Healthcare_Systemnow\Healthcare_System\obj\Debug\Healthcare_System.ManagerialView.resources
+C:\Users\Alex\Documents\GitHub\Healthcare-System\Healthcare_Systemnow\Healthcare_Systemnow\Healthcare_System\obj\Debug\Healthcare_System.Views.PatientModuleView.resources
+C:\Users\Alex\Documents\GitHub\Healthcare-System\Healthcare_Systemnow\Healthcare_Systemnow\Healthcare_System\obj\Debug\Healthcare_System.csproj.GenerateResource.cache
+C:\Users\Alex\Documents\GitHub\Healthcare-System\Healthcare_Systemnow\Healthcare_Systemnow\Healthcare_System\obj\Debug\Healthcare_System.exe
+C:\Users\Alex\Documents\GitHub\Healthcare-System\Healthcare_Systemnow\Healthcare_Systemnow\Healthcare_System\obj\Debug\Healthcare_System.pdb

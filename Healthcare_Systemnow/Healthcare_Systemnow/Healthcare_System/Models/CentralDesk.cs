@@ -13,6 +13,8 @@ namespace Healthcare_System.Models
 
         public static Timer PatientTimer = new Timer();
 
+        public List<Patient> Patients { get { return patients; } }
+
         public CentralDesk()
         {
             for (int i = 0; i < patients.Count; i++)
