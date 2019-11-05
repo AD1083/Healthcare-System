@@ -21,7 +21,7 @@ namespace Healthcare_System
             Application.SetCompatibleTextRenderingDefault(false);
             var presenter = new LoginPresenter(new LoginView(), new LoginService(), new RegistrationService());
             presenter.Run();
-            
+
         }
     }
 }

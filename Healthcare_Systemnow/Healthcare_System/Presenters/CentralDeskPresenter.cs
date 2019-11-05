@@ -13,39 +13,52 @@ namespace Healthcare_System.Presenters
         private readonly RegistrationService _service;
         private readonly ICentralDeskView _view;
         private readonly Staff _staff;
-       // private readonly PatientSimulator _simulator;
-        public CentralDeskPresenter(ICentralDeskView view, RegistrationService service, Staff staff)
+        private readonly CentralDesk _simulator;
+        public CentralDeskPresenter(ICentralDeskView view, RegistrationService service, Staff staff, CentralDesk patientSimulator)
         {
             _view = view;
             _service = service;
             _staff = staff;
+            _simulator = patientSimulator;
 
-            _view.ViewPatient += () => ViewPatient(_view.Room1); ;
-            _view.SignOut += _view_SignOut;
+            _view.ViewPatient += () => ViewPatient(_view.Room1);
+            _view.ViewPatient += () => ViewPatient(_view.Room2);
+            _view.ViewPatient += () => ViewPatient(_view.Room3);
+            _view.ViewPatient += () => ViewPatient(_view.Room4);
+            _view.ViewPatient += () => ViewPatient(_view.Room5);
+            _view.ViewPatient += () => ViewPatient(_view.Room6);
+            _view.ViewPatient += () => ViewPatient(_view.Room7);
+            _view.ViewPatient += () => ViewPatient(_view.Room8);
+            _view.SignOut += SignOut;
 
-           //_view.StartPatientSimulation += _view_StartPatientSimulation;
+            _view.StartSimulation += _view_StartSimulation;
+
         }
 
-        private void _view_SignOut(object sender, EventArgs e)
+        private void SignOut(object sender, EventArgs e)
         {
             _service.RecordEndTime(_staff);
+
+            var presenter = new LoginPresenter(new LoginView(), new LoginService(), new RegistrationService());
+            presenter.Run();
+
         }
 
-       private void ViewPatient(string roomNum)
-       {
+
+        private void ViewPatient(string roomNum)
+        {
             Int32.TryParse(roomNum.Substring(5, 1), out int roomNumber);
+            Patient patient = _simulator.Patients.ElementAt(roomNumber);
 
-            //var patientModulePresenter = new PatientModulePresenter();
+            // var patientModulePresenter = new PatientModuleViewPresenter(Patient(), new PatientModuleView(), new Module());
             //patientModulePresenter.Run();
-       }
+        }
 
-        //private void _view_StartPatientSimulation(object sender, EventArgs e)
-        //{
-        //    Patient patient1 = new Patient();
-        //    _simulator.SimulatePatient(patient1);//repeat for the rest of the patients
-        //}
+        private void _view_StartSimulation(object sender, EventArgs e)
+        {
 
 
+        }
 
         public void Run()
         {

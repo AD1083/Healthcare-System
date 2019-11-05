@@ -10,6 +10,7 @@ namespace Healthcare_System.Models
     {
         public string StaffID { get; set; }
         public string Password { get; set; }
+        public string Role { get; set; }
         public Registration Registration { get; set; } 
 
 

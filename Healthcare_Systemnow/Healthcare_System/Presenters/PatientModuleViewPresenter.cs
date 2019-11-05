@@ -13,48 +13,61 @@ namespace Healthcare_System
     {
         private readonly Patient _patient;
         private readonly IPatientModuleView _view;
-        private readonly Module _module;
+        
 
-        public PatientModuleViewPresenter(Patient patient, IPatientModuleView view, Module module)
+        public PatientModuleViewPresenter(Patient patient, IPatientModuleView view)
         {
             _patient = patient;
             _view = view;
-            _module = module;
 
-            _view.RectifyAlarm += _view_RectifyAlarm;
+            _view.LoadPatientData += () => LoadPatientData(); 
+            _view.SetPulseRate += () => SetPulseRate(_view.LowerPulseRate, _view.UpperPulseRate);
+            _view.SetBreathingRate += () => SetBreathingRate(_view.LowerBreathingRate, _view.UpperBreathingRate);
+            _view.SetBloodPressure += () => SetBloodPressure(_view.LowerBloodPressure, _view.UpperBloodPressure);
+            _view.SetTemperature += () => SetTemperature(_view.LowerTemperature, _view.UpperTemperature);
+
+            _view.GoBack += () => GoBack();
         }
 
-        public void _view_TriggerAlarm(object sender, EventArgs e)
+        private void SetPulseRate(string lowerPulseRate, string upperPulseRate)
         {
-            //generate random reading within module range +- 20
-            int randomReading =_module.GeneratePatientData.Next(_module.LowerBoundary -20, _module.UpperBoundary +21);
-
-
-            //compare generated value to the set boundary
-            if ( randomReading> _module.UpperBoundary || randomReading < _module.LowerBoundary)
-            {
-                _module.alarm.AlarmStatus = true;
-            }
-
-            else
-            {
-                _module.alarm.AlarmStatus = false;
-            }
-
-
-
+            
         }
-        public void _view_RectifyAlarm(object sender, EventArgs e)
+        private void SetBreathingRate(string lowerBreathingRate, string upperBreathingRate)
         {
-            //  true- alarm is oon false- alarm is off
-            //Alarm alarm = new Alarm();
-            _module.alarm.AlarmStatus = false;
+
         }
-        public void _view_GoBack()
+        private void SetBloodPressure(string lowerBloodPressure, string upperBloodPressure)
         {
-            var presenter = new CentralDeskPresenter(new CentralDeskView(), new RegistrationService(), new Staff());
-            presenter.Run();
+
+        }
+        private void SetTemperature(string lowerTemperature, string upperTemperature)
+        {
+
         }
 
+        private void GoBack()
+        {
+            //run previous presenter view, hide curr view
+            _view.Hide();
+
+        }
+        private void RectifyAlarm()
+        {
+            //restart timer
+        }
+
+        private void LoadPatientData()
+        {
+            _view.FirstName = _patient.FirstName;
+            _view.LastName = _patient.LastName;
+            _view.DOB = _patient.DOB;
+            _view.Condition = _patient.Condition;
+        }
+
+        public void Run()
+        {
+            _view.Show();
+        }
     }
 }
