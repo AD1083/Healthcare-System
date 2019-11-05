@@ -14,9 +14,11 @@ namespace Healthcare_System
     {
         private static DatabaseConnection _instance;
         private static string dBConnectionString;
+
         //the SQLConnection object used to store the connection to the database
-        private System.Data.SqlClient.SqlConnection sqlconn;
-        private System.Data.SqlClient.SqlDataAdapter sqlAdapter;
+        private SqlConnection sqlconn;
+        private SqlDataAdapter sqlAdapter;
+
         public static DatabaseConnection Instance
         {
             get

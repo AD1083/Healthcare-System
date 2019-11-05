@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 
 namespace Healthcare_System.Models
 {
@@ -10,7 +11,7 @@ namespace Healthcare_System.Models
     {
         private Alarm patientAlarm;
         private List<Module> modules = new List<Module>(4);
-        private bool sendAlert;
+        private bool sendPatientAlarm;
         private static int patientIDNumber = 1;
 
         //patient details - related to UI - from databases
@@ -39,25 +40,32 @@ namespace Healthcare_System.Models
 
         public void AccessModules()
         {
-            //timer should be stopped before this called
-
+            //reset local private variables so old state/data is no retained
             patientAlarm = null;
-            sendAlert = false;
+            sendPatientAlarm = false;
 
-            string moduleMessages = "";
+            string moduleMessages = ""; //to contain messages from any alarms from this patients modules
+
+            //iterate through this patient's modules and determine if they have set an alarm
             foreach (Module patientModule in modules)
             {
+                //check the patient data to see if an alarm is triggered
                 Alarm moduleAlarm = patientModule.CheckPatientData();
+
+                //if an alarm is set then record the alram message
                 if (moduleAlarm.SendAlarm)
                 {
                     moduleMessages += moduleAlarm.AlarmMessage + "\n";
-                    sendAlert = true;
+                    //if at least one module has an alarm, then a patient has an alarm to send to the medical staff
+                    sendPatientAlarm = true;
                 }
             }
 
+            //create a patient alarm which contains all the messages raised in module alarms
             patientAlarm = new Alarm(moduleMessages);
 
-            if (sendAlert)
+            //if an alarm needs to be sent for the patient, raise the alarm
+            if (sendPatientAlarm)
             {
                 RaiseAlert();
             }
@@ -65,12 +73,6 @@ namespace Healthcare_System.Models
 
         private void RaiseAlert()
         {
-            //Output patient alarm
-            //Console.WriteLine("!!!! ALERT !!!!");
-            //Console.WriteLine($"from patient '{PatientNumber}' modules:");
-            //Console.WriteLine(alertMessage);
-            //Console.Write("Press any key to rectify...");
-            //Console.ReadKey();
 
             //EVENTS
             //show rectify button on PatientModuleView
@@ -82,9 +84,14 @@ namespace Healthcare_System.Models
 
         private void FillPatientProperties()
         {
-            //access DB 
+            //access DB for Patient table, accessing the row which matches the patient ID
+            DataSet patientDetails = DatabaseConnection.Instance.getDataSet($"SELECT * FROM Patient WHERE PatientID = {PatientID.ToString()}");
 
-            //enter in the property data
+            //enter each row in the property data
+            FirstName = patientDetails.Tables[0].Rows[0][1].ToString();
+            LastName = patientDetails.Tables[0].Rows[0][2].ToString();
+            DOB = patientDetails.Tables[0].Rows[0][3].ToString();
+            Condition = patientDetails.Tables[0].Rows[0][5].ToString();
         }
 
     }

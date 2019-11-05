@@ -24,7 +24,7 @@ namespace Healthcare_System.Models
                 patients.Add(patient);
             }
 
-            SetupTimer();
+            SetupTimer(); //change timer logic so that stuff still generated even if others have not been setup
         }
 
         private void SetupTimer()
@@ -41,7 +41,7 @@ namespace Healthcare_System.Models
             PatientTimer.Stop();
 
             //go through each patient and each patients modules
-            //call on patient to access its 4 modules to 'read' and display their monitoring data
+            //call on patient to access its 4 modules to 'read' their monitoring data
             foreach (Patient patient in patients)
             {
                 patient.AccessModules();
