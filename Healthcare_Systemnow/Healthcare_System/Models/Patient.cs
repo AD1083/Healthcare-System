@@ -11,8 +11,13 @@ namespace Healthcare_System.Models
     {
         private Alarm patientAlarm;
         private List<Module> modules = new List<Module>(4);
-        private bool sendPatientAlarm;
         private static int patientIDNumber = 1;
+
+        //used to determine if the patient has an alarm to send to the staff; true to send an alarm, false if not
+        //also determines if an alarm has been rectified; through the property of AlarmRectified which returns the inverse of this boolean
+        //therefore when patient alarm is true, alarm rectified is false; when patient alarm false, alarm rectified
+        private bool sendPatientAlarm; 
+
 
         //patient details - related to UI - from databases
         public int PatientID { get; private set; }
@@ -21,6 +26,9 @@ namespace Healthcare_System.Models
         public string Condition { get; private set; }
         public string DOB { get; private set; }
 
+        //this property returns the inverse of sendPatientAlarm and sets sendPatientAlarm to its inverse
+        public bool AlarmRectified { get { return !sendPatientAlarm; } set { sendPatientAlarm = !sendPatientAlarm; } }
+        //property returns the patient alarm to the caller
         public Alarm PatientAlarm { get { return patientAlarm; } } //this alarm will contain all messages from each module alarm 
 
         public Patient()
@@ -29,9 +37,10 @@ namespace Healthcare_System.Models
             PatientID = patientIDNumber;
             patientIDNumber++;
 
-            //method to fill other properties of patient from DB
+            //extracts the details about patients from the patient table in the DB
+            FillPatientProperties();
 
-            //add the patients modules
+            //add the patient's modules
             modules.Add(new Module("Pulse Rate"));
             modules.Add(new Module("Breathing Rate"));
             modules.Add(new Module("Blood Pressure"));
@@ -85,7 +94,7 @@ namespace Healthcare_System.Models
         private void FillPatientProperties()
         {
             //access DB for Patient table, accessing the row which matches the patient ID
-            DataSet patientDetails = DatabaseConnection.Instance.getDataSet($"SELECT * FROM Patient WHERE PatientID = {PatientID.ToString()}");
+            DataSet patientDetails = DatabaseConnection.Instance.GetDataSet($"SELECT * FROM Patient WHERE PatientID = {PatientID.ToString()}");
 
             //enter each row in the property data
             FirstName = patientDetails.Tables[0].Rows[0][1].ToString();

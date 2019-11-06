@@ -111,6 +111,7 @@
             // btnSetTemperature
             // 
             this.btnSetTemperature.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(73)))), ((int)(((byte)(143)))));
+            this.btnSetTemperature.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSetTemperature.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSetTemperature.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSetTemperature.ForeColor = System.Drawing.SystemColors.HighlightText;
@@ -211,6 +212,7 @@
             // btnSetBloodPressure
             // 
             this.btnSetBloodPressure.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(73)))), ((int)(((byte)(143)))));
+            this.btnSetBloodPressure.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSetBloodPressure.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSetBloodPressure.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSetBloodPressure.ForeColor = System.Drawing.SystemColors.HighlightText;
@@ -297,6 +299,7 @@
             // btnSetBreathingRate
             // 
             this.btnSetBreathingRate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(73)))), ((int)(((byte)(143)))));
+            this.btnSetBreathingRate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSetBreathingRate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSetBreathingRate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSetBreathingRate.ForeColor = System.Drawing.SystemColors.HighlightText;
@@ -396,6 +399,7 @@
             // btnRectify
             // 
             this.btnRectify.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(73)))), ((int)(((byte)(143)))));
+            this.btnRectify.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRectify.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRectify.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRectify.ForeColor = System.Drawing.SystemColors.HighlightText;
@@ -438,6 +442,7 @@
             // btnSetPulseRate
             // 
             this.btnSetPulseRate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(73)))), ((int)(((byte)(143)))));
+            this.btnSetPulseRate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSetPulseRate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSetPulseRate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSetPulseRate.ForeColor = System.Drawing.SystemColors.HighlightText;
@@ -492,6 +497,7 @@
             // btnBack
             // 
             this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(73)))), ((int)(((byte)(143)))));
+            this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.SystemColors.HighlightText;

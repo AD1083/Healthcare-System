@@ -21,5 +21,9 @@ namespace Healthcare_System
         {
             Application.Exit();
         }
+        public void Run()
+        {
+            this.ShowDialog();
+        }
     }
 }

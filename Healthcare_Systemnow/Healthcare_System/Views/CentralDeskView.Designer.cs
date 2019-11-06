@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.btnRoom5 = new Bunifu.Framework.UI.BunifuTileButton();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -45,7 +46,7 @@
             this.lblRoom4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblRoom8 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btnSignOut = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblTime = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -111,6 +112,7 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -358,6 +360,7 @@
             // btnSignOut
             // 
             this.btnSignOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(42)))), ((int)(((byte)(82)))));
+            this.btnSignOut.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSignOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSignOut.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSignOut.ForeColor = System.Drawing.SystemColors.HighlightText;
@@ -368,15 +371,15 @@
             this.btnSignOut.Text = "Sign out";
             this.btnSignOut.UseVisualStyleBackColor = false;
             // 
-            // label2
+            // lblTime
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(645, 42);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 17);
-            this.label2.TabIndex = 71;
-            this.label2.Text = "Start Time";
+            this.lblTime.AutoSize = true;
+            this.lblTime.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime.Location = new System.Drawing.Point(598, 42);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(70, 17);
+            this.lblTime.TabIndex = 71;
+            this.lblTime.Text = "Start Time";
             // 
             // label3
             // 
@@ -804,7 +807,7 @@
             // 
             this.lblStaffName.AutoSize = true;
             this.lblStaffName.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStaffName.Location = new System.Drawing.Point(134, 37);
+            this.lblStaffName.Location = new System.Drawing.Point(118, 37);
             this.lblStaffName.Name = "lblStaffName";
             this.lblStaffName.Size = new System.Drawing.Size(112, 22);
             this.lblStaffName.TabIndex = 110;
@@ -1122,6 +1125,10 @@
             this.panel8.Size = new System.Drawing.Size(182, 10);
             this.panel8.TabIndex = 107;
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // CentralDeskView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
@@ -1195,7 +1202,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblTime);
             this.Controls.Add(this.lblRoom8);
             this.Controls.Add(this.lblRoom4);
             this.Controls.Add(this.lblRoom7);
@@ -1241,7 +1248,7 @@
         private Bunifu.Framework.UI.BunifuCustomLabel lblRoom8;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Button btnSignOut;
         private System.Windows.Forms.Label label5;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
@@ -1306,5 +1313,6 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Timer timer1;
     }
 }

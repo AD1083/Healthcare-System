@@ -13,20 +13,21 @@ namespace Healthcare_System
     {
         private readonly Patient _patient;
         private readonly IPatientModuleView _view;
+       
         
 
         public PatientModuleViewPresenter(Patient patient, IPatientModuleView view)
         {
             _patient = patient;
             _view = view;
-
+            
             _view.LoadPatientData += () => LoadPatientData(); 
             _view.SetPulseRate += () => SetPulseRate(_view.LowerPulseRate, _view.UpperPulseRate);
             _view.SetBreathingRate += () => SetBreathingRate(_view.LowerBreathingRate, _view.UpperBreathingRate);
             _view.SetBloodPressure += () => SetBloodPressure(_view.LowerBloodPressure, _view.UpperBloodPressure);
             _view.SetTemperature += () => SetTemperature(_view.LowerTemperature, _view.UpperTemperature);
 
-            _view.GoBack += () => GoBack();
+            _view.GoBack += GoBack;
         }
 
         private void SetPulseRate(string lowerPulseRate, string upperPulseRate)
@@ -46,10 +47,12 @@ namespace Healthcare_System
 
         }
 
-        private void GoBack()
+        private void GoBack(object sender, EventArgs e)
         {
             //run previous presenter view, hide curr view
-            _view.Hide();
+            // var presenter = new CentralDeskPresenter(new CentralDeskView(), new RegistrationService(), new Staff(), new CentralDesk());
+            
+         //presenter.Run();
 
         }
         private void RectifyAlarm()

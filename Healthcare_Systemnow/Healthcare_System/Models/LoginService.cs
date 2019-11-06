@@ -20,11 +20,15 @@ namespace Healthcare_System.Models
         {
             passwordEncryption = new PasswordEncryption(staff.Password);
             string encryptedPassword = passwordEncryption.EncryptedPassword;
-            DataSet dsStaff = DatabaseConnection.Instance.getDataSet("SELECT * FROM Staff WHERE StaffID = '" + staff.StaffID + "' Password = '" + encryptedPassword + "' AND Role'" + staff.Role + "'");
+            DataSet dsStaff = DatabaseConnection.Instance.GetDataSet("SELECT * FROM Staff WHERE StaffID = '" + staff.StaffID + "' AND Password = '" + encryptedPassword + "'");
+            
+
             DataTable table = dsStaff.Tables[0];
             if (table.Rows.Count == 1)
             {
-                
+                staff.Role = dsStaff.Tables[0].Rows[0][6].ToString();
+                staff.FirstName = dsStaff.Tables[0].Rows[0][2].ToString();
+                staff.LastName = dsStaff.Tables[0].Rows[0][3].ToString();
                 return true;
             }
             else

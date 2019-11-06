@@ -14,5 +14,7 @@ namespace Healthcare_System.Views
         event Action Login;
         void ShowError(string message);
         void Show();
+        void Hide();
+       
     }
 }

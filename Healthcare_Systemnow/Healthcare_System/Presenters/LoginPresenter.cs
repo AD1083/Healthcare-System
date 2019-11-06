@@ -18,13 +18,13 @@ namespace Healthcare_System.Presenters
             _view = view;
             _service = service;
             _regService = regService;
-            _view.Login += () => Login(_view.StaffID, _view.Password,_view.Role);
+            _view.Login += () => Login(_view.StaffID, _view.Password, _view.Role);
         }
 
 
         private void Login(string staffID, string password, string role)
         {
-            var staff = new Staff { StaffID = staffID, Password = password, Role=role};
+            var staff = new Staff { StaffID = staffID, Password = password, Role = role };
             if (!_service.Login(staff))
             {
                 _view.ShowError("Check your Staff ID and password");
@@ -33,22 +33,31 @@ namespace Healthcare_System.Presenters
             {
                 // successful authorization, next form opening (?)
                 _regService.RecordStartTime(staff);
-                if (staff.Role == "nurse" && staff.Role == "consultant")
+                if (staff.Role == "Nurse" || staff.Role == "Consultant")
                 {
+                    
+                    var presenter = new CentralDeskPresenter(new CentralDeskView(), new RegistrationService(), staff, new CentralDesk());
+                    _view.Hide();
 
-                    //var presenter = new CentralDeskPresenter(new CentralDeskView(), new RegistrationService(), staff);
-                    //presenter.Run();
+                   
+                    presenter.Run();
+                    
+
                 }
                 else
                 {
-                    //var presenter = new ManagerialView();
-                    //presenter.Run();
+                    var presenter = new ManagerialView();
+                    presenter.Run();
                 }
             }
         }
         public void Run()
         {
             _view.Show();
+        }
+        public void Hide()
+        {
+            _view.Hide();
         }
     }
 }

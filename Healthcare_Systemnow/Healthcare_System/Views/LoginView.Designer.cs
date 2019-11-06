@@ -54,8 +54,8 @@
             this.txtPassword.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtPassword.HintForeColor = System.Drawing.Color.Black;
-            this.txtPassword.HintText = "";
-            this.txtPassword.isPassword = true;
+            this.txtPassword.HintText = "Password";
+            this.txtPassword.isPassword = false;
             this.txtPassword.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(197)))), ((int)(((byte)(218)))));
             this.txtPassword.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(100)))), ((int)(((byte)(197)))));
             this.txtPassword.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(197)))), ((int)(((byte)(218)))));
@@ -65,8 +65,8 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(309, 44);
             this.txtPassword.TabIndex = 28;
-            this.txtPassword.Text = "Password";
             this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtPassword.OnValueChanged += new System.EventHandler(this.txtPassword_OnValueChanged);
             // 
             // label1
             // 
@@ -102,6 +102,7 @@
             // btnSignIn
             // 
             this.btnSignIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(100)))), ((int)(((byte)(197)))));
+            this.btnSignIn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSignIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSignIn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSignIn.ForeColor = System.Drawing.SystemColors.HighlightText;

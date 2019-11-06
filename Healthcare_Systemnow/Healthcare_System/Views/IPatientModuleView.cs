@@ -8,6 +8,7 @@ namespace Healthcare_System
 {
     public interface IPatientModuleView
     {
+
         string FirstName { get; set; }
         string LastName { get; set; }
         string DOB { get; set; }
@@ -32,10 +33,11 @@ namespace Healthcare_System
         event Action SetBreathingRate;
         event Action SetBloodPressure;
         event Action SetTemperature;
-        event Action GoBack;
+        event EventHandler GoBack;
 
         void Show();
         void Hide();
+        
 
     }
 }

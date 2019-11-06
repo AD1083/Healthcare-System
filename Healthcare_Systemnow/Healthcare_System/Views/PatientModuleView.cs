@@ -12,6 +12,7 @@ namespace Healthcare_System.Views
 {
     public partial class PatientModuleView : Form, IPatientModuleView
     {
+        
         public PatientModuleView()
         {
             InitializeComponent();
@@ -25,7 +26,7 @@ namespace Healthcare_System.Views
             btnRectify.Hide();
             btnRectify.Click += (sender, args) => Invoke(RectifyAlarm);
 
-            btnBack.Click += (sender, args) => Invoke(GoBack);
+            btnBack.Click += BtnBack_Click;
 
         }
         // properties
@@ -53,8 +54,12 @@ namespace Healthcare_System.Views
         public event Action SetBloodPressure;
         public event Action SetTemperature;
         public event Action RectifyAlarm;
-        public event Action GoBack;
         public event Action LoadPatientData;
+        public event EventHandler GoBack;
+        private void BtnBack_Click(object sender, EventArgs e)
+        {
+            if (GoBack != null) GoBack(this, EventArgs.Empty);
+        }
 
         private void Invoke(Action action)
         {
@@ -64,11 +69,8 @@ namespace Healthcare_System.Views
         public new void Show()
         {
             this.ShowDialog();
-        } 
-         public new void Hide()
-        {
-            this.Hide();
         }
+       
 
     }
 }

@@ -17,6 +17,7 @@ namespace Healthcare_System
         {
             InitializeComponent();
             this.Load += CentralDeskView_Load;
+            
             btnSignOut.Click += BtnSignOut_Click;
             btnRoom1.Click += (sender, args) => Invoke(ViewPatient);
             btnRoom2.Click += (sender, args) => Invoke(ViewPatient);
@@ -26,6 +27,9 @@ namespace Healthcare_System
             btnRoom6.Click += (sender, args) => Invoke(ViewPatient);
             btnRoom7.Click += (sender, args) => Invoke(ViewPatient);
             btnRoom8.Click += (sender, args) => Invoke(ViewPatient);
+
+
+            timer1.Start();
         }
         //properties
 
@@ -80,7 +84,12 @@ namespace Healthcare_System
         public event EventHandler SignOut;
        
         public event Action ViewPatient;
-
+        public new void Show()
+        {
+            this.ShowDialog();
+        }
+       
+        
         private void Invoke(Action action)
         {
             if (action != null) action();
@@ -92,13 +101,16 @@ namespace Healthcare_System
             if (StartSimulation != null) StartSimulation(this, EventArgs.Empty);
         }
 
-        public new void Show()
-        {
-            this.ShowDialog();
-        }
+        
         private void label1_Click(object sender, EventArgs e)
         {
             BtnSignOut_Click(this, EventArgs.Empty);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            DateTime dateTime = DateTime.Now;
+            this.lblTime.Text = dateTime.ToString();
         }
     }
 }
