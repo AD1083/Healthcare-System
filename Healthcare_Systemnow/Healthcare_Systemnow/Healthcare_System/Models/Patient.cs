@@ -13,7 +13,7 @@ namespace Healthcare_System.Models
         private List<Module> modules = new List<Module>(4);
         private static int patientIDNumber = 1;
 
-        //used to determine if the patient has an alarm to send to the staff; true to send ana alarm, false if not
+        //used to determine if the patient has an alarm to send to the staff; true to send an alarm, false if not
         //also determines if an alarm has been rectified; through the property of AlarmRectified which returns the inverse of this boolean
         //therefore when patient alarm is true, alarm rectified is false; when patient alarm false, alarm rectified
         private bool sendPatientAlarm; 
@@ -94,7 +94,7 @@ namespace Healthcare_System.Models
         private void FillPatientProperties()
         {
             //access DB for Patient table, accessing the row which matches the patient ID
-            DataSet patientDetails = DatabaseConnection.Instance.getDataSet($"SELECT * FROM Patient WHERE PatientID = {PatientID.ToString()}");
+            DataSet patientDetails = DatabaseConnection.Instance.GetDataSet($"SELECT * FROM Patient WHERE PatientID = {PatientID.ToString()}");
 
             //enter each row in the property data
             FirstName = patientDetails.Tables[0].Rows[0][1].ToString();

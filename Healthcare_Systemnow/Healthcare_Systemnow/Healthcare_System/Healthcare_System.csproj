@@ -74,6 +74,7 @@
   <ItemGroup>
     <Compile Include="Models\Alarm.cs" />
     <Compile Include="Models\CentralDesk.cs" />
+    <Compile Include="Models\EmailNotifications.cs" />
     <Compile Include="Models\PasswordEncryption.cs" />
     <Compile Include="Views\IPatientModuleView.cs" />
     <Compile Include="Models\Patient.cs" />

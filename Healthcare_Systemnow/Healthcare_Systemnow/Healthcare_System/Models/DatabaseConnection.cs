@@ -12,12 +12,13 @@ namespace Healthcare_System
 
     class DatabaseConnection
     {
-        private static DatabaseConnection _instance;
-        private static string dBConnectionString;
-
         //the SQLConnection object used to store the connection to the database
         private SqlConnection sqlconn;
         private SqlDataAdapter sqlAdapter;
+
+        //static attributes
+        private static DatabaseConnection _instance;
+        private static string dBConnectionString;
 
         public static DatabaseConnection Instance
         {
@@ -30,56 +31,47 @@ namespace Healthcare_System
                     _instance = new DatabaseConnection();
 
                     // set the connection string
-                    DatabaseConnection.DBConnectionString = Properties.Settings.Default.DBConnectionStr;
+                    dBConnectionString = Properties.Settings.Default.DBConnectionStr;
 
                 }
                 return _instance;
             }
 
         }
-        //property for the connection string
-        // to be used JUST in this class
-        public static string DBConnectionString
-        {
-            set
-            {
-                dBConnectionString = value;
-            }
-        }
 
         //methods
+        //create and return a data set
+        public DataSet GetDataSet(string sqlStatement)
+        {
+            DataSet dsStaff = new DataSet();
+            //open connenction to the DB
+            OpenConnection();
+
+            //create the table adapter using the connection string and the sql statement
+            sqlAdapter = new SqlDataAdapter(sqlStatement, dBConnectionString);
+
+            //fills in the data set using the data retrived using the SQL query into the dataset variable
+            sqlAdapter.Fill(dsStaff);
+
+            //close connection to the DB and return filled dataset
+            CloseConnection();
+            return dsStaff;
+        }
+
         //open the connection
-        public void openConnection()
+        private void OpenConnection()
         {
             //create the connection to the database as an instance of System.Data.SqlClient.SqlConnection 
             sqlconn = new System.Data.SqlClient.SqlConnection(dBConnectionString);
             //open the connection
             sqlconn.Open();
-
         }
-        // Close the connection
-        public void closeConnection()
+
+        //close the connection
+        private void CloseConnection()
         {
             //close the connection to the database
             sqlconn.Close();
-        }
-        // create and return a data set
-        public DataSet getDataSet(string sqlStatement)
-        {
-            DataSet dsStaff= new DataSet();
-            //open conn
-            openConnection();
-
-            //create the table adapter using the connection string and the sql statement
-            sqlAdapter = new SqlDataAdapter(sqlStatement, dBConnectionString);
-
-            //fills in the data set
-            sqlAdapter.Fill(dsStaff);
-
-            //close conn
-            closeConnection();
-            return dsStaff;
-
         }
     }
 }

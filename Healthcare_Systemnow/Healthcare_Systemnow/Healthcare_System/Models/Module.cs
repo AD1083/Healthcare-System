@@ -16,7 +16,7 @@ namespace Healthcare_System
         public int LowerBoundary { get; set; }
         public string CurrentReading { get; private set; }
 
-        public string ModuleName { get; } // set; }
+        public string ModuleName { get; }
 
         public Module(string moduleName)
         {

@@ -11,6 +11,7 @@ namespace Healthcare_System.Models
     {
         private static List<Patient> patients = new List<Patient>(8);
 
+        //one overall timer to be used to avoid timer threading issues
         public static Timer patientTimer = new Timer();
 
         public List<Patient> Patients { get { return patients; } }
@@ -24,26 +25,31 @@ namespace Healthcare_System.Models
                 patients.Add(patient);
             }
 
-            SetupTimer(); //change timer logic so that stuff still generated even if others have not been setup
+            SetupTimer(); 
+            //possible change timer logic so that stuff still generated even if others have not been setup
+            //timer stops, goes through each patient etc,
+            //if patient has an alarm it does not generate anymore values
+            //other patients without alarm can continue to generate values
         }
 
-        public void RestartTime()
+        public void RestartTime() //used for when timer only restarts when all patients recified
         {
             bool restartTimer = false;
 
+            //check if each patient's alarm has been rectified
             foreach(Patient patient in patients)
             {
                 restartTimer = patient.AlarmRectified;
                 if (patient.AlarmRectified)
                 {
-                   // FIX patient.AlarmRectified.set;
+                    patient.AlarmRectified = true; //CHECK if works since set {} has no external value - should inverse the sendPatientAlarm private field
                 }
             }
 
+            //only if all patient's alarms rectified should the timer start again
             if (restartTimer)
             {
                 patientTimer.Start();
-
             }
         }
 
