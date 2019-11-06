@@ -11,7 +11,7 @@ namespace Healthcare_System.Models
     {
         private static List<Patient> patients = new List<Patient>(8);
 
-        public static Timer PatientTimer = new Timer();
+        public static Timer patientTimer = new Timer();
 
         public List<Patient> Patients { get { return patients; } }
 
@@ -27,28 +27,46 @@ namespace Healthcare_System.Models
             SetupTimer(); //change timer logic so that stuff still generated even if others have not been setup
         }
 
+        public void RestartTime()
+        {
+            bool restartTimer = false;
+
+            foreach(Patient patient in patients)
+            {
+                restartTimer = patient.AlarmRectified;
+                if (patient.AlarmRectified)
+                {
+                   // FIX patient.AlarmRectified.set;
+                }
+            }
+
+            if (restartTimer)
+            {
+                patientTimer.Start();
+
+            }
+        }
+
         private void SetupTimer()
         {
-            PatientTimer.Interval = 1000;
-            PatientTimer.AutoReset = true;
-            PatientTimer.Elapsed += ReadCheckModuleData;
-            PatientTimer.Enabled = true;
-            PatientTimer.Start();
+            patientTimer.Interval = 1000;
+            patientTimer.AutoReset = true;
+            patientTimer.Elapsed += ReadCheckModuleData;
+            patientTimer.Start();
         }
 
         private void ReadCheckModuleData(object sender, ElapsedEventArgs e)
         {
-            PatientTimer.Stop();
+            patientTimer.Stop();
 
             //go through each patient and each patients modules
             //call on patient to access its 4 modules to 'read' their monitoring data
             foreach (Patient patient in patients)
             {
                 patient.AccessModules();
-
             }
 
-            PatientTimer.Start();
+            //timer can only restart after every patient alarm rectified
         }
     }
 }
