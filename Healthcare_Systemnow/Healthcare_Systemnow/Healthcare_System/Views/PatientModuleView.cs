@@ -61,7 +61,7 @@ namespace Healthcare_System.Views
             if (action != null) action();
         }
 
-        public new void Show()
+        public new void ShowDialog()
         {
             this.ShowDialog();
         } 

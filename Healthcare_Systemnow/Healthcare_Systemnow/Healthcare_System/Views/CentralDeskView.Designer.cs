@@ -358,6 +358,7 @@
             // btnSignOut
             // 
             this.btnSignOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(42)))), ((int)(((byte)(82)))));
+            this.btnSignOut.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSignOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSignOut.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSignOut.ForeColor = System.Drawing.SystemColors.HighlightText;

@@ -33,16 +33,19 @@ namespace Healthcare_System.Presenters
             {
                 // successful authorization, next form opening (?)
                 _regService.RecordStartTime(staff);
-                if (staff.Role == "nurse" || staff.Role == "consultant")
+                if (staff.Role == "Nurse" || staff.Role == "Consultant")
                 {
+                    
+                    var presenter = new CentralDeskPresenter(new CentralDeskView(), new RegistrationService(), staff, new CentralDesk());
+                    
+                    presenter.Run();
+                    
 
-                    //var presenter = new CentralDeskPresenter(new CentralDeskView(), new RegistrationService(), staff);
-                    //presenter.Run();
                 }
                 else
                 {
-                    //var presenter = new ManagerialView();
-                    //presenter.Run();
+                    var presenter = new ManagerialView();
+                    presenter.Run();
                 }
             }
         }
@@ -50,5 +53,6 @@ namespace Healthcare_System.Presenters
         {
             _view.Show();
         }
+        
     }
 }

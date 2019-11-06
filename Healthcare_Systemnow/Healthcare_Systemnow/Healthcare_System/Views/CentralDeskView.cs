@@ -17,6 +17,7 @@ namespace Healthcare_System
         {
             InitializeComponent();
             this.Load += CentralDeskView_Load;
+            
             btnSignOut.Click += BtnSignOut_Click;
             btnRoom1.Click += (sender, args) => Invoke(ViewPatient);
             btnRoom2.Click += (sender, args) => Invoke(ViewPatient);
@@ -92,10 +93,7 @@ namespace Healthcare_System
             if (StartSimulation != null) StartSimulation(this, EventArgs.Empty);
         }
 
-        public new void Show()
-        {
-            this.ShowDialog();
-        }
+        
         private void label1_Click(object sender, EventArgs e)
         {
             BtnSignOut_Click(this, EventArgs.Empty);

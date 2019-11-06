@@ -67,7 +67,7 @@ namespace Healthcare_System
 
         public void Run()
         {
-            _view.Show();
+            _view.ShowDialog();
         }
     }
 }

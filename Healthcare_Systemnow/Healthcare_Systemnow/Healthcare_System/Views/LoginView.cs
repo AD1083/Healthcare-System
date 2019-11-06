@@ -42,7 +42,11 @@ namespace Healthcare_System
         {
             Application.Run(this);
         }
-
+       
+        private void txtPassword_OnValueChanged(object sender, EventArgs e)
+        {
+            txtPassword.isPassword = true;
+        }
     }
 }
 

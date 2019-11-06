@@ -12,6 +12,7 @@ namespace Healthcare_System.Views
         event EventHandler SignOut;
         event EventHandler StartSimulation;
         void Show();
+        
 
         string StaffID {  set; }
         string StaffRole {  set; }

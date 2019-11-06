@@ -27,6 +27,8 @@ namespace Healthcare_System.Models
             if (table.Rows.Count == 1)
             {
                 staff.Role = dsStaff.Tables[0].Rows[0][6].ToString();
+                staff.FirstName = dsStaff.Tables[0].Rows[0][2].ToString();
+                staff.LastName = dsStaff.Tables[0].Rows[0][3].ToString();
                 return true;
             }
             else

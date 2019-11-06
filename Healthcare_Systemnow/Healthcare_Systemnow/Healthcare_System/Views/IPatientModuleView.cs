@@ -34,7 +34,7 @@ namespace Healthcare_System
         event Action SetTemperature;
         event Action GoBack;
 
-        void Show();
+        void ShowDialog();
         void Hide();
 
     }

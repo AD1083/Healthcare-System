@@ -38,10 +38,10 @@ namespace Healthcare_System.Presenters
         private void SignOut(object sender, EventArgs e)
         {
             _service.RecordEndTime(_staff);
-
+            
             var presenter = new LoginPresenter(new LoginView(), new LoginService(), new RegistrationService());
             presenter.Run();
-
+           
         }
 
 
@@ -50,14 +50,16 @@ namespace Healthcare_System.Presenters
             Int32.TryParse(roomNum.Substring(5, 1), out int roomNumber);
             Patient patient = _simulator.Patients.ElementAt(roomNumber);
 
-            // var patientModulePresenter = new PatientModuleViewPresenter(Patient(), new PatientModuleView(), new Module());
-            //patientModulePresenter.Run();
+            var patientModulePresenter = new PatientModuleViewPresenter(patient, new PatientModuleView());
+            patientModulePresenter.Run();
         }
 
         private void _view_StartSimulation(object sender, EventArgs e)
         {
-
-
+            _view.StaffID = _staff.StaffID;
+            _view.StaffName = $"{_staff.FirstName} {_staff.LastName}";
+            _view.StaffRole = _staff.Role;
+            //start time label
         }
 
         public void Run()
