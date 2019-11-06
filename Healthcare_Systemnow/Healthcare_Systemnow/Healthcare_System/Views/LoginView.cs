@@ -22,6 +22,7 @@ namespace Healthcare_System
 
         public string StaffID { get { return txtStaff.Text; } }
         public string Password { get { return txtPassword.Text; } }
+        public string Role { get; }
         public event Action Login;
         public void ShowError(string message)
         {

@@ -10,6 +10,7 @@ namespace Healthcare_System.Views
     {
         string StaffID { get; }
         string Password { get; }
+        string Role { get; }
         event Action Login;
         void ShowError(string message);
         void Show();
