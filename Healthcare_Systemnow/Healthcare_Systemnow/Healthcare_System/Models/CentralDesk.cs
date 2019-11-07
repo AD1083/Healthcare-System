@@ -18,7 +18,7 @@ namespace Healthcare_System.Models
 
         public CentralDesk()
         {
-            for (int i = 0; i < patients.Count; i++)
+            for (int i = 0; i < patients.Capacity; i++)
             {
                 //create the patients
                 Patient patient = new Patient();

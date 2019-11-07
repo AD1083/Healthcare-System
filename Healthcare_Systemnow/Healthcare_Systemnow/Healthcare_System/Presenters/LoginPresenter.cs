@@ -35,11 +35,13 @@ namespace Healthcare_System.Presenters
                 _regService.RecordStartTime(staff);
                 if (staff.Role == "Nurse" || staff.Role == "Consultant")
                 {
-                    
+
                     var presenter = new CentralDeskPresenter(new CentralDeskView(), new RegistrationService(), staff, new CentralDesk());
-                    
+                    _view.Hide();
+
+
                     presenter.Run();
-                    
+
 
                 }
                 else
@@ -53,6 +55,9 @@ namespace Healthcare_System.Presenters
         {
             _view.Show();
         }
-        
+        public void Hide()
+        {
+            _view.Hide();
+        }
     }
 }

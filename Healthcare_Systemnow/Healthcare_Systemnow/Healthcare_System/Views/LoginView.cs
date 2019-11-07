@@ -40,9 +40,9 @@ namespace Healthcare_System
 
         public new void Show()
         {
-            Application.Run(this);
+            this.ShowDialog();
         }
-       
+
         private void txtPassword_OnValueChanged(object sender, EventArgs e)
         {
             txtPassword.isPassword = true;

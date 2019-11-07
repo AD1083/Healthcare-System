@@ -21,14 +21,14 @@ namespace Healthcare_System.Presenters
             _staff = staff;
             _simulator = patientSimulator;
 
-            _view.ViewPatient += () => ViewPatient(_view.Room1);
-            _view.ViewPatient += () => ViewPatient(_view.Room2);
-            _view.ViewPatient += () => ViewPatient(_view.Room3);
-            _view.ViewPatient += () => ViewPatient(_view.Room4);
-            _view.ViewPatient += () => ViewPatient(_view.Room5);
-            _view.ViewPatient += () => ViewPatient(_view.Room6);
-            _view.ViewPatient += () => ViewPatient(_view.Room7);
-            _view.ViewPatient += () => ViewPatient(_view.Room8);
+            _view.ViewPatient1 += () => ViewPatient(_view.Room1);
+            _view.ViewPatient2 += () => ViewPatient(_view.Room2);
+            _view.ViewPatient3 += () => ViewPatient(_view.Room3);
+            _view.ViewPatient4 += () => ViewPatient(_view.Room4);
+            _view.ViewPatient5 += () => ViewPatient(_view.Room5);
+            _view.ViewPatient6 += () => ViewPatient(_view.Room6);
+            _view.ViewPatient7 += () => ViewPatient(_view.Room7);
+            _view.ViewPatient8 += () => ViewPatient(_view.Room8);
             _view.SignOut += SignOut;
 
             _view.StartSimulation += _view_StartSimulation;
@@ -38,17 +38,18 @@ namespace Healthcare_System.Presenters
         private void SignOut(object sender, EventArgs e)
         {
             _service.RecordEndTime(_staff);
-            
-            var presenter = new LoginPresenter(new LoginView(), new LoginService(), new RegistrationService());
-            presenter.Run();
-           
-        }
 
+            var presenter = new LoginPresenter(new LoginView(), new LoginService(), new RegistrationService());
+            _view.Hide();
+            presenter.Run();
+
+        }
 
         private void ViewPatient(string roomNum)
         {
             Int32.TryParse(roomNum.Substring(5, 1), out int roomNumber);
-            Patient patient = _simulator.Patients.ElementAt(roomNumber);
+            System.Windows.Forms.MessageBox.Show($"ROOM NNUM : {roomNumber}");
+            Patient patient = _simulator.Patients.ElementAt(roomNumber - 1);
 
             var patientModulePresenter = new PatientModuleViewPresenter(patient, new PatientModuleView());
             patientModulePresenter.Run();
@@ -65,6 +66,10 @@ namespace Healthcare_System.Presenters
         public void Run()
         {
             _view.Show();
+        }
+        public void Hide()
+        {
+            _view.Hide();
         }
     }
 }

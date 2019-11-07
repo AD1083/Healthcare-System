@@ -96,11 +96,13 @@ namespace Healthcare_System.Models
             //access DB for Patient table, accessing the row which matches the patient ID
             DataSet patientDetails = DatabaseConnection.Instance.GetDataSet($"SELECT * FROM Patient WHERE PatientID = {PatientID.ToString()}");
 
+            //FIX THROWS EXCEPTION !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
             //enter each row in the property data
-            FirstName = patientDetails.Tables[0].Rows[0][1].ToString();
-            LastName = patientDetails.Tables[0].Rows[0][2].ToString();
-            DOB = patientDetails.Tables[0].Rows[0][3].ToString();
-            Condition = patientDetails.Tables[0].Rows[0][5].ToString();
+            //FirstName = patientDetails.Tables[0].Rows[0][1].ToString();
+            //LastName = patientDetails.Tables[0].Rows[0][2].ToString();
+            //DOB = patientDetails.Tables[0].Rows[0][3].ToString();
+            //Condition = patientDetails.Tables[0].Rows[0][5].ToString();
         }
 
     }
