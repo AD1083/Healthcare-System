@@ -17,7 +17,7 @@ namespace Healthcare_System
         {
             InitializeComponent();
             this.Load += CentralDeskView_Load;
-            
+
             btnSignOut.Click += BtnSignOut_Click;
             btnRoom1.Click += (sender, args) => Invoke(ViewPatient);
             btnRoom2.Click += (sender, args) => Invoke(ViewPatient);
@@ -39,30 +39,30 @@ namespace Healthcare_System
 
         public string FirstNameRoom1 { set { lblFirstNameRoom1.Text = value; } }
         public string LastNameRoom1 { set { lblSecondNameRoom1.Text = value; } }
-        public string ConditionRoom1 {  set { lblConditionRoom1.Text = value; } }
+        public string ConditionRoom1 { set { lblConditionRoom1.Text = value; } }
         public string Room1 { get { return lblRoom1.Text; } }
 
         public string FirstNameRoom2 { set { lblFirstNameRoom2.Text = value; } }
-        public string LastNameRoom2 {  set { lblSecondNameRoom2.Text = value; } }
-        public string ConditionRoom2 {  set { lblConditionRoom2.Text = value; } }
+        public string LastNameRoom2 { set { lblSecondNameRoom2.Text = value; } }
+        public string ConditionRoom2 { set { lblConditionRoom2.Text = value; } }
         public string Room2 { get { return lblRoom2.Text; } }
 
-        public string FirstNameRoom3 {  set { lblFirstNameRoom3.Text = value; } }
+        public string FirstNameRoom3 { set { lblFirstNameRoom3.Text = value; } }
         public string LastNameRoom3 { set { lblSecondNameRoom3.Text = value; } }
-        public string ConditionRoom3 {  set { lblConditionRoom3.Text = value; } }
+        public string ConditionRoom3 { set { lblConditionRoom3.Text = value; } }
         public string Room3 { get { return lblRoom3.Text; } }
 
-        public string FirstNameRoom4 {  set { lblFirstNameRoom4.Text = value; } }
-        public string LastNameRoom4 {  set { lblSecondNameRoom4.Text = value; } }
+        public string FirstNameRoom4 { set { lblFirstNameRoom4.Text = value; } }
+        public string LastNameRoom4 { set { lblSecondNameRoom4.Text = value; } }
         public string ConditionRoom4 { set { lblConditionRoom4.Text = value; } }
         public string Room4 { get { return lblRoom4.Text; } }
 
         public string FirstNameRoom5 { set { lblFirstNameRoom5.Text = value; } }
-        public string LastNameRoom5 {  set { lblSecondNameRoom5.Text = value; } }
+        public string LastNameRoom5 { set { lblSecondNameRoom5.Text = value; } }
         public string ConditionRoom5 { set { lblConditionRoom5.Text = value; } }
         public string Room5 { get { return lblRoom5.Text; } }
 
-        public string FirstNameRoom6 {  set { lblFirstNameRoom6.Text = value; } }
+        public string FirstNameRoom6 { set { lblFirstNameRoom6.Text = value; } }
         public string LastNameRoom6 { set { lblSecondNameRoom6.Text = value; } }
         public string ConditionRoom6 { set { lblConditionRoom6.Text = value; } }
         public string Room6 { get { return lblRoom6.Text; } }
@@ -82,14 +82,14 @@ namespace Healthcare_System
         }
 
         public event EventHandler SignOut;
-       
+
         public event Action ViewPatient;
         public new void Show()
         {
             this.ShowDialog();
         }
-       
-        
+
+
         private void Invoke(Action action)
         {
             if (action != null) action();
@@ -101,7 +101,7 @@ namespace Healthcare_System
             if (StartSimulation != null) StartSimulation(this, EventArgs.Empty);
         }
 
-        
+
         private void label1_Click(object sender, EventArgs e)
         {
             BtnSignOut_Click(this, EventArgs.Empty);

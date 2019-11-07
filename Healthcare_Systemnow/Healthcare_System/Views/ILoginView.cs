@@ -15,6 +15,6 @@ namespace Healthcare_System.Views
         void ShowError(string message);
         void Show();
         void Hide();
-       
+
     }
 }

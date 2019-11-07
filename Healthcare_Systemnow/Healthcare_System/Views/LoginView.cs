@@ -42,7 +42,7 @@ namespace Healthcare_System
         {
             this.ShowDialog();
         }
-       
+
         private void txtPassword_OnValueChanged(object sender, EventArgs e)
         {
             txtPassword.isPassword = true;

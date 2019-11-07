@@ -12,7 +12,7 @@ namespace Healthcare_System.Views
 {
     public partial class PatientModuleView : Form, IPatientModuleView
     {
-        
+
         public PatientModuleView()
         {
             InitializeComponent();
@@ -70,7 +70,7 @@ namespace Healthcare_System.Views
         {
             this.ShowDialog();
         }
-       
+
 
     }
 }

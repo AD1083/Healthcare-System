@@ -74,11 +74,7 @@
   <ItemGroup>
     <Compile Include="Models\Alarm.cs" />
     <Compile Include="Models\CentralDesk.cs" />
-<<<<<<< HEAD
-    <Compile Include="Models\FormProvider.cs" />
-=======
     <Compile Include="Models\EmailNotifications.cs" />
->>>>>>> 6167e145c882ae1d3fdbf9e347bd9a2a1badda97
     <Compile Include="Models\PasswordEncryption.cs" />
     <Compile Include="Views\IPatientModuleView.cs" />
     <Compile Include="Models\Patient.cs" />

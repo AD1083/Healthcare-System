@@ -37,7 +37,7 @@ namespace Healthcare_System
 
         void Show();
         void Hide();
-        
+
 
     }
 }
