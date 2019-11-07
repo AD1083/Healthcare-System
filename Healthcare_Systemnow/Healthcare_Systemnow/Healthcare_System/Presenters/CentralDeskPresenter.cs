@@ -48,7 +48,7 @@ namespace Healthcare_System.Presenters
         private void ViewPatient(string roomNum)
         {
             Int32.TryParse(roomNum.Substring(5, 1), out int roomNumber);
-            System.Windows.Forms.MessageBox.Show($"ROOM NNUM : {roomNumber}");
+            
             Patient patient = _simulator.Patients.ElementAt(roomNumber - 1);
 
             var patientModulePresenter = new PatientModuleViewPresenter(patient, new PatientModuleView());

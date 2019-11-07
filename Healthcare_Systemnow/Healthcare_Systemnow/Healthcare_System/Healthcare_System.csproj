@@ -163,10 +163,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="HealthcareDB.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="HealthcareDB_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>HealthcareDB.mdf</DependentUpon>
     </Content>
   </ItemGroup>

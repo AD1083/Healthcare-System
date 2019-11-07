@@ -18,7 +18,11 @@ namespace Healthcare_System.Models
         public void RecordEndTime(Staff staff)
         {
             staff.Registration.EndTime = DateTime.Now.ToString();
+            int staffID;
+            Int32.TryParse(staff.Registration.StaffID, out staffID);
             //record end time to the database
+            DatabaseConnection.Instance.InsertData($"INSERT INTO Registrations (StaffID, RegistrationTime, DeregistrationTime) " +
+               $"VALUES ({staffID}, '{staff.Registration.StartTime}', '{staff.Registration.EndTime}')");
         }
     }
 }

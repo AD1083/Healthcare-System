@@ -44,8 +44,9 @@ namespace Healthcare_System
         public DataSet GetDataSet(string sqlStatement)
         {
             DataSet dsStaff = new DataSet();
+            sqlconn = new SqlConnection(dBConnectionString);
             //open connenction to the DB
-            OpenConnection();
+            OpenConnection(sqlconn);
 
             //create the table adapter using the connection string and the sql statement
             sqlAdapter = new SqlDataAdapter(sqlStatement, dBConnectionString);
@@ -54,24 +55,42 @@ namespace Healthcare_System
             sqlAdapter.Fill(dsStaff);
 
             //close connection to the DB and return filled dataset
-            CloseConnection();
+            CloseConnection(sqlconn);
             return dsStaff;
         }
 
-        //open the connection
-        private void OpenConnection()
+        /// <summary>
+        /// method to insert data into the database
+        /// </summary>
+        /// <param name="sqlStatement">The sql insert statement for the database</param>
+        public void InsertData(string sqlStatement)
         {
-            //create the connection to the database as an instance of System.Data.SqlClient.SqlConnection 
-            sqlconn = new System.Data.SqlClient.SqlConnection(dBConnectionString);
+
+            SqlCommand sqlCommand = new SqlCommand();
+            sqlCommand.CommandType = CommandType.Text;
+            sqlCommand.CommandText = sqlStatement;
+
+            sqlconn = new SqlConnection(dBConnectionString);
+            sqlCommand.Connection = sqlconn;
+
+            OpenConnection(sqlconn);
+
+            sqlCommand.ExecuteNonQuery();
+            CloseConnection(sqlconn);
+        }
+
+        //open the connection
+        private void OpenConnection(SqlConnection sqlconnection)
+        {
             //open the connection
-            sqlconn.Open();
+            sqlconnection.Open();
         }
 
         //close the connection
-        private void CloseConnection()
+        private void CloseConnection(SqlConnection sqlconnection)
         {
             //close the connection to the database
-            sqlconn.Close();
+            sqlconnection.Close();
         }
     }
 }
