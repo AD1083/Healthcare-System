@@ -36,6 +36,7 @@ namespace Healthcare_System
         public string StaffID { set { lblStaffID.Text = value; } }
         public string StaffName { set { lblStaffName.Text = value; } }
         public string StaffRole { set { lblStaffRole.Text = value; } }
+        public string StartTime { set { lblStartTime.Text = value; } }
 
         public string FirstNameRoom1 { set { lblFirstNameRoom1.Text = value; } }
         public string LastNameRoom1 { set { lblSecondNameRoom1.Text = value; } }

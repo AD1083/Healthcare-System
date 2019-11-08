@@ -22,9 +22,9 @@ namespace Healthcare_System
         {
             ModuleName = moduleName;
             CurrentReading = "No Data Available";
-            //set boundaries?
+            
         }
-
+        
         public Alarm CheckPatientData()
         {
 
@@ -33,7 +33,8 @@ namespace Healthcare_System
             {
                 //generate reading data and record in the property
                 int reading = GenerateReading();
-                CurrentReading = reading.ToString() ;
+                CurrentReading = reading.ToString();
+                
                 
                 //compare to boundaries and return appropriate alarm
                 if (CompareToUpperBoundary(reading))

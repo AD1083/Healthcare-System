@@ -71,6 +71,9 @@ namespace Healthcare_System.Views
             this.ShowDialog();
         }
 
-
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            //timer evemnt from ui to trigger the read of current reading of modules
+        }
     }
 }

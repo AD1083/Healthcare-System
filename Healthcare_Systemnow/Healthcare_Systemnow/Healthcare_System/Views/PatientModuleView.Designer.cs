@@ -32,6 +32,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblFirstName = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSetTemperature = new System.Windows.Forms.Button();
@@ -76,6 +77,7 @@
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.timer = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -558,6 +560,11 @@
             this.bunifuCustomLabel4.TabIndex = 52;
             this.bunifuCustomLabel4.Text = "First Name";
             // 
+            // timer
+            // 
+            this.timer.Interval = 1300;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
             // PatientModuleView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -642,5 +649,6 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
+        private System.Windows.Forms.Timer timer;
     }
 }

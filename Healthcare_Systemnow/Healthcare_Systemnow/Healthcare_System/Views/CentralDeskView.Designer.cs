@@ -113,6 +113,8 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lblStartTime = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -377,9 +379,9 @@
             this.lblTime.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTime.Location = new System.Drawing.Point(598, 42);
             this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(70, 17);
+            this.lblTime.Size = new System.Drawing.Size(37, 17);
             this.lblTime.TabIndex = 71;
-            this.lblTime.Text = "Start Time";
+            this.lblTime.Text = "Time";
             // 
             // label3
             // 
@@ -395,7 +397,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(24, 90);
+            this.label4.Location = new System.Drawing.Point(24, 71);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 17);
             this.label4.TabIndex = 73;
@@ -405,7 +407,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(24, 118);
+            this.label5.Location = new System.Drawing.Point(24, 99);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(68, 17);
             this.label5.TabIndex = 74;
@@ -787,7 +789,7 @@
             // 
             this.lblStaffID.AutoSize = true;
             this.lblStaffID.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStaffID.Location = new System.Drawing.Point(111, 90);
+            this.lblStaffID.Location = new System.Drawing.Point(111, 71);
             this.lblStaffID.Name = "lblStaffID";
             this.lblStaffID.Size = new System.Drawing.Size(53, 17);
             this.lblStaffID.TabIndex = 108;
@@ -797,7 +799,7 @@
             // 
             this.lblStaffRole.AutoSize = true;
             this.lblStaffRole.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStaffRole.Location = new System.Drawing.Point(111, 118);
+            this.lblStaffRole.Location = new System.Drawing.Point(111, 99);
             this.lblStaffRole.Name = "lblStaffRole";
             this.lblStaffRole.Size = new System.Drawing.Size(68, 17);
             this.lblStaffRole.TabIndex = 109;
@@ -1129,12 +1131,34 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // lblStartTime
+            // 
+            this.lblStartTime.AutoSize = true;
+            this.lblStartTime.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStartTime.Location = new System.Drawing.Point(111, 126);
+            this.lblStartTime.Name = "lblStartTime";
+            this.lblStartTime.Size = new System.Drawing.Size(70, 17);
+            this.lblStartTime.TabIndex = 137;
+            this.lblStartTime.Text = "Start Time";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(24, 126);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(70, 17);
+            this.label6.TabIndex = 136;
+            this.label6.Text = "Start Time";
+            // 
             // CentralDeskView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(781, 512);
+            this.Controls.Add(this.lblStartTime);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
@@ -1314,5 +1338,7 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label lblStartTime;
+        private System.Windows.Forms.Label label6;
     }
 }

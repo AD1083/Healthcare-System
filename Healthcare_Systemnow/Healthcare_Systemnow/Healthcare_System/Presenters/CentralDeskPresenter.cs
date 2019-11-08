@@ -51,7 +51,7 @@ namespace Healthcare_System.Presenters
             
             Patient patient = _simulator.Patients.ElementAt(roomNumber - 1);
 
-            var patientModulePresenter = new PatientModuleViewPresenter(patient, new PatientModuleView());
+            var patientModulePresenter = new PatientModuleViewPresenter(patient, new PatientModuleView(), _simulator);
             patientModulePresenter.Run();
         }
 
@@ -60,7 +60,35 @@ namespace Healthcare_System.Presenters
             _view.StaffID = _staff.StaffID;
             _view.StaffName = $"{_staff.FirstName} {_staff.LastName}";
             _view.StaffRole = _staff.Role;
-            //start time label
+            _view.StartTime = _staff.Registration.StartTime.Substring(11); //show time only
+            //Load patients data
+            _view.FirstNameRoom1 = _simulator.Patients.ElementAt(0).FirstName;
+            _view.FirstNameRoom2 = _simulator.Patients.ElementAt(1).FirstName;
+            _view.FirstNameRoom3 = _simulator.Patients.ElementAt(2).FirstName;
+            _view.FirstNameRoom4 = _simulator.Patients.ElementAt(3).FirstName;
+            _view.FirstNameRoom5 = _simulator.Patients.ElementAt(4).FirstName;
+            _view.FirstNameRoom6 = _simulator.Patients.ElementAt(5).FirstName;
+            _view.FirstNameRoom7 = _simulator.Patients.ElementAt(6).FirstName;
+            _view.FirstNameRoom8 = _simulator.Patients.ElementAt(7).FirstName;
+
+            _view.LastNameRoom1 = _simulator.Patients.ElementAt(0).LastName;
+            _view.LastNameRoom2 = _simulator.Patients.ElementAt(1).LastName;
+            _view.LastNameRoom3 = _simulator.Patients.ElementAt(2).LastName;
+            _view.LastNameRoom4 = _simulator.Patients.ElementAt(3).LastName;
+            _view.LastNameRoom5 = _simulator.Patients.ElementAt(4).LastName;
+            _view.LastNameRoom6 = _simulator.Patients.ElementAt(5).LastName;
+            _view.LastNameRoom7 = _simulator.Patients.ElementAt(6).LastName;
+            _view.LastNameRoom8 = _simulator.Patients.ElementAt(7).LastName;
+
+            _view.ConditionRoom1 = _simulator.Patients.ElementAt(0).Condition;
+            _view.ConditionRoom2 = _simulator.Patients.ElementAt(1).Condition;
+            _view.ConditionRoom3 = _simulator.Patients.ElementAt(2).Condition;
+            _view.ConditionRoom4 = _simulator.Patients.ElementAt(3).Condition;
+            _view.ConditionRoom5 = _simulator.Patients.ElementAt(4).Condition;
+            _view.ConditionRoom6 = _simulator.Patients.ElementAt(5).Condition;
+            _view.ConditionRoom7 = _simulator.Patients.ElementAt(6).Condition;
+            _view.ConditionRoom8 = _simulator.Patients.ElementAt(7).Condition;
+
         }
 
         public void Run()

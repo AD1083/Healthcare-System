@@ -25,6 +25,7 @@ namespace Healthcare_System.Views
         string StaffID { set; }
         string StaffRole { set; }
         string StaffName { set; }
+        string StartTime { set; }
 
 
         string FirstNameRoom1 { set; }

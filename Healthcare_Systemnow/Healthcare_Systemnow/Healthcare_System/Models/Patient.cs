@@ -16,7 +16,7 @@ namespace Healthcare_System.Models
         //used to determine if the patient has an alarm to send to the staff; true to send an alarm, false if not
         //also determines if an alarm has been rectified; through the property of AlarmRectified which returns the inverse of this boolean
         //therefore when patient alarm is true, alarm rectified is false; when patient alarm false, alarm rectified
-        private bool sendPatientAlarm; 
+        private bool sendPatientAlarm;
 
 
         //patient details - related to UI - from databases
@@ -30,6 +30,8 @@ namespace Healthcare_System.Models
         public bool AlarmRectified { get { return !sendPatientAlarm; } set { sendPatientAlarm = !sendPatientAlarm; } }
         //property returns the patient alarm to the caller
         public Alarm PatientAlarm { get { return patientAlarm; } } //this alarm will contain all messages from each module alarm 
+        public List<Module> Modules { get { return modules; } }
+
 
         public Patient()
         {
@@ -96,13 +98,15 @@ namespace Healthcare_System.Models
             //access DB for Patient table, accessing the row which matches the patient ID
             DataSet patientDetails = DatabaseConnection.Instance.GetDataSet($"SELECT * FROM Patient WHERE PatientID = {PatientID.ToString()}");
 
-            //FIX THROWS EXCEPTION !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            if (patientDetails.Tables[0].Rows.Count == 1) //ensures that there is data in the dataset 
+            {
+                //enter each row in the property data
+                FirstName = patientDetails.Tables[0].Rows[0][1].ToString();  //FirstName
+                LastName = patientDetails.Tables[0].Rows[0][2].ToString();  //LastName
+                DOB = patientDetails.Tables[0].Rows[0][3].ToString();   //DateOfBirth
+                Condition = patientDetails.Tables[0].Rows[0][5].ToString(); //Condition
+            }
 
-            //enter each row in the property data
-            //FirstName = patientDetails.Tables[0].Rows[0][1].ToString();
-            //LastName = patientDetails.Tables[0].Rows[0][2].ToString();
-            //DOB = patientDetails.Tables[0].Rows[0][3].ToString();
-            //Condition = patientDetails.Tables[0].Rows[0][5].ToString();
         }
 
     }
