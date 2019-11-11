@@ -26,8 +26,9 @@ namespace Healthcare_System.Models
         public string Condition { get; private set; }
         public string DOB { get; private set; }
 
-        //this property returns the inverse of sendPatientAlarm and sets sendPatientAlarm to its inverse
-        public bool AlarmRectified { get { return !sendPatientAlarm; } set { sendPatientAlarm = !sendPatientAlarm; } }
+        ////this property returns the inverse of sendPatientAlarm and sets sendPatientAlarm to its inverse
+        //public bool AlarmRectified { get { return !sendPatientAlarm; } set { sendPatientAlarm = !sendPatientAlarm; } }
+
         //property returns the patient alarm to the caller
         public Alarm PatientAlarm { get { return patientAlarm; } } //this alarm will contain all messages from each module alarm 
         public List<Module> Modules { get { return modules; } }
@@ -60,13 +61,18 @@ namespace Healthcare_System.Models
             //iterate through this patient's modules and determine if they have set an alarm
             foreach (Module patientModule in modules)
             {
-                //check the patient data to see if an alarm is triggered
-                Alarm moduleAlarm = patientModule.CheckPatientData();
-
-                //if an alarm is set then record the alram message
-                if (moduleAlarm.SendAlarm)
+                //check if the module's alarm has been rectified by the medical staff
+                //if the patient has been seen to, then new data and alarms can be raised by this module
+                if (patientModule.AlarmRectified)
                 {
-                    moduleMessages += moduleAlarm.AlarmMessage + "\n";
+                    //check the patient data to see if an alarm is triggered
+                    patientModule.CheckPatientData();
+                }
+
+                //if an alarm is set then record the alarm message, includes any previous unrectified alarms
+                if (patientModule.ModuleAlarm.SendAlarm)
+                {
+                    moduleMessages += patientModule.ModuleAlarm.AlarmMessage + "\n";
                     //if at least one module has an alarm, then a patient has an alarm to send to the medical staff
                     sendPatientAlarm = true;
                 }
@@ -78,11 +84,44 @@ namespace Healthcare_System.Models
             //if an alarm needs to be sent for the patient, raise the alarm
             if (sendPatientAlarm)
             {
-                RaiseAlert();
+                RaiseAlarm();
             }
         }
 
-        private void RaiseAlert()
+        //public void AccessModules()
+        //{
+        //    //reset local private variables so old state/data is no retained
+        //    patientAlarm = null;
+        //    sendPatientAlarm = false;
+
+        //    string moduleMessages = ""; //to contain messages from any alarms from this patients modules
+
+        //    //iterate through this patient's modules and determine if they have set an alarm
+        //    foreach (Module patientModule in modules)
+        //    {
+
+        //            //check the patient data to see if an alarm is triggered
+        //            Alarm moduleAlarm = patientModule.CheckPatientData();
+
+        //            //if an alarm is set then record the alram message
+        //            if (moduleAlarm.SendAlarm)
+        //            {
+        //                moduleMessages += moduleAlarm.AlarmMessage + "\n";
+        //                //if at least one module has an alarm, then a patient has an alarm to send to the medical staff
+        //                sendPatientAlarm = true;
+        //            }
+        //    }
+
+        //    //create a patient alarm which contains all the messages raised in module alarms
+        //    patientAlarm = new Alarm(moduleMessages);
+
+        //        //if an alarm needs to be sent for the patient, raise the alarm
+        //        if (sendPatientAlarm)
+        //        {
+        //            RaiseAlert();
+        //}
+
+        private void RaiseAlarm()
         {
 
             //EVENTS
