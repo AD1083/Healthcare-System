@@ -12,7 +12,6 @@ namespace Healthcare_System.Models
         private Alarm patientAlarm;
         private List<Module> modules = new List<Module>(4);
         private static int patientIDNumber = 1;
-        private
 
         //used to determine if the patient has an alarm to send to the staff; true to send an alarm, false if not
         //also determines if an alarm has been rectified; through the property of AlarmRectified which returns the inverse of this boolean
@@ -78,13 +77,14 @@ namespace Healthcare_System.Models
                     sendPatientAlarm = true;
                 }
             }
+
             //create a patient alarm which contains all the messages raised in module alarms
             patientAlarm = new Alarm(moduleMessages);
 
             //if an alarm needs to be sent for the patient, raise the alarm
             if (sendPatientAlarm)
             {
-                RaiseAlert();
+                RaiseAlarm();
             }
         }
 
@@ -121,7 +121,7 @@ namespace Healthcare_System.Models
         //            RaiseAlert();
         //}
 
-        private void RaiseAlert()
+        private void RaiseAlarm()
         {
 
             //EVENTS
