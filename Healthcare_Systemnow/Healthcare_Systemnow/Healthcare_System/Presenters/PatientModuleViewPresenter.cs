@@ -23,9 +23,7 @@ namespace Healthcare_System
             _patient = patient;
             _view = view;
             _centralDesk = centralDesk;
-            patientModuleList = _centralDesk.Patients.ElementAt(_patient.PatientID).Modules;
-
-            SetupTimer();
+            patientModuleList = _centralDesk.Patients.ElementAt(_patient.PatientID - 1).Modules;
 
             _view.LoadPatientData += () => LoadPatientData();
             _view.SetPulseRate += () => SetPulseRate(_view.LowerPulseRate, _view.UpperPulseRate);
@@ -36,22 +34,13 @@ namespace Healthcare_System
             _view.GoBack += GoBack;
         }
 
-        private void SetupTimer()
-        {
-            displayReadings = new Timer();
-            displayReadings.Interval = 1300;
-            displayReadings.AutoReset = true;
-            displayReadings.Elapsed += DisplayCurrentReading;
-            displayReadings.Start();
-        }
-
-        private void DisplayCurrentReading(object sender, ElapsedEventArgs e)
-        {
-            _view.CurPulseRate = patientModuleList.ElementAt(0).CurrentReading;
-            _view.CurBreathingRate = patientModuleList.ElementAt(1).CurrentReading;
-            _view.CurBloodPressureRate = patientModuleList.ElementAt(2).CurrentReading;
-            _view.CurTemperature = patientModuleList.ElementAt(3).CurrentReading;
-        }
+        //private void DisplayCurrentReading(object sender, ElapsedEventArgs e)
+        //{
+        //    _view.CurPulseRate = patientModuleList.ElementAt(0).CurrentReading;
+        //    _view.CurBreathingRate = patientModuleList.ElementAt(1).CurrentReading;
+        //    _view.CurBloodPressureRate = patientModuleList.ElementAt(2).CurrentReading;
+        //    _view.CurTemperature = patientModuleList.ElementAt(3).CurrentReading;
+        //}
 
         private void SetBoundaries(string lowerBoundary, string upperBoundary, int modulePosition)
         {

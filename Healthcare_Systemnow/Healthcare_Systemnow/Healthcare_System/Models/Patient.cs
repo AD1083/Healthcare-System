@@ -11,7 +11,6 @@ namespace Healthcare_System.Models
     {
         private Alarm patientAlarm;
         private List<Module> modules = new List<Module>(4);
-        private static int patientIDNumber = 1;
 
         //used to determine if the patient has an alarm to send to the staff; true to send an alarm, false if not
         //also determines if an alarm has been rectified; through the property of AlarmRectified which returns the inverse of this boolean
@@ -34,11 +33,10 @@ namespace Healthcare_System.Models
         public List<Module> Modules { get { return modules; } }
 
 
-        public Patient()
+        public Patient(int patientNumber)
         {
             //record the patient ID each time Patient instantiated
-            PatientID = patientIDNumber;
-            patientIDNumber++;
+            PatientID = patientNumber;
 
             //extracts the details about patients from the patient table in the DB
             FillPatientProperties();

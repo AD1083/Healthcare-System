@@ -38,9 +38,11 @@ namespace Healthcare_System.Presenters
         private void SignOut(object sender, EventArgs e)
         {
             _service.RecordEndTime(_staff);
-
+            _simulator.DisableTimer();
             var presenter = new LoginPresenter(new LoginView(), new LoginService(), new RegistrationService());
+           
             _view.Hide();
+           
             presenter.Run();
 
         }

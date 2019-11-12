@@ -10,10 +10,10 @@ namespace Healthcare_System.Models
     public class CentralDesk
     {
         //list of all patients in the central desk bay, private as operated on only in this class, but object accesible through the property
-        private static List<Patient> patients = new List<Patient>(8);
+        private List<Patient> patients = new List<Patient>(8);
 
         //one overall timer to be used to avoid timer threading issues
-        public static Timer patientTimer = new Timer();
+        public Timer patientTimer = new Timer();
         //property of the list of patients in the bay, publicly-accessbible for the presenters
         public List<Patient> Patients { get { return patients; } }
 
@@ -26,7 +26,7 @@ namespace Healthcare_System.Models
             for (int i = 0; i < patients.Capacity; i++)
             {
                 //create the patients and add them to the central desk list
-                Patient patient = new Patient();
+                Patient patient = new Patient(i + 1);
                 patients.Add(patient);
             }
             //setup the timer used to read data from each patient's bedside modules
