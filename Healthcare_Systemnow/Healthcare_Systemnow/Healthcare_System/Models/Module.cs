@@ -21,11 +21,8 @@ namespace Healthcare_System
         public string CurrentReading { get; private set; }
         public string ModuleName { get; } //doesn't need a set as value can be set in constructor
         public Alarm ModuleAlarm { get; private set; }
-
-        //this property returns the inverse of of send Alarm of this module's alarm property
-        //e.g. when the module alarm's send alarm is true, the property alarm rectified is false as the patient hasn't been attened to
-        //on other hand, if module alarm is false then the alarm has been rectified - patient doesn't need attending to
-        public bool AlarmRectified { get { return alarmRectified; } }
+       
+        public bool AlarmRectified { get { return alarmRectified; } set { alarmRectified = value; } }
 
         /// <summary>
         /// constructor to create the patient's bedside moudles
@@ -52,24 +49,26 @@ namespace Healthcare_System
                 //compare to boundaries and return appropriate alarm
                 if (CompareToUpperBoundary(reading)) //check for value above upper boundary
                 {
-                    ModuleAlarm = new Alarm($"Reading above {ModuleName} upper boundary!");
-                    alarmRectified = false;
+                    ModuleAlarm = new Alarm($"Reading above {ModuleName} upper boundary!", true);
+                    AlarmRectified = false;
                 }
 
-                if (CompareToLowerBoundary(reading)) //check for value below lower boundary
+                else if (CompareToLowerBoundary(reading)) //check for value below lower boundary
                 {
-                    ModuleAlarm = new Alarm($"Reading below {ModuleName} lower boundary!");
-                    alarmRectified = false;
+                    ModuleAlarm = new Alarm($"Reading below {ModuleName} lower boundary!", true);
+                    AlarmRectified = false;
                 }
                 else
                 {
                     ModuleAlarm = new Alarm(); //return a blank alarm with no message, will cause no reaction for user and ui
+                    AlarmRectified = true;
                 }
             }
             else
             {
                 //will cause the patient in CD to appear red must therefore change back upon boundaries being set
-                ModuleAlarm = new Alarm($"Attention: {ModuleName}'s boundaries not set!");
+                ModuleAlarm = new Alarm($"Attention: {ModuleName}'s boundaries not set!", false);
+                AlarmRectified = true;
             }
         }
 

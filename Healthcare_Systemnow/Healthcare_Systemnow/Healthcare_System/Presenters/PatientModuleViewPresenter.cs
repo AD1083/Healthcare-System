@@ -16,7 +16,7 @@ namespace Healthcare_System
         private readonly IPatientModuleView _view;
         private readonly CentralDesk _centralDesk;
         private List<Module> patientModuleList;
-        private Timer displayReadings;
+        private Alarm patientAlarm;
 
         public PatientModuleViewPresenter(Patient patient, IPatientModuleView view, CentralDesk centralDesk)
         {
@@ -24,6 +24,7 @@ namespace Healthcare_System
             _view = view;
             _centralDesk = centralDesk;
             patientModuleList = _centralDesk.Patients.ElementAt(_patient.PatientID - 1).Modules;
+            
 
             _view.LoadPatientData += () => LoadPatientData();
             _view.SetPulseRate += () => SetPulseRate(_view.LowerPulseRate, _view.UpperPulseRate);
@@ -32,6 +33,39 @@ namespace Healthcare_System
             _view.SetTemperature += () => SetTemperature(_view.LowerTemperature, _view.UpperTemperature);
 
             _view.GoBack += GoBack;
+            _view.UpdatePatientModuleData += UpdatePatientModuleData;
+
+            //_view.RectifyAlarm += _view_RectifyAlarm;
+        }
+
+        private void _view_RectifyAlarm()
+        {
+            patientModuleList.ElementAt(0).AlarmRectified = true;
+            patientModuleList.ElementAt(1).AlarmRectified = true;
+            patientModuleList.ElementAt(2).AlarmRectified = true;
+            patientModuleList.ElementAt(3).AlarmRectified = true;
+            _view.BtnRectify.Hide();
+        }
+
+        private void UpdatePatientModuleData(object sender, EventArgs e)
+        {            
+            _view.CurPulseRate = patientModuleList.ElementAt(0).CurrentReading;
+            _view.CurBreathingRate = patientModuleList.ElementAt(1).CurrentReading;
+            _view.CurBloodPressureRate = patientModuleList.ElementAt(2).CurrentReading;
+            _view.CurTemperature = patientModuleList.ElementAt(3).CurrentReading;
+
+            patientAlarm = _centralDesk.Patients.ElementAt(_patient.PatientID - 1).PatientAlarm;
+            if (patientAlarm != null)
+            {
+                _view.AlarmMessage = patientAlarm.AlarmMessage;
+            }
+
+            //show rectify button
+            if (!_patient.AlarmRectified)
+            {
+                _view.BtnRectify.Show();
+                _view.RectifyAlarm += _view_RectifyAlarm;
+            }
         }
 
         //private void DisplayCurrentReading(object sender, ElapsedEventArgs e)
@@ -85,6 +119,15 @@ namespace Healthcare_System
             _view.LastName = _patient.LastName;
             _view.DOB = _patient.DOB.Substring(0, 10);
             _view.Condition = _patient.Condition;
+
+            _view.UpperPulseRate = patientModuleList.ElementAt(0).UpperBoundary.ToString();
+            _view.UpperBreathingRate = patientModuleList.ElementAt(1).UpperBoundary.ToString();
+            _view.UpperBloodPressure = patientModuleList.ElementAt(2).UpperBoundary.ToString();
+            _view.UpperTemperature = patientModuleList.ElementAt(3).UpperBoundary.ToString();
+            _view.LowerPulseRate = patientModuleList.ElementAt(0).LowerBoundary.ToString();
+            _view.LowerBreathingRate = patientModuleList.ElementAt(1).LowerBoundary.ToString();
+            _view.LowerBloodPressure = patientModuleList.ElementAt(2).LowerBoundary.ToString();
+            _view.LowerTemperature = patientModuleList.ElementAt(3).LowerBoundary.ToString();
         }
 
         public void Run()

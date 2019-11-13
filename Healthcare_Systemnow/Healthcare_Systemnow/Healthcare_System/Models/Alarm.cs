@@ -35,11 +35,12 @@ namespace Healthcare_System
         /// sets the SendAlarm property to true
         /// </summary>
         /// <param name="alarmMessage">the message from the module why the alarm was triggered</param>
-        public Alarm(string alarmMessage)
+        public Alarm(string alarmMessage, bool sendAlarm)
         {
             AlarmMessage = alarmMessage;
             AlarmStartTime = DateTime.UtcNow;
-            SendAlarm = true;
+
+            SendAlarm = sendAlarm;
         }
     }
 }

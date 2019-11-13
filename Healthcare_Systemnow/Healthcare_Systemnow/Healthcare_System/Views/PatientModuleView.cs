@@ -30,6 +30,7 @@ namespace Healthcare_System.Views
 
         }
         // properties
+        public Button BtnRectify { get { return btnRectify; } }
         public string FirstName { get { return lblFirstName.Text; } set { lblFirstName.Text = value; } }
         public string LastName { get { return lblLastName.Text; } set { lblLastName.Text = value; } }
         public string DOB { get { return lblDOB.Text; } set { lblDOB.Text = value; } }
@@ -56,6 +57,7 @@ namespace Healthcare_System.Views
         public event Action RectifyAlarm;
         public event Action LoadPatientData;
         public event EventHandler GoBack;
+        public event EventHandler UpdatePatientModuleData;
         private void BtnBack_Click(object sender, EventArgs e)
         {
             if (GoBack != null) GoBack(this, EventArgs.Empty);
@@ -73,7 +75,7 @@ namespace Healthcare_System.Views
 
         private void timer_Tick(object sender, EventArgs e)
         {
-            //timer evemnt from ui to trigger the read of current reading of modules
+            if (UpdatePatientModuleData != null) UpdatePatientModuleData(this, EventArgs.Empty);
         }
     }
 }

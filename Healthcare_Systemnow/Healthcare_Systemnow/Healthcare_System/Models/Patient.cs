@@ -25,8 +25,7 @@ namespace Healthcare_System.Models
         public string Condition { get; private set; }
         public string DOB { get; private set; }
 
-        ////this property returns the inverse of sendPatientAlarm and sets sendPatientAlarm to its inverse
-        //public bool AlarmRectified { get { return !sendPatientAlarm; } set { sendPatientAlarm = !sendPatientAlarm; } }
+        public bool AlarmRectified { get { return !sendPatientAlarm; } set { ModuleRectified(); } }
 
         //property returns the patient alarm to the caller
         public Alarm PatientAlarm { get { return patientAlarm; } } //this alarm will contain all messages from each module alarm 
@@ -67,17 +66,27 @@ namespace Healthcare_System.Models
                     patientModule.CheckPatientData();
                 }
 
+                moduleMessages += patientModule.ModuleAlarm.AlarmMessage + "\n";
+
                 //if an alarm is set then record the alarm message, includes any previous unrectified alarms
                 if (patientModule.ModuleAlarm.SendAlarm)
                 {
-                    moduleMessages += patientModule.ModuleAlarm.AlarmMessage + "\n";
                     //if at least one module has an alarm, then a patient has an alarm to send to the medical staff
                     sendPatientAlarm = true;
                 }
             }
 
-            //create a patient alarm which contains all the messages raised in module alarms
-            patientAlarm = new Alarm(moduleMessages);
+            if (sendPatientAlarm)
+            {
+                //create a patient alarm which contains all the messages raised in module alarms
+                patientAlarm = new Alarm(moduleMessages, true);
+            }
+            else
+            {
+                //create a patient alarm which contains all the messages raised in module alarms
+                patientAlarm = new Alarm(moduleMessages, false);
+            }
+
 
             //if an alarm needs to be sent for the patient, raise the alarm
             if (sendPatientAlarm)
@@ -118,6 +127,14 @@ namespace Healthcare_System.Models
         //        {
         //            RaiseAlert();
         //}
+
+        private void ModuleRectified()
+        {
+            foreach (Module patientModule in modules)
+            {
+                patientModule.AlarmRectified = true;
+            }
+        }
 
         private void RaiseAlarm()
         {

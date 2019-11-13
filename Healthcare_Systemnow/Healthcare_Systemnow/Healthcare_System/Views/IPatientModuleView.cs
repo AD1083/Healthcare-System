@@ -8,7 +8,7 @@ namespace Healthcare_System
 {
     public interface IPatientModuleView
     {
-
+        System.Windows.Forms.Button BtnRectify { get; }
         string FirstName { get; set; }
         string LastName { get; set; }
         string DOB { get; set; }
@@ -34,6 +34,7 @@ namespace Healthcare_System
         event Action SetBloodPressure;
         event Action SetTemperature;
         event EventHandler GoBack;
+        event EventHandler UpdatePatientModuleData;
 
         void Show();
         void Hide();
