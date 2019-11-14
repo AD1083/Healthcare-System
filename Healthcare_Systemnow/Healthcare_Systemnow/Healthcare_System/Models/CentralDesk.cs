@@ -42,27 +42,22 @@ namespace Healthcare_System.Models
             patientTimer.Stop();
         }
 
-        //OLD
-        //public void RestartTime() //used for when timer only restarts when all patients recified
-        //{
-        //    bool restartTimer = false;
+        public List<int> ChangePanelColour()
+        {
+            DisableTimer();
+            List<int> panelsToChange = new List<int>();
+            for (int i = 0; i < Patients.Capacity; i++)
+            {
+                Patient patient = Patients.ElementAt(i);
+                if (patient.PatientAlarm.SendAlarm)
+                {
+                    //add patient to list that needs a panel change
+                    panelsToChange.Add(i + 1);
+                }
+            }
 
-        //    //check if each patient's alarm has been rectified
-        //    foreach(Patient patient in patients)
-        //    {
-        //        restartTimer = patient.AlarmRectified;
-        //        if (patient.AlarmRectified)
-        //        {
-        //            patient.AlarmRectified = true; //CHECK if works since set {} has no external value - should inverse the sendPatientAlarm private field
-        //        }
-        //    }
-
-        //    //only if all patient's alarms rectified should the timer start again
-        //    if (restartTimer)
-        //    {
-        //        patientTimer.Start();
-        //    }
-        //}
+            return panelsToChange;
+        }
 
         /// <summary>
         /// private method to setup and initialise the timer
@@ -95,20 +90,5 @@ namespace Healthcare_System.Models
             //restart the timer
             patientTimer.Start();
         }
-
-        //OLD
-        //private void ReadCheckModuleData(object sender, ElapsedEventArgs e)
-        //{
-        //    patientTimer.Stop();
-
-        //    //go through each patient and each patients modules
-        //    //call on patient to access its 4 modules to 'read' their monitoring data
-        //    foreach (Patient patient in patients)
-        //    {
-        //        patient.AccessModules();
-        //    }
-
-        //    //timer can only restart after every patient alarm rectified
-        //}
     }
 }

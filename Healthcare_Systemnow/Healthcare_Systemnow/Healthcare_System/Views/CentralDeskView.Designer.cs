@@ -76,11 +76,11 @@
             this.lbl3 = new System.Windows.Forms.Label();
             this.lbl2 = new System.Windows.Forms.Label();
             this.lbl1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.pnl1 = new System.Windows.Forms.Panel();
+            this.pnl2 = new System.Windows.Forms.Panel();
+            this.pnl6 = new System.Windows.Forms.Panel();
+            this.pnl4 = new System.Windows.Forms.Panel();
+            this.pnl3 = new System.Windows.Forms.Panel();
             this.btnRoom3 = new Bunifu.Framework.UI.BunifuTileButton();
             this.lblStaffID = new System.Windows.Forms.Label();
             this.lblStaffRole = new System.Windows.Forms.Label();
@@ -109,9 +109,9 @@
             this.lblConditionRoom4 = new System.Windows.Forms.Label();
             this.lblSecondNameRoom4 = new System.Windows.Forms.Label();
             this.lblFirstNameRoom4 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
+            this.pnl5 = new System.Windows.Forms.Panel();
+            this.pnl7 = new System.Windows.Forms.Panel();
+            this.pnl8 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lblStartTime = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -726,45 +726,45 @@
             this.lbl1.TabIndex = 101;
             this.lbl1.Text = "First Name";
             // 
-            // panel1
+            // pnl1
             // 
-            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.Location = new System.Drawing.Point(15, 163);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(190, 10);
-            this.panel1.TabIndex = 104;
+            this.pnl1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnl1.Location = new System.Drawing.Point(15, 163);
+            this.pnl1.Name = "pnl1";
+            this.pnl1.Size = new System.Drawing.Size(190, 10);
+            this.pnl1.TabIndex = 104;
             // 
-            // panel2
+            // pnl2
             // 
-            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel2.Location = new System.Drawing.Point(210, 163);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(181, 10);
-            this.panel2.TabIndex = 105;
+            this.pnl2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnl2.Location = new System.Drawing.Point(210, 163);
+            this.pnl2.Name = "pnl2";
+            this.pnl2.Size = new System.Drawing.Size(181, 10);
+            this.pnl2.TabIndex = 105;
             // 
-            // panel3
+            // pnl6
             // 
-            this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel3.Location = new System.Drawing.Point(210, 331);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(181, 10);
-            this.panel3.TabIndex = 106;
+            this.pnl6.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnl6.Location = new System.Drawing.Point(210, 331);
+            this.pnl6.Name = "pnl6";
+            this.pnl6.Size = new System.Drawing.Size(181, 10);
+            this.pnl6.TabIndex = 106;
             // 
-            // panel4
+            // pnl4
             // 
-            this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel4.Location = new System.Drawing.Point(583, 163);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(182, 10);
-            this.panel4.TabIndex = 106;
+            this.pnl4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnl4.Location = new System.Drawing.Point(583, 163);
+            this.pnl4.Name = "pnl4";
+            this.pnl4.Size = new System.Drawing.Size(182, 10);
+            this.pnl4.TabIndex = 106;
             // 
-            // panel5
+            // pnl3
             // 
-            this.panel5.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel5.Location = new System.Drawing.Point(396, 163);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(182, 10);
-            this.panel5.TabIndex = 106;
+            this.pnl3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnl3.Location = new System.Drawing.Point(396, 163);
+            this.pnl3.Name = "pnl3";
+            this.pnl3.Size = new System.Drawing.Size(182, 10);
+            this.pnl3.TabIndex = 106;
             // 
             // btnRoom3
             // 
@@ -1103,32 +1103,33 @@
             this.lblFirstNameRoom4.TabIndex = 130;
             this.lblFirstNameRoom4.Text = "First Name";
             // 
-            // panel6
+            // pnl5
             // 
-            this.panel6.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel6.Location = new System.Drawing.Point(15, 331);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(190, 10);
-            this.panel6.TabIndex = 107;
+            this.pnl5.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnl5.Location = new System.Drawing.Point(15, 331);
+            this.pnl5.Name = "pnl5";
+            this.pnl5.Size = new System.Drawing.Size(190, 10);
+            this.pnl5.TabIndex = 107;
             // 
-            // panel7
+            // pnl7
             // 
-            this.panel7.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel7.Location = new System.Drawing.Point(396, 331);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(181, 10);
-            this.panel7.TabIndex = 105;
+            this.pnl7.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnl7.Location = new System.Drawing.Point(396, 331);
+            this.pnl7.Name = "pnl7";
+            this.pnl7.Size = new System.Drawing.Size(181, 10);
+            this.pnl7.TabIndex = 105;
             // 
-            // panel8
+            // pnl8
             // 
-            this.panel8.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel8.Location = new System.Drawing.Point(583, 331);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(182, 10);
-            this.panel8.TabIndex = 107;
+            this.pnl8.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnl8.Location = new System.Drawing.Point(583, 331);
+            this.pnl8.Name = "pnl8";
+            this.pnl8.Size = new System.Drawing.Size(182, 10);
+            this.pnl8.TabIndex = 107;
             // 
             // timer1
             // 
+            this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // lblStartTime
@@ -1159,9 +1160,9 @@
             this.ClientSize = new System.Drawing.Size(781, 512);
             this.Controls.Add(this.lblStartTime);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.panel8);
-            this.Controls.Add(this.panel7);
-            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.pnl8);
+            this.Controls.Add(this.pnl7);
+            this.Controls.Add(this.pnl5);
             this.Controls.Add(this.lblConditionRoom8);
             this.Controls.Add(this.lblSecondNameRoom8);
             this.Controls.Add(this.lblFirstNameRoom8);
@@ -1189,16 +1190,16 @@
             this.Controls.Add(this.lblStaffName);
             this.Controls.Add(this.lblStaffRole);
             this.Controls.Add(this.lblStaffID);
-            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.pnl3);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.lblRoom3);
             this.Controls.Add(this.btnRoom3);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnl4);
+            this.Controls.Add(this.pnl6);
+            this.Controls.Add(this.pnl2);
+            this.Controls.Add(this.pnl1);
             this.Controls.Add(this.lbl3);
             this.Controls.Add(this.lbl2);
             this.Controls.Add(this.lbl1);
@@ -1301,11 +1302,11 @@
         private System.Windows.Forms.Label lbl3;
         private System.Windows.Forms.Label lbl2;
         private System.Windows.Forms.Label lbl1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel pnl1;
+        private System.Windows.Forms.Panel pnl2;
+        private System.Windows.Forms.Panel pnl6;
+        private System.Windows.Forms.Panel pnl4;
+        private System.Windows.Forms.Panel pnl3;
         private Bunifu.Framework.UI.BunifuTileButton btnRoom3;
         private System.Windows.Forms.Label lblStaffID;
         private System.Windows.Forms.Label lblStaffRole;
@@ -1334,9 +1335,9 @@
         private System.Windows.Forms.Label lblConditionRoom4;
         private System.Windows.Forms.Label lblSecondNameRoom4;
         private System.Windows.Forms.Label lblFirstNameRoom4;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel pnl5;
+        private System.Windows.Forms.Panel pnl7;
+        private System.Windows.Forms.Panel pnl8;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lblStartTime;
         private System.Windows.Forms.Label label6;

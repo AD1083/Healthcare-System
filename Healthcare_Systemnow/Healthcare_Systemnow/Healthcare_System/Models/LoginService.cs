@@ -20,7 +20,8 @@ namespace Healthcare_System.Models
         {
             passwordEncryption = new PasswordEncryption(staff.Password);
             string encryptedPassword = passwordEncryption.EncryptedPassword;
-            DataSet dsStaff = DatabaseConnection.Instance.GetDataSet("SELECT * FROM Staff WHERE StaffID = '" + staff.StaffID + "' AND Password = '" + encryptedPassword + "'");
+            Int32.TryParse(staff.StaffID, out int staffID);
+            DataSet dsStaff = DatabaseConnection.Instance.GetDataSet("SELECT * FROM Staff WHERE StaffID = '" + staffID + "' AND Password = '" + encryptedPassword + "'");
             
 
             DataTable table = dsStaff.Tables[0];

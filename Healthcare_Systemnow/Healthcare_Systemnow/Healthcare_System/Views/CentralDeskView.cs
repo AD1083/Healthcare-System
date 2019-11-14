@@ -77,6 +77,14 @@ namespace Healthcare_System
         public string LastNameRoom8 { set { lblSecondNameRoom8.Text = value; } }
         public string ConditionRoom8 { set { lblConditionRoom8.Text = value; } }
         public string Room8 { get { return lblRoom8.Text; } }
+        public Panel PanelRoom1 { get { return pnl1; } }
+        public Panel PanelRoom2 { get { return pnl2; } }
+        public Panel PanelRoom3 { get { return pnl3; } }
+        public Panel PanelRoom4 { get { return pnl4; } }
+        public Panel PanelRoom5 { get { return pnl5; } }
+        public Panel PanelRoom6 { get { return pnl6; } }
+        public Panel PanelRoom7 { get { return pnl7; } }
+        public Panel PanelRoom8 { get { return pnl8; } }
         private void BtnSignOut_Click(object sender, EventArgs e)
         {
             if (SignOut != null) SignOut(this, EventArgs.Empty);
@@ -92,6 +100,7 @@ namespace Healthcare_System
         public event Action ViewPatient6;
         public event Action ViewPatient7;
         public event Action ViewPatient8;
+        public event EventHandler ChangePanelColour;
         public new void Show()
         {
             this.ShowDialog();
@@ -119,6 +128,7 @@ namespace Healthcare_System
         {
             DateTime dateTime = DateTime.Now;
             this.lblTime.Text = dateTime.ToString();
+            if (ChangePanelColour != null) ChangePanelColour(this, EventArgs.Empty);
         }
     }
 }

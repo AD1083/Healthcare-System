@@ -17,12 +17,16 @@ namespace Healthcare_System
         private readonly CentralDesk _centralDesk;
         private List<Module> patientModuleList;
         private Alarm patientAlarm;
+        private AlarmRegistrationService _service;
+        private Staff _staff;
 
-        public PatientModuleViewPresenter(Patient patient, IPatientModuleView view, CentralDesk centralDesk)
+        public PatientModuleViewPresenter(Patient patient, IPatientModuleView view, CentralDesk centralDesk, Staff staff, AlarmRegistrationService service)
         {
             _patient = patient;
             _view = view;
             _centralDesk = centralDesk;
+            _staff = staff;
+            _service = service;
             patientModuleList = _centralDesk.Patients.ElementAt(_patient.PatientID - 1).Modules;
             
 
@@ -45,6 +49,8 @@ namespace Healthcare_System
             patientModuleList.ElementAt(2).AlarmRectified = true;
             patientModuleList.ElementAt(3).AlarmRectified = true;
             _view.BtnRectify.Hide();
+            //register alarm data
+            _service.RegisterAlarmData(_staff, patientAlarm);
         }
 
         private void UpdatePatientModuleData(object sender, EventArgs e)

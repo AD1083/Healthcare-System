@@ -18,6 +18,7 @@ namespace Healthcare_System
         public string AlarmMessage { get; }
         public bool SendAlarm { get; }
         public DateTime AlarmStartTime { get; }
+        public DateTime AlarmEndTime { get; set; }
 
         /// <summary>
         /// constructor for a blank/false alarm

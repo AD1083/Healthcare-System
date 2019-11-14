@@ -86,47 +86,7 @@ namespace Healthcare_System.Models
                 //create a patient alarm which contains all the messages raised in module alarms
                 patientAlarm = new Alarm(moduleMessages, false);
             }
-
-
-            //if an alarm needs to be sent for the patient, raise the alarm
-            if (sendPatientAlarm)
-            {
-                RaiseAlarm();
-            }
         }
-
-        //public void AccessModules()
-        //{
-        //    //reset local private variables so old state/data is no retained
-        //    patientAlarm = null;
-        //    sendPatientAlarm = false;
-
-        //    string moduleMessages = ""; //to contain messages from any alarms from this patients modules
-
-        //    //iterate through this patient's modules and determine if they have set an alarm
-        //    foreach (Module patientModule in modules)
-        //    {
-
-        //            //check the patient data to see if an alarm is triggered
-        //            Alarm moduleAlarm = patientModule.CheckPatientData();
-
-        //            //if an alarm is set then record the alram message
-        //            if (moduleAlarm.SendAlarm)
-        //            {
-        //                moduleMessages += moduleAlarm.AlarmMessage + "\n";
-        //                //if at least one module has an alarm, then a patient has an alarm to send to the medical staff
-        //                sendPatientAlarm = true;
-        //            }
-        //    }
-
-        //    //create a patient alarm which contains all the messages raised in module alarms
-        //    patientAlarm = new Alarm(moduleMessages);
-
-        //        //if an alarm needs to be sent for the patient, raise the alarm
-        //        if (sendPatientAlarm)
-        //        {
-        //            RaiseAlert();
-        //}
 
         private void ModuleRectified()
         {
@@ -134,17 +94,6 @@ namespace Healthcare_System.Models
             {
                 patientModule.AlarmRectified = true;
             }
-        }
-
-        private void RaiseAlarm()
-        {
-
-            //EVENTS
-            //show rectify button on PatientModuleView
-            //display output of the patientAlarm - ie all the messages from each patient's module on their view
-            //change indicator to red on central desk
-
-            //centraldesk.showRectify
         }
 
         private void FillPatientProperties()

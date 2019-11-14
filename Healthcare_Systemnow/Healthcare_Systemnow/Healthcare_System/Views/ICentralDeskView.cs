@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,6 +20,8 @@ namespace Healthcare_System.Views
         
         event EventHandler SignOut;
         event EventHandler StartSimulation;
+        event EventHandler ChangePanelColour;
+
         void Show();
         void Hide();
 
@@ -67,6 +70,15 @@ namespace Healthcare_System.Views
         string LastNameRoom8 { set; }
         string ConditionRoom8 { set; }
         string Room8 { get; }
+
+        Panel PanelRoom1 { get; }
+        Panel PanelRoom2 { get; }
+        Panel PanelRoom3 { get; }
+        Panel PanelRoom4 { get; }
+        Panel PanelRoom5 { get; }
+        Panel PanelRoom6 { get; }
+        Panel PanelRoom7 { get; }
+        Panel PanelRoom8 { get; }
 
     }
 }
