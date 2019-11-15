@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,7 +30,8 @@ namespace Healthcare_System
             btnRoom8.Click += (sender, args) => Invoke(ViewPatient8);
 
 
-            timer1.Start();
+            //timer1.Start();
+            
         }
         //properties
 
@@ -77,14 +79,16 @@ namespace Healthcare_System
         public string LastNameRoom8 { set { lblSecondNameRoom8.Text = value; } }
         public string ConditionRoom8 { set { lblConditionRoom8.Text = value; } }
         public string Room8 { get { return lblRoom8.Text; } }
-        public Panel PanelRoom1 { get { return pnl1; } }
-        public Panel PanelRoom2 { get { return pnl2; } }
-        public Panel PanelRoom3 { get { return pnl3; } }
-        public Panel PanelRoom4 { get { return pnl4; } }
-        public Panel PanelRoom5 { get { return pnl5; } }
-        public Panel PanelRoom6 { get { return pnl6; } }
-        public Panel PanelRoom7 { get { return pnl7; } }
-        public Panel PanelRoom8 { get { return pnl8; } }
+       
+
+        public Color PanelRoom1Color { get { return pnl1.BackColor; } set { pnl1.BackColor = value; } }
+        public Color PanelRoom2Color { get { return pnl2.BackColor; } set { pnl2.BackColor = value; } }
+        public Color PanelRoom3Color { get { return pnl3.BackColor; } set { pnl3.BackColor = value; } }
+        public Color PanelRoom4Color { get { return pnl4.BackColor; } set { pnl4.BackColor = value; } }
+        public Color PanelRoom5Color { get { return pnl5.BackColor; } set { pnl5.BackColor = value; } }
+        public Color PanelRoom6Color { get { return pnl6.BackColor; } set { pnl6.BackColor = value; } }
+        public Color PanelRoom7Color { get { return pnl7.BackColor; } set { pnl7.BackColor = value; } }
+        public Color PanelRoom8Color { get { return pnl8.BackColor; } set { pnl8.BackColor = value; } }
         private void BtnSignOut_Click(object sender, EventArgs e)
         {
             if (SignOut != null) SignOut(this, EventArgs.Empty);
@@ -129,6 +133,9 @@ namespace Healthcare_System
             DateTime dateTime = DateTime.Now;
             this.lblTime.Text = dateTime.ToString();
             if (ChangePanelColour != null) ChangePanelColour(this, EventArgs.Empty);
+          
         }
+
+       
     }
 }

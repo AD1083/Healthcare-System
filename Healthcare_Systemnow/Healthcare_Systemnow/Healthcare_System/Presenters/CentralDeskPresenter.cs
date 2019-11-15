@@ -40,9 +40,12 @@ namespace Healthcare_System.Presenters
         {
             List<int> panelsToChange = new List<int>();
             panelsToChange = _centralDesk.ChangePanelColour();
-            foreach (int i in panelsToChange)
+            if (panelsToChange != null || panelsToChange.Count == 0)
             {
-                PanelColourChange(i);
+                foreach (int i in panelsToChange)
+                {
+                    PanelColourChange(i);
+                }
             }
         }
 
@@ -51,28 +54,28 @@ namespace Healthcare_System.Presenters
             switch(panelNum)
             {
                 case 1:
-                    _view.PanelRoom1.BackColor = System.Drawing.Color.Red;
+                    _view.PanelRoom1Color = System.Drawing.Color.Red;
                     break;
-                case 22:
-                    _view.PanelRoom2.BackColor = System.Drawing.Color.Red;
+                case 2:
+                    _view.PanelRoom2Color = System.Drawing.Color.Red;
                     break;
                 case 3:
-                    _view.PanelRoom3.BackColor = System.Drawing.Color.Red;
+                    _view.PanelRoom3Color = System.Drawing.Color.Red;
                     break;
                 case 4:
-                    _view.PanelRoom4.BackColor = System.Drawing.Color.Red;
+                    _view.PanelRoom4Color = System.Drawing.Color.Red;
                     break;
                 case 5:
-                    _view.PanelRoom5.BackColor = System.Drawing.Color.Red;
+                    _view.PanelRoom5Color = System.Drawing.Color.Red;
                     break;
                 case 6:
-                    _view.PanelRoom6.BackColor = System.Drawing.Color.Red;
+                    _view.PanelRoom6Color = System.Drawing.Color.Red;
                     break;
                 case 7:
-                    _view.PanelRoom7.BackColor = System.Drawing.Color.Red;
+                    _view.PanelRoom7Color = System.Drawing.Color.Red;
                     break;
                 case 8:
-                    _view.PanelRoom8.BackColor = System.Drawing.Color.Red;
+                    _view.PanelRoom8Color = System.Drawing.Color.Red;
                     break;
             }
         }

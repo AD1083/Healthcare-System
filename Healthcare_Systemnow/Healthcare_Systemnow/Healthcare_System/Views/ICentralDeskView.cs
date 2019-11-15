@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Windows.Forms;
+using System.Drawing;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -71,14 +71,14 @@ namespace Healthcare_System.Views
         string ConditionRoom8 { set; }
         string Room8 { get; }
 
-        Panel PanelRoom1 { get; }
-        Panel PanelRoom2 { get; }
-        Panel PanelRoom3 { get; }
-        Panel PanelRoom4 { get; }
-        Panel PanelRoom5 { get; }
-        Panel PanelRoom6 { get; }
-        Panel PanelRoom7 { get; }
-        Panel PanelRoom8 { get; }
+        Color PanelRoom1Color { get; set; }
+        Color PanelRoom2Color { get; set; }
+        Color PanelRoom3Color { get; set; }
+        Color PanelRoom4Color { get; set; }
+        Color PanelRoom5Color { get; set; }
+        Color PanelRoom6Color { get; set; }
+        Color PanelRoom7Color { get; set; }
+        Color PanelRoom8Color { get; set; }
 
     }
 }

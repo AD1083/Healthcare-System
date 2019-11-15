@@ -17,8 +17,8 @@ namespace Healthcare_System
         //properties of an alarm
         public string AlarmMessage { get; }
         public bool SendAlarm { get; }
-        public DateTime AlarmStartTime { get; }
-        public DateTime AlarmEndTime { get; set; }
+        public string AlarmStartTime { get; }
+        public string AlarmEndTime { get; set; }
 
         /// <summary>
         /// constructor for a blank/false alarm
@@ -39,7 +39,7 @@ namespace Healthcare_System
         public Alarm(string alarmMessage, bool sendAlarm)
         {
             AlarmMessage = alarmMessage;
-            AlarmStartTime = DateTime.UtcNow;
+            AlarmStartTime = DateTime.UtcNow.ToString();
 
             SendAlarm = sendAlarm;
         }

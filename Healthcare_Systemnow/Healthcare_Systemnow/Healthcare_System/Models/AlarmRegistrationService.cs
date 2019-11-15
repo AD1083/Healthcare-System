@@ -10,7 +10,7 @@ namespace Healthcare_System.Models
     {
         public void RegisterAlarmData(Staff staff, Alarm alarm)
         {
-            alarm.AlarmEndTime = DateTime.UtcNow;
+            alarm.AlarmEndTime = DateTime.UtcNow.ToString();
             Int32.TryParse(staff.StaffID, out int staffID);
             DatabaseConnection.Instance.InsertData($"INSERT INTO Alarms (StaffID, Alarm_StartTime, Alarm_EndTime) " +
                $"VALUES ({staffID}, '{alarm.AlarmStartTime}', '{alarm.AlarmEndTime}')");

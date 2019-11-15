@@ -11,6 +11,7 @@ namespace Healthcare_System.Models
     {
         //list of all patients in the central desk bay, private as operated on only in this class, but object accesible through the property
         private List<Patient> patients = new List<Patient>(8);
+        private bool patientListSetup = false;
 
         //one overall timer to be used to avoid timer threading issues
         public Timer patientTimer = new Timer();
@@ -30,7 +31,9 @@ namespace Healthcare_System.Models
                 patients.Add(patient);
             }
             //setup the timer used to read data from each patient's bedside modules
+            patientListSetup = true;
             SetupTimer();
+            
         }
 
         /// <summary>
@@ -44,18 +47,24 @@ namespace Healthcare_System.Models
 
         public List<int> ChangePanelColour()
         {
-            DisableTimer();
-            List<int> panelsToChange = new List<int>();
-            for (int i = 0; i < Patients.Capacity; i++)
+            List<int> panelsToChange = null;
+            if (patientListSetup)
             {
-                Patient patient = Patients.ElementAt(i);
-                if (patient.PatientAlarm.SendAlarm)
+                DisableTimer();
+                panelsToChange = new List<int>();
+                for (int i = 0; i < Patients.Capacity; i++)
                 {
-                    //add patient to list that needs a panel change
-                    panelsToChange.Add(i + 1);
+                    Patient patient = Patients.ElementAt(i);
+                    if (patient.PatientAlarm != null)
+                    {
+                        if (patient.PatientAlarm.SendAlarm)
+                        {
+                            //add patient to list that needs a panel change
+                            panelsToChange.Add(i + 1);
+                        }
+                    }
                 }
             }
-
             return panelsToChange;
         }
 

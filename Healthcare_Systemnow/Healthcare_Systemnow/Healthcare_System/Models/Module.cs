@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Timers;
 
-namespace Healthcare_System
+namespace Healthcare_System.Models
 {
     public class Module
     {
-        private readonly Random GeneratePatientData = new Random();
+        private readonly ConsistentRandom consistentRandom = new ConsistentRandom();
         private bool alarmRectified = true;
 
         //boundaries to be set by the PateintModuleViewPresenter when staff enter module boundaries on UI
@@ -78,10 +78,10 @@ namespace Healthcare_System
         /// <returns>interger reading for the module</returns>
         private int GenerateReading()
         {
-            //create a random reading; extends the boundary for generating values by 10
-            int reading = GeneratePatientData.Next(LowerBoundary - 10, UpperBoundary + 11); //Random.Next(inclusive, exclusive)
-            //return the result
-            return reading;
+
+            consistentRandom.UpperBoundary = UpperBoundary;
+            consistentRandom.LowerBoundary = LowerBoundary;
+            return consistentRandom.GenerateValue();
         }
 
         /// <summary>
