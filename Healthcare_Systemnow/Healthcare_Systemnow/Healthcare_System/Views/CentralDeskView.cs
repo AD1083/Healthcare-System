@@ -3,7 +3,6 @@ using System.Drawing;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,10 +28,8 @@ namespace Healthcare_System
             btnRoom7.Click += (sender, args) => Invoke(ViewPatient7);
             btnRoom8.Click += (sender, args) => Invoke(ViewPatient8);
 
-
-            //timer1.Start();
-            
         }
+
         //properties
 
         public string StaffID { set { lblStaffID.Text = value; } }
@@ -79,22 +76,21 @@ namespace Healthcare_System
         public string LastNameRoom8 { set { lblSecondNameRoom8.Text = value; } }
         public string ConditionRoom8 { set { lblConditionRoom8.Text = value; } }
         public string Room8 { get { return lblRoom8.Text; } }
-       
 
-        public Color PanelRoom1Color { get { return pnl1.BackColor; } set { pnl1.BackColor = value; } }
-        public Color PanelRoom2Color { get { return pnl2.BackColor; } set { pnl2.BackColor = value; } }
-        public Color PanelRoom3Color { get { return pnl3.BackColor; } set { pnl3.BackColor = value; } }
-        public Color PanelRoom4Color { get { return pnl4.BackColor; } set { pnl4.BackColor = value; } }
-        public Color PanelRoom5Color { get { return pnl5.BackColor; } set { pnl5.BackColor = value; } }
-        public Color PanelRoom6Color { get { return pnl6.BackColor; } set { pnl6.BackColor = value; } }
-        public Color PanelRoom7Color { get { return pnl7.BackColor; } set { pnl7.BackColor = value; } }
-        public Color PanelRoom8Color { get { return pnl8.BackColor; } set { pnl8.BackColor = value; } }
+
+        public Panel PanelRoom1 { get { return pnl1; } set { pnl1 = value; } }
+        public Panel PanelRoom2 { get { return pnl2; } set { pnl2 = value; } }
+        public Panel PanelRoom3 { get { return pnl3; } set { pnl3 = value; } }
+        public Panel PanelRoom4 { get { return pnl4; } set { pnl4 = value; } }
+        public Panel PanelRoom5 { get { return pnl5; } set { pnl5 = value; } }
+        public Panel PanelRoom6 { get { return pnl6; } set { pnl6 = value; } }
+        public Panel PanelRoom7 { get { return pnl7; } set { pnl7 = value; } }
+        public Panel PanelRoom8 { get { return pnl8; } set { pnl8 = value; } }
+
         private void BtnSignOut_Click(object sender, EventArgs e)
         {
             if (SignOut != null) SignOut(this, EventArgs.Empty);
         }
-
-        public event EventHandler SignOut;
 
         public event Action ViewPatient1;
         public event Action ViewPatient2;
@@ -104,7 +100,11 @@ namespace Healthcare_System
         public event Action ViewPatient6;
         public event Action ViewPatient7;
         public event Action ViewPatient8;
+        public event EventHandler StartSimulation;
+        public event EventHandler SignOut;
         public event EventHandler ChangePanelColour;
+
+
         public new void Show()
         {
             this.ShowDialog();
@@ -116,10 +116,11 @@ namespace Healthcare_System
             if (action != null) action();
         }
 
-        public event EventHandler StartSimulation;
+
         private void CentralDeskView_Load(object sender, EventArgs e)
         {
             if (StartSimulation != null) StartSimulation(this, EventArgs.Empty);
+
         }
 
 
@@ -132,10 +133,10 @@ namespace Healthcare_System
         {
             DateTime dateTime = DateTime.Now;
             this.lblTime.Text = dateTime.ToString();
-            if (ChangePanelColour != null) ChangePanelColour(this, EventArgs.Empty);
-          
-        }
 
-       
+            if (ChangePanelColour != null) ChangePanelColour(this, EventArgs.Empty);
+
+
+        }
     }
 }

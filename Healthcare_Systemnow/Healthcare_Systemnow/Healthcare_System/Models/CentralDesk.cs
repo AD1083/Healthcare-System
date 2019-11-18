@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Timers;
+using System.Drawing;
 
 namespace Healthcare_System.Models
 {
@@ -33,7 +34,7 @@ namespace Healthcare_System.Models
             //setup the timer used to read data from each patient's bedside modules
             patientListSetup = true;
             SetupTimer();
-            
+
         }
 
         /// <summary>
@@ -45,27 +46,34 @@ namespace Healthcare_System.Models
             patientTimer.Stop();
         }
 
-        public List<int> ChangePanelColour()
+        public List<Color> ChangePanelColour()
         {
-            List<int> panelsToChange = null;
+            List<Color> panelsColours = null;
             if (patientListSetup)
             {
                 DisableTimer();
-                panelsToChange = new List<int>();
+                panelsColours = new List<Color>();
+
                 for (int i = 0; i < Patients.Capacity; i++)
                 {
                     Patient patient = Patients.ElementAt(i);
                     if (patient.PatientAlarm != null)
                     {
+                        //System.Windows.Forms.MessageBox.Show($"I IS {i}");
                         if (patient.PatientAlarm.SendAlarm)
                         {
                             //add patient to list that needs a panel change
-                            panelsToChange.Add(i + 1);
+                            panelsColours.Add(Color.Red);
+                        }
+                        else
+                        {
+                            panelsColours.Add(Color.WhiteSmoke);
                         }
                     }
                 }
+                patientTimer.Start();
             }
-            return panelsToChange;
+            return panelsColours;
         }
 
         /// <summary>
