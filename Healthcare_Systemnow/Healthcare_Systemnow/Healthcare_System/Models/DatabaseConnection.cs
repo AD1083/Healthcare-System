@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace Healthcare_System
+namespace Healthcare_System.Models
 {
 
     class DatabaseConnection

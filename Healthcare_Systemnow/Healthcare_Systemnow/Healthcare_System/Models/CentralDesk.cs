@@ -38,7 +38,7 @@ namespace Healthcare_System.Models
         }
 
         /// <summary>
-        /// public mthod for stopping the backen patient timer
+        /// public mthod for stopping the backend patient timer
         /// public to allow the timer to be stopped when the central desk is closed in the view
         /// </summary>
         public void DisableTimer()
