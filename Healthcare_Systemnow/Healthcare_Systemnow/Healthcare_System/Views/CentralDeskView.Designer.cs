@@ -846,6 +846,7 @@
             this.lblConditionRoom1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConditionRoom1.ForeColor = System.Drawing.Color.White;
             this.lblConditionRoom1.Location = new System.Drawing.Point(109, 285);
+            this.lblConditionRoom1.MaximumSize = new System.Drawing.Size(100, 0);
             this.lblConditionRoom1.Name = "lblConditionRoom1";
             this.lblConditionRoom1.Size = new System.Drawing.Size(66, 17);
             this.lblConditionRoom1.TabIndex = 113;
@@ -965,7 +966,8 @@
             this.lblConditionRoom7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(79)))), ((int)(((byte)(156)))));
             this.lblConditionRoom7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConditionRoom7.ForeColor = System.Drawing.Color.White;
-            this.lblConditionRoom7.Location = new System.Drawing.Point(485, 454);
+            this.lblConditionRoom7.Location = new System.Drawing.Point(484, 454);
+            this.lblConditionRoom7.MaximumSize = new System.Drawing.Size(100, 0);
             this.lblConditionRoom7.Name = "lblConditionRoom7";
             this.lblConditionRoom7.Size = new System.Drawing.Size(66, 17);
             this.lblConditionRoom7.TabIndex = 129;
@@ -1073,7 +1075,8 @@
             this.lblConditionRoom4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(100)))), ((int)(((byte)(197)))));
             this.lblConditionRoom4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConditionRoom4.ForeColor = System.Drawing.Color.White;
-            this.lblConditionRoom4.Location = new System.Drawing.Point(673, 285);
+            this.lblConditionRoom4.Location = new System.Drawing.Point(672, 285);
+            this.lblConditionRoom4.MaximumSize = new System.Drawing.Size(100, 0);
             this.lblConditionRoom4.Name = "lblConditionRoom4";
             this.lblConditionRoom4.Size = new System.Drawing.Size(66, 17);
             this.lblConditionRoom4.TabIndex = 132;

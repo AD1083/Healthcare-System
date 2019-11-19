@@ -515,6 +515,7 @@
             this.lblAlarmMessage.AutoSize = true;
             this.lblAlarmMessage.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAlarmMessage.Location = new System.Drawing.Point(12, 316);
+            this.lblAlarmMessage.MaximumSize = new System.Drawing.Size(253, 0);
             this.lblAlarmMessage.Name = "lblAlarmMessage";
             this.lblAlarmMessage.Size = new System.Drawing.Size(107, 17);
             this.lblAlarmMessage.TabIndex = 51;
