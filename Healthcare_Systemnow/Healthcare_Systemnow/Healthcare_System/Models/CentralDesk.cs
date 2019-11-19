@@ -59,11 +59,10 @@ namespace Healthcare_System.Models
                     Patient patient = Patients.ElementAt(i);
                     if (patient.PatientAlarm != null)
                     {
-                        //System.Windows.Forms.MessageBox.Show($"I IS {i}");
                         if (patient.PatientAlarm.SendAlarm)
                         {
                             //add patient to list that needs a panel change
-                            panelsColours.Add(Color.Red);
+                            panelsColours.Add(Color.DarkRed);
                         }
                         else
                         {
