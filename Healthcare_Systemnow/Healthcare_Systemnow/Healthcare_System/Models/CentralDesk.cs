@@ -45,27 +45,39 @@ namespace Healthcare_System.Models
         {
             patientTimer.Stop();
         }
-
+        
+        /// <summary>
+        /// Determines the colour that each patients panel should be on the central desk ui
+        /// Determines this by seeing if the paient has an alarm 
+        /// </summary>
+        /// <returns>A list of colours that correspond to each panel</returns>
         public List<Color> ChangePanelColour()
         {
-            List<Color> panelsColours = null;
-            if (patientListSetup)
-            {
-                DisableTimer();
-                panelsColours = new List<Color>();
+            List<Color> panelsColours = null; //create blank list 
 
+            //can only check for alarms if the patient list esits
+            //this is due to the use of a timer to change the panel colours
+            if (patientListSetup) 
+            {
+                DisableTimer(); //pause the timer 
+                panelsColours = new List<Color>(); //declare new list
+
+                //iterate through the list of patients and determine if the patient has an alarm
+                //if there is an alarm then the patient's panel colour will be red, otherwise it is white
                 for (int i = 0; i < Patients.Capacity; i++)
                 {
-                    Patient patient = Patients.ElementAt(i);
+                    //get patinet form list
+                    Patient patient = Patients.ElementAt(i); 
                     if (patient.PatientAlarm != null)
                     {
                         if (patient.PatientAlarm.SendAlarm)
                         {
-                            //add patient to list that needs a panel change
+                            //add red colour to the list as patient has an alarm
                             panelsColours.Add(Color.DarkRed);
                         }
                         else
                         {
+                            //no alarm, so this patients panel colour is white
                             panelsColours.Add(Color.WhiteSmoke);
                         }
                     }

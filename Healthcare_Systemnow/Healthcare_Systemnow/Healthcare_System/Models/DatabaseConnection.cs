@@ -20,6 +20,7 @@ namespace Healthcare_System.Models
         private static DatabaseConnection _instance;
         private static string dBConnectionString;
 
+        //create singleton instance 
         public static DatabaseConnection Instance
         {
             get
@@ -39,8 +40,12 @@ namespace Healthcare_System.Models
 
         }
 
-        //methods
-        //create and return a data set
+                
+        /// <summary>
+        /// Get the dataset from the data retrieved from sql queries from the database
+        /// </summary>
+        /// <param name="sqlStatement"></param>
+        /// <returns>Dataset with data from the database</returns>
         public DataSet GetDataSet(string sqlStatement)
         {
             DataSet dsStaff = new DataSet();
@@ -60,7 +65,7 @@ namespace Healthcare_System.Models
         }
 
         /// <summary>
-        /// method to insert data into the database
+        /// Insert data into the database
         /// </summary>
         /// <param name="sqlStatement">The sql insert statement for the database</param>
         public void InsertData(string sqlStatement)

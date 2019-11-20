@@ -9,8 +9,14 @@ namespace Healthcare_System.Models
 {
     class PasswordEncryption
     {
+        //property to allow login service to access the encrypted password
         public string EncryptedPassword { get; }
 
+        /// <summary>
+        /// constructor for password encryption
+        /// takes the unecrypted string as a parameter and sets the encrypted value to the property
+        /// </summary>
+        /// <param name="passwordToEncrypt"></param>
         public PasswordEncryption(string passwordToEncrypt)
         {
             EncryptedPassword = Encrypt(passwordToEncrypt);

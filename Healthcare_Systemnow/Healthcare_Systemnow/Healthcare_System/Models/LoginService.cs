@@ -9,6 +9,7 @@ namespace Healthcare_System.Models
 {
     public class LoginService
     {
+        //field for the encrypted password
         private PasswordEncryption passwordEncryption;
 
         /// <summary>
@@ -34,6 +35,7 @@ namespace Healthcare_System.Models
             //therefore login is succesful, so fill the staff properties with the details from the db table
             if (table.Rows.Count == 1)
             {
+                //fill the staff properties with data from database
                 staff.Role = dsStaff.Tables[0].Rows[0][6].ToString();
                 staff.FirstName = dsStaff.Tables[0].Rows[0][2].ToString();
                 staff.LastName = dsStaff.Tables[0].Rows[0][3].ToString();

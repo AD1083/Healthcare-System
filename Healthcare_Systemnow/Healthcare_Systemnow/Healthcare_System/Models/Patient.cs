@@ -9,6 +9,7 @@ namespace Healthcare_System.Models
 {
     public class Patient
     {
+        //fields for the patient - which has an alarm and a list of 4 modules
         private Alarm patientAlarm;
         private List<Module> modules = new List<Module>(4);
 
@@ -25,13 +26,16 @@ namespace Healthcare_System.Models
         public string Condition { get; private set; }
         public string DOB { get; private set; }
 
-        public bool AlarmRectified { get { return !sendPatientAlarm; } set { ModuleRectified(); } }
+        public bool AlarmRectified { get { return !sendPatientAlarm; }  }
 
         //property returns the patient alarm to the caller
         public Alarm PatientAlarm { get { return patientAlarm; } } //this alarm will contain all messages from each module alarm 
         public List<Module> Modules { get { return modules; } }
 
-
+        /// <summary>
+        /// creates a new patient and the four mosules that will be monitoring this patient
+        /// </summary>
+        /// <param name="patientNumber">the patient id</param>
         public Patient(int patientNumber)
         {
             //record the patient ID each time Patient instantiated
@@ -47,6 +51,11 @@ namespace Healthcare_System.Models
             modules.Add(new Module("Temperature"));
         }
 
+        /// <summary>
+        /// method to call on each module to generate a reading if they do not have an alarm
+        /// the genrated value is checked for an alarm, and all module alarms are concatenated into one patient alarm
+        /// which is sent to central desk staff
+        /// </summary>
         public void AccessModules()
         {
             //reset local private variables so old state/data is no retained
@@ -76,26 +85,22 @@ namespace Healthcare_System.Models
                 }
             }
 
+            //if there is an emergency alarm the patient alarm must be rectifiable
             if (sendPatientAlarm)
             {
                 //create a patient alarm which contains all the messages raised in module alarms
                 patientAlarm = new Alarm(moduleMessages, true);
             }
-            else
+            else //when there is a non-emergency alarm for when boundaries are not set
             {
                 //create a patient alarm which contains all the messages raised in module alarms
                 patientAlarm = new Alarm(moduleMessages, false);
             }
         }
 
-        private void ModuleRectified()
-        {
-            foreach (Module patientModule in modules)
-            {
-                patientModule.AlarmRectified = true;
-            }
-        }
-
+        /// <summary>
+        /// Gets this patient's data from the database and inserts it into this patient's properties
+        /// </summary>
         private void FillPatientProperties()
         {
             //access DB for Patient table, accessing the row which matches the patient ID
@@ -111,6 +116,5 @@ namespace Healthcare_System.Models
             }
 
         }
-
     }
 }

@@ -9,11 +9,6 @@ namespace Healthcare_System.Models
 {
     public class Alarm
     {
-        //public bool AlarmStatus { get; set; }
-
-        //public Module Module { get; set; }
-        //public string StaffID { get; set; }
-
         //properties of an alarm
         public string AlarmMessage { get; }
         public bool SendAlarm { get; }
@@ -40,7 +35,6 @@ namespace Healthcare_System.Models
         {
             AlarmMessage = alarmMessage;
             AlarmStartTime = DateTime.UtcNow.ToString();
-
             SendAlarm = sendAlarm;
         }
     }

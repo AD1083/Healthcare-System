@@ -46,7 +46,8 @@ namespace Healthcare_System.Presenters
                 }
                 else
                 {
-                    var presenter = new ManagerialView();
+                    var presenter = new ManagerViewPresenter(new ManagerialView(), new RegistrationService(), new ManagerialService(), staff);
+                    _view.Hide();
                     presenter.Run();
                 }
             }

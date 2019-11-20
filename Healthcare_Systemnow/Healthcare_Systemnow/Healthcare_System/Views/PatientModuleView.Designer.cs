@@ -571,7 +571,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(824, 539);
+            this.ClientSize = new System.Drawing.Size(822, 512);
             this.Controls.Add(this.bunifuCustomLabel1);
             this.Controls.Add(this.bunifuCustomLabel2);
             this.Controls.Add(this.bunifuCustomLabel3);
