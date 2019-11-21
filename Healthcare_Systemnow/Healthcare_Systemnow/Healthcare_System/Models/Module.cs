@@ -47,7 +47,7 @@ namespace Healthcare_System.Models
                 ModuleAlarm = new Alarm($"Attention: {ModuleName}'s upper boundary cannot be less than the lower boundary!", false);
                 AlarmRectified = true; //no need to have the non-emergency alarm be rectified
             }
-            else if (UpperBoundary < LowerBoundary)
+            else if (LowerBoundary > UpperBoundary)
             {
                 //will cause the patient in CD to appear red must therefore change back upon boundaries being set
                 ModuleAlarm = new Alarm($"Attention: {ModuleName}'s lower boundary cannot be greater than the upper boundary!", false);
