@@ -12,6 +12,7 @@ namespace Healthcare_System.Models
         private readonly ConsistentRandom consistentRandom = new ConsistentRandom();
         private bool alarmRectified = true;
 
+
         //boundaries to be set by the PateintModuleViewPresenter when staff enter module boundaries on UI
         //get to allow displaying on the UI, set to allow PMVP to access this property
         public int UpperBoundary { get; set; }
@@ -21,7 +22,7 @@ namespace Healthcare_System.Models
         public string CurrentReading { get; private set; }
         public string ModuleName { get; } //doesn't need a set as value can be set in constructor
         public Alarm ModuleAlarm { get; private set; }
-       
+
         public bool AlarmRectified { get { return alarmRectified; } set { alarmRectified = value; } }
 
         /// <summary>
@@ -39,8 +40,26 @@ namespace Healthcare_System.Models
         /// </summary>
         public void CheckPatientData()
         {
-            //ensure boundaries are set before creating a reading
-            if (!(UpperBoundary == 0 || LowerBoundary == 0))
+            //ensure boundaries are set to before creating a reading
+            if (UpperBoundary < LowerBoundary)
+            {
+
+                ModuleAlarm = new Alarm($"Attention: {ModuleName}'s upper boundary cannot be less than the lower boundary!", false);
+                AlarmRectified = true; //no need to have the non-emergency alarm be rectified
+            }
+            else if (UpperBoundary < LowerBoundary)
+            {
+                //will cause the patient in CD to appear red must therefore change back upon boundaries being set
+                ModuleAlarm = new Alarm($"Attention: {ModuleName}'s lower boundary cannot be greater than the upper boundary!", false);
+                AlarmRectified = true;
+            }
+            else if (UpperBoundary < 0 || LowerBoundary < 0)
+            {
+                //will cause the patient in CD to appear red must therefore change back upon boundaries being set
+                ModuleAlarm = new Alarm($"Attention: {ModuleName}'s boundaries cannot be below zero!", false);
+                AlarmRectified = true;
+            }
+            else if (!(UpperBoundary == 0 || LowerBoundary == 0))
             {
                 //generate reading data and record in the property
                 int reading = GenerateReading();
@@ -50,7 +69,7 @@ namespace Healthcare_System.Models
                 if (CompareToUpperBoundary(reading)) //check for value above upper boundary
                 {
                     ModuleAlarm = new Alarm($"Reading above {ModuleName} upper boundary!", true);
-                    AlarmRectified = false;
+                    AlarmRectified = false; //emergency alarm must be rectified
                 }
 
                 else if (CompareToLowerBoundary(reading)) //check for value below lower boundary
@@ -67,7 +86,7 @@ namespace Healthcare_System.Models
             else
             {
                 //will cause the patient in CD to appear red must therefore change back upon boundaries being set
-                ModuleAlarm = new Alarm($"Attention: {ModuleName}'s boundaries not set!", false);
+                ModuleAlarm = new Alarm($"Attention: {ModuleName}'s not set!", false);
                 AlarmRectified = true;
             }
         }

@@ -39,7 +39,6 @@ namespace Healthcare_System
             _view.GoBack += GoBack;
             _view.UpdatePatientModuleData += UpdatePatientModuleData;
 
-            //_view.RectifyAlarm += _view_RectifyAlarm;
         }
 
         private void _view_RectifyAlarm()
@@ -51,10 +50,12 @@ namespace Healthcare_System
             _view.BtnRectify.Hide();
             //register alarm data
             _service.RegisterAlarmData(_staff, patientAlarm);
+            _view.RestartTimer();
         }
 
         private void UpdatePatientModuleData(object sender, EventArgs e)
         {            
+
             _view.CurPulseRate = patientModuleList.ElementAt(0).CurrentReading;
             _view.CurBreathingRate = patientModuleList.ElementAt(1).CurrentReading;
             _view.CurBloodPressureRate = patientModuleList.ElementAt(2).CurrentReading;
@@ -69,6 +70,7 @@ namespace Healthcare_System
             //show rectify button
             if (!_patient.AlarmRectified)
             {
+                _view.StopTimer();
                 _view.BtnRectify.Show();
                 _view.RectifyAlarm += _view_RectifyAlarm;
             }

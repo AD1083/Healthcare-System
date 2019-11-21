@@ -39,6 +39,9 @@ namespace Healthcare_System
         void Show();
         void Hide();
 
+        void StopTimer();
+        void RestartTimer();
+
 
     }
 }

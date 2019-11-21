@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridRegistrations = new System.Windows.Forms.DataGridView();
             this.btnSignOut = new System.Windows.Forms.Button();
@@ -42,6 +43,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lblTime = new System.Windows.Forms.Label();
             this.dataGridAlarms = new System.Windows.Forms.DataGridView();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridRegistrations)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridAlarms)).BeginInit();
             this.SuspendLayout();
@@ -51,7 +53,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label1.Location = new System.Drawing.Point(760, 9);
+            this.label1.Location = new System.Drawing.Point(767, -1);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(28, 30);
             this.label1.TabIndex = 33;
@@ -67,8 +69,9 @@
             this.dataGridRegistrations.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridRegistrations.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.dataGridRegistrations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridRegistrations.Location = new System.Drawing.Point(22, 154);
+            this.dataGridRegistrations.Location = new System.Drawing.Point(9, 154);
             this.dataGridRegistrations.Name = "dataGridRegistrations";
+            this.dataGridRegistrations.ReadOnly = true;
             this.dataGridRegistrations.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridRegistrations.Size = new System.Drawing.Size(777, 169);
             this.dataGridRegistrations.TabIndex = 34;
@@ -80,7 +83,7 @@
             this.btnSignOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSignOut.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSignOut.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnSignOut.Location = new System.Drawing.Point(671, 109);
+            this.btnSignOut.Location = new System.Drawing.Point(669, 104);
             this.btnSignOut.Name = "btnSignOut";
             this.btnSignOut.Size = new System.Drawing.Size(117, 41);
             this.btnSignOut.TabIndex = 71;
@@ -184,7 +187,7 @@
             // 
             this.lblTime.AutoSize = true;
             this.lblTime.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTime.Location = new System.Drawing.Point(633, 42);
+            this.lblTime.Location = new System.Drawing.Point(632, 64);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(37, 17);
             this.lblTime.TabIndex = 138;
@@ -199,17 +202,23 @@
             this.dataGridAlarms.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridAlarms.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.dataGridAlarms.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridAlarms.Location = new System.Drawing.Point(22, 331);
+            this.dataGridAlarms.Location = new System.Drawing.Point(9, 331);
             this.dataGridAlarms.Name = "dataGridAlarms";
+            this.dataGridAlarms.ReadOnly = true;
             this.dataGridAlarms.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridAlarms.Size = new System.Drawing.Size(777, 169);
             this.dataGridAlarms.TabIndex = 148;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // ManagerialView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(822, 512);
+            this.ClientSize = new System.Drawing.Size(796, 512);
             this.Controls.Add(this.dataGridAlarms);
             this.Controls.Add(this.lblStartTime);
             this.Controls.Add(this.label6);
@@ -251,5 +260,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.DataGridView dataGridAlarms;
+        private System.Windows.Forms.Timer timer1;
     }
 }

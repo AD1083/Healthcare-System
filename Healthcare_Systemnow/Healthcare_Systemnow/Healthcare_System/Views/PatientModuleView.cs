@@ -77,5 +77,15 @@ namespace Healthcare_System.Views
         {
             if (UpdatePatientModuleData != null) UpdatePatientModuleData(this, EventArgs.Empty);
         }
+
+        public void StopTimer()
+        {
+            timer.Stop();
+        }
+
+        public void RestartTimer()
+        {
+            timer.Start();
+        }
     }
 }

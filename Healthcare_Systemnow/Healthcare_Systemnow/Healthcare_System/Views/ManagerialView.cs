@@ -46,5 +46,11 @@ namespace Healthcare_System
         public string StartTime { set { lblStartTime.Text = value; } }
         public DataGridView DataGridRegistrations { get { return dataGridRegistrations; }  }
         public DataGridView DataGridAlarms { get { return dataGridAlarms; } }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            DateTime dateTime = DateTime.Now;
+            this.lblTime.Text = dateTime.ToString();
+        }
     }
 }

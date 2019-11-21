@@ -90,6 +90,13 @@ namespace Healthcare_System.Models
             {
                 //create a patient alarm which contains all the messages raised in module alarms
                 patientAlarm = new Alarm(moduleMessages, true);
+
+                //fill out the alert email body
+                /*this code is commented out because of a system policy restriction at the university preventing
+                 * access to the secure SMTP port used in the EmailNotification class
+                 */
+
+
             }
             else //when there is a non-emergency alarm for when boundaries are not set
             {
