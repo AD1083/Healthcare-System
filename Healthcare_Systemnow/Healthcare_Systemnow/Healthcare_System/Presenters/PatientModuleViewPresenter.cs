@@ -56,10 +56,10 @@ namespace Healthcare_System
         private void UpdatePatientModuleData(object sender, EventArgs e)
         {            
 
-            _view.CurPulseRate = patientModuleList.ElementAt(0).CurrentReading;
-            _view.CurBreathingRate = patientModuleList.ElementAt(1).CurrentReading;
-            _view.CurBloodPressureRate = patientModuleList.ElementAt(2).CurrentReading;
-            _view.CurTemperature = patientModuleList.ElementAt(3).CurrentReading;
+            _view.CurPulseRate = patientModuleList.ElementAt(0).CurrentReading.ToString();
+            _view.CurBreathingRate = patientModuleList.ElementAt(1).CurrentReading.ToString();
+            _view.CurBloodPressureRate = patientModuleList.ElementAt(2).CurrentReading.ToString();
+            _view.CurTemperature = patientModuleList.ElementAt(3).CurrentReading.ToString();
 
             patientAlarm = _centralDesk.Patients.ElementAt(_patient.PatientID - 1).PatientAlarm;
             if (patientAlarm != null)

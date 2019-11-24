@@ -15,6 +15,7 @@ namespace Healthcare_System.Presenters
         private readonly ICentralDeskView _view;
         private readonly Staff _staff;
         private readonly CentralDesk _centralDesk;
+
         public CentralDeskPresenter(ICentralDeskView view, RegistrationService service, Staff staff, CentralDesk patientSimulator)
         {
             _view = view;
@@ -89,7 +90,7 @@ namespace Healthcare_System.Presenters
         {
             _service.RecordEndTime(_staff);
             _centralDesk.DisableTimer();
-            var presenter = new LoginPresenter(new LoginView(), new LoginService(), new RegistrationService());
+            LoginPresenter presenter = new LoginPresenter(new LoginView(), new LoginService(), new RegistrationService());
 
             _view.Hide();
 
@@ -103,7 +104,7 @@ namespace Healthcare_System.Presenters
 
             Patient patient = _centralDesk.Patients.ElementAt(roomNumber - 1);
 
-            var patientModulePresenter = new PatientModuleViewPresenter(patient, new PatientModuleView(), _centralDesk, _staff, new AlarmRegistrationService());
+            PatientModuleViewPresenter patientModulePresenter = new PatientModuleViewPresenter(patient, new PatientModuleView(), _centralDesk, _staff, new AlarmRegistrationService());
             patientModulePresenter.Run();
         }
 
@@ -113,7 +114,9 @@ namespace Healthcare_System.Presenters
             _view.StaffName = $"{_staff.FirstName} {_staff.LastName}";
             _view.StaffRole = _staff.Role;
             _view.StartTime = _staff.Registration.StartTime.Substring(11); //show time only
+            
             //Load patients data
+            //Output each patient's first name to the UI
             _view.FirstNameRoom1 = _centralDesk.Patients.ElementAt(0).FirstName;
             _view.FirstNameRoom2 = _centralDesk.Patients.ElementAt(1).FirstName;
             _view.FirstNameRoom3 = _centralDesk.Patients.ElementAt(2).FirstName;
@@ -123,6 +126,7 @@ namespace Healthcare_System.Presenters
             _view.FirstNameRoom7 = _centralDesk.Patients.ElementAt(6).FirstName;
             _view.FirstNameRoom8 = _centralDesk.Patients.ElementAt(7).FirstName;
 
+            //Output each patient's last name to the UI
             _view.LastNameRoom1 = _centralDesk.Patients.ElementAt(0).LastName;
             _view.LastNameRoom2 = _centralDesk.Patients.ElementAt(1).LastName;
             _view.LastNameRoom3 = _centralDesk.Patients.ElementAt(2).LastName;
@@ -132,6 +136,7 @@ namespace Healthcare_System.Presenters
             _view.LastNameRoom7 = _centralDesk.Patients.ElementAt(6).LastName;
             _view.LastNameRoom8 = _centralDesk.Patients.ElementAt(7).LastName;
 
+            //Output each patient's admitted condition to the UI
             _view.ConditionRoom1 = _centralDesk.Patients.ElementAt(0).Condition;
             _view.ConditionRoom2 = _centralDesk.Patients.ElementAt(1).Condition;
             _view.ConditionRoom3 = _centralDesk.Patients.ElementAt(2).Condition;
