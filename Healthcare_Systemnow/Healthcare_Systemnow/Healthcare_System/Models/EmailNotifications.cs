@@ -9,17 +9,19 @@ using System.Net;
 namespace Healthcare_System.Models
 {
     //https://docs.microsoft.com/en-us/dotnet/api/system.net.mail?view=netframework-4.8 System.Net.Mail namespace
-    class EmailNotifications
+    public class EmailNotifications
     {
         //https://docs.microsoft.com/en-us/dotnet/api/system.net.mail.smtpclient?view=netframework-4.8
 
         private static EmailNotifications instance;
-        private SmtpClient smtpClient;
+        //create smtp client to handle sending emails
+        private static SmtpClient smtpClient = new SmtpClient();
 
         //properties for an email
-        public string EmailMessage { private get; set; }
+        public string EmailMessage { get; set; }
         public string ReceipientEmailAddress { private get; set; }
 
+        //singleton design pattern
         public static EmailNotifications Instance
         {
             get
@@ -36,11 +38,9 @@ namespace Healthcare_System.Models
         /// Method to consrtct and send an email containing the emergency alarm notification for a patient
         /// </summary>
         /// <returns>boolean inidicating if the email has been sent</returns>
-        public bool SendEmailNotification()
+        public void SendEmailNotification()
         {
-            bool emailSent = false;
-
-            if (!(EmailMessage == null || ReceipientEmailAddress == null))
+            if (!(EmailMessage == null || ReceipientEmailAddress == null)) //strings have initial value of null
             {
                 ConfigureSMTPClient(); //sets up the smtp client to send the email
 
@@ -56,9 +56,8 @@ namespace Healthcare_System.Models
                 try
                 {
                     smtpClient.Send(email);
-                    emailSent = true;
                 }
-                catch { }
+                catch (Exception) { } //network disconnect exception
 
                 //release resources consumed by these objects
                 email.Dispose();
@@ -68,8 +67,6 @@ namespace Healthcare_System.Models
                 EmailMessage = null;
                 ReceipientEmailAddress = null;
             }
-
-            return emailSent;
         }
 
         /// <summary>
@@ -77,13 +74,10 @@ namespace Healthcare_System.Models
         /// </summary>
         private void ConfigureSMTPClient()
         {
-            //create smtp client to handle sending emails
-            smtpClient = new SmtpClient();
-
             //configuration of smtp properties to use secure port and encrypted communication wih host server
             smtpClient.Port = 587;
-            smtpClient.EnableSsl = true;
-            smtpClient.Host = "smtp.angliahealthcare.com";
+            smtpClient.EnableSsl = true; //secure socket layer
+            smtpClient.Host = "smtp.angliahealthcare.com"; //the healthcare trust's email server
             smtpClient.Timeout = 100;
             smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network; //uses the network to send the email
         }

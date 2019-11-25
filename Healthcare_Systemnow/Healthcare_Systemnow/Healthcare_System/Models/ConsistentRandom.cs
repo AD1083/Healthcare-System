@@ -8,34 +8,46 @@ namespace Healthcare_System.Models
 {
     public class ConsistentRandom
     {
-        private Random Random = new Random();
-        private int tendToUpperLower = 0; //using int as three states needed
-        private int previousValue;
+        private static Random Random = new Random();
+        private static int tendToUpperLower = 0; //using int as three states needed
+        private static ConsistentRandom instance;
 
         public int UpperBoundary { get; set; }
         public int LowerBoundary { get; set; }
 
-        public int GenerateValue()
+        //singleton design pattern
+        public static ConsistentRandom Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new ConsistentRandom();
+                }
+                return instance;
+            }
+        }
+
+        public int GenerateValue(int currentValue)
         {
             int randomResult = 0;
+            int previousValue = currentValue; //generating a new value, so the current value on the module ui becomes the previous value
 
             if (previousValue == 0) //create a start value
             {
-                Console.Write("Initialisation Value: ");
                 randomResult = Random.Next(LowerBoundary, UpperBoundary + 1);
             }
 
             //if the previous is equal or greater than the upper boundary then the next reading should be lower
             else if (previousValue >= UpperBoundary)
             {
-                Console.Write("Upper Boundary Hit: ");
                 int minValue = (int)(UpperBoundary * 0.8);
                 randomResult = Random.Next(minValue, UpperBoundary);
             }
+
             //if the previous is equal or less than the lower boundary then the next reading should be lower
             else if (previousValue <= LowerBoundary)
             {
-                Console.Write("Lower Boundary Hit: ");
                 int maxValue = (int)(LowerBoundary * 1.2);
                 randomResult = Random.Next(LowerBoundary + 1, maxValue + 1);
             }

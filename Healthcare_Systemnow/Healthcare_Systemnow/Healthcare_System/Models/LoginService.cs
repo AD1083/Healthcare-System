@@ -15,9 +15,9 @@ namespace Healthcare_System.Models
         /// <summary>
         /// Checks if the staff exists in the database by searching the database for the staff ID and password
         /// </summary>
-        /// <param name="staff">The staff object produced from the Login</param>
+        /// <param name="staff">The staff object produced from the Login, passed by reference as the staff object properties need to be filled from the database</param>
         /// <returns>True, if stafffID and the encrypted password exist in the database, false otherwise</returns>
-        public bool Login(Staff staff)
+        public bool Login(ref Staff staff)
         {
 
             //encrypt the user password before comparing to the db
@@ -39,6 +39,7 @@ namespace Healthcare_System.Models
                 staff.Role = dsStaff.Tables[0].Rows[0][6].ToString();
                 staff.FirstName = dsStaff.Tables[0].Rows[0][2].ToString();
                 staff.LastName = dsStaff.Tables[0].Rows[0][3].ToString();
+                staff.EmailAddress = dsStaff.Tables[0].Rows[0][4].ToString();
                 return true; //login succes
             }
             else //no row in table, so no matching staff in db

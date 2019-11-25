@@ -25,6 +25,7 @@ namespace Healthcare_System.Models
         public string LastName { get; private set; }
         public string Condition { get; private set; }
         public string DOB { get; private set; }
+        public string NameOfStaffInAttendance { private get; set; } //which staff memeber is currently responsible for the patient's care
 
         public bool AlarmRectified { get { return !sendPatientAlarm; }  }
 
@@ -91,10 +92,15 @@ namespace Healthcare_System.Models
                 //create a patient alarm which contains all the messages raised in module alarms
                 patientAlarm = new Alarm(moduleMessages, true);
 
-                //fill out the alert email body
-                /*this code is commented out because of a system policy restriction at the university preventing
+                //fill out the alarm email body with the patient alarm message and the email trailer
+                EmailNotifications.Instance.EmailMessage = $"{NameOfStaffInAttendance}, \nAn emergency alarm requires your attention: {patientAlarm.AlarmMessage}" +
+                    $" \nPlease see to this patient immediately \nSent by: Anglia Healthcare Alarm System";
+                /* Note:
+                 * the following code is commented out because of a system policy restriction at the university preventing
                  * access to the secure SMTP port used in the EmailNotification class
                  */
+                //send the email
+                //EmailNotifications.Instance.SendEmailNotification();
 
 
             }

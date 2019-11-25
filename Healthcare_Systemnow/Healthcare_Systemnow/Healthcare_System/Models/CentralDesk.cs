@@ -21,18 +21,29 @@ namespace Healthcare_System.Models
 
         /// <summary>
         /// constructor for a central desk that is used to create the pateints in the bay and setup the class timer
+        /// takes the staff object who logged in, to set the recipeint for any email notifications
         /// </summary>
-        public CentralDesk()
+        public CentralDesk(Staff staff)
         {
             //create patients to the capacity of the bay - which is eight
             for (int i = 0; i < patients.Capacity; i++)
             {
-                //create the patients and add them to the central desk list
+                //create the patient
                 Patient patient = new Patient(i + 1);
+
+                //set the name of staff memeber responsible for this patient
+                patient.NameOfStaffInAttendance = $"{staff.FirstName} {staff.LastName}";
+
+                //add each patient to the central desk list
                 patients.Add(patient);
             }
-            //setup the timer used to read data from each patient's bedside modules
+            //indicates for UI timer if the patient list has been created
             patientListSetup = true;
+
+            //set the recipient of the email notifcatiopn singleton
+            EmailNotifications.Instance.ReceipientEmailAddress = staff.EmailAddress;
+
+            //setup the backend timer used to read data from each patient's bedside modules
             SetupTimer();
 
         }

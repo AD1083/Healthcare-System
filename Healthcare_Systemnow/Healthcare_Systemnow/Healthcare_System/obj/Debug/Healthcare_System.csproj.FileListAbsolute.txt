@@ -246,3 +246,4 @@ C:\Users\Alex\OneDrive - Anglia Ruskin University\Healthcare-System-3a7\Healthca
 C:\Users\Alex\OneDrive - Anglia Ruskin University\Healthcare-System-3a7\Healthcare-System-3a7a92e7a51672927feb561c69abe833f6644825\Healthcare_Systemnow\Healthcare_Systemnow\Healthcare_System\obj\Debug\Healthcare_System.csproj.CopyComplete
 C:\Users\Alex\OneDrive - Anglia Ruskin University\Healthcare-System-3a7\Healthcare-System-3a7a92e7a51672927feb561c69abe833f6644825\Healthcare_Systemnow\Healthcare_Systemnow\Healthcare_System\obj\Debug\Healthcare_System.exe
 C:\Users\Alex\OneDrive - Anglia Ruskin University\Healthcare-System-3a7\Healthcare-System-3a7a92e7a51672927feb561c69abe833f6644825\Healthcare_Systemnow\Healthcare_Systemnow\Healthcare_System\obj\Debug\Healthcare_System.pdb
+C:\Users\Alex\Documents\GitHub\Healthcare-System\Healthcare_Systemnow\Healthcare_Systemnow\Healthcare_System\obj\Debug\Healthcare_System.csproj.CoreCompileInputs.cache
