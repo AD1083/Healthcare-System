@@ -24,10 +24,12 @@ namespace Healthcare_System
         public string Password { get { return txtPassword.Text; } }
         public string Role { get; }
         public event Action Login;
+
         public void ShowError(string message)
         {
             MessageBox.Show(message);
         }
+
         private void Invoke(Action action)
         {
             if (action != null) action();
