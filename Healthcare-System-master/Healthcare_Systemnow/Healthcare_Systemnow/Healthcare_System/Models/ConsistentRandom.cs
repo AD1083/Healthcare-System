@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Healthcare_System.Models
 {
@@ -30,9 +26,9 @@ namespace Healthcare_System.Models
 
         public int GenerateValue(int currentValue)
         {
-            int randomResult = 0;
             int previousValue = currentValue; //generating a new value, so the current value on the module ui becomes the previous value
 
+            int randomResult;
             if (previousValue == 0) //create a start value
             {
                 randomResult = Random.Next(LowerBoundary, UpperBoundary + 1);

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Data;
 
 namespace Healthcare_System.Models
@@ -96,6 +92,7 @@ namespace Healthcare_System.Models
                 //fill out the alarm email body with the patient alarm message and the email trailer
                 EmailNotifications.Instance.EmailMessage = $"{NameOfStaffInAttendance}, \nAn emergency alarm requires your attention: {patientAlarm.AlarmMessage}" +
                     $" \nPlease see to this patient immediately \nSent by: Anglia Healthcare Alarm System";
+               
                 /* Note:
                  * the following code is commented out because of a system policy restriction at the university preventing
                  * access to the secure SMTP port used in the EmailNotification class

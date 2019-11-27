@@ -100,7 +100,7 @@ namespace Healthcare_System
         public event Action ViewPatient6;
         public event Action ViewPatient7;
         public event Action ViewPatient8;
-        public event EventHandler StartSimulation;
+        public event EventHandler LoadData;
         public event EventHandler SignOut;
         public event EventHandler ChangePanelColour;
 
@@ -119,7 +119,7 @@ namespace Healthcare_System
 
         private void CentralDeskView_Load(object sender, EventArgs e)
         {
-            if (StartSimulation != null) StartSimulation(this, EventArgs.Empty);
+            if (LoadData != null) LoadData(this, EventArgs.Empty);
 
         }
 
@@ -131,7 +131,7 @@ namespace Healthcare_System
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            DateTime dateTime = DateTime.Now;
+            DateTime dateTime = DateTime.UtcNow;
             this.lblTime.Text = dateTime.ToString();
 
             if (ChangePanelColour != null) ChangePanelColour(this, EventArgs.Empty);

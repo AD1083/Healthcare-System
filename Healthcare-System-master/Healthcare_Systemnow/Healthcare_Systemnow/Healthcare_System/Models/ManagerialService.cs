@@ -1,10 +1,5 @@
-﻿using System;
-using System.Data;
-using Healthcare_System.Models;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data;
+
 
 namespace Healthcare_System.Models
 {
@@ -17,10 +12,9 @@ namespace Healthcare_System.Models
         public DataTable GetRegistrations()
         {
             DataTable dataTable = DatabaseConnection.Instance.GetDataSet("SELECT * FROM Registrations").Tables[0];
-
-
             return dataTable;
         }
+
         /// <summary>
         /// Retrieve all Alarms records from the database
         /// </summary>

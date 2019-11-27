@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Healthcare_System.Views
 {
@@ -19,7 +15,7 @@ namespace Healthcare_System.Views
         event Action ViewPatient8;
         
         event EventHandler SignOut;
-        event EventHandler StartSimulation;
+        event EventHandler LoadData;
         event EventHandler ChangePanelColour;
 
         void Show();

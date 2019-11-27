@@ -286,3 +286,21 @@ E:\Healthcare-System-master (1)\Healthcare-System-master\Healthcare_Systemnow\He
 E:\Healthcare-System-master (1)\Healthcare-System-master\Healthcare_Systemnow\Healthcare_Systemnow\Healthcare_System\obj\Debug\Healthcare_System.csproj.CopyComplete
 E:\Healthcare-System-master (1)\Healthcare-System-master\Healthcare_Systemnow\Healthcare_Systemnow\Healthcare_System\obj\Debug\Healthcare_System.exe
 E:\Healthcare-System-master (1)\Healthcare-System-master\Healthcare_Systemnow\Healthcare_Systemnow\Healthcare_System\obj\Debug\Healthcare_System.pdb
+C:\Users\Alex\Documents\GitHub\Healthcare-System\Healthcare-System-master\Healthcare_Systemnow\Healthcare_Systemnow\Healthcare_System\obj\Debug\Healthcare_System.csprojAssemblyReference.cache
+C:\Users\Alex\Documents\GitHub\Healthcare-System\Healthcare-System-master\Healthcare_Systemnow\Healthcare_Systemnow\Healthcare_System\obj\Debug\Healthcare_System.exe
+C:\Users\Alex\Documents\GitHub\Healthcare-System\Healthcare-System-master\Healthcare_Systemnow\Healthcare_Systemnow\Healthcare_System\obj\Debug\Healthcare_System.pdb
+C:\Users\Alex\Documents\GitHub\Healthcare-System\Healthcare-System-master\Healthcare_Systemnow\Healthcare_Systemnow\Healthcare_System\bin\Debug\HealthcareDB.mdf
+C:\Users\Alex\Documents\GitHub\Healthcare-System\Healthcare-System-master\Healthcare_Systemnow\Healthcare_Systemnow\Healthcare_System\bin\Debug\HealthcareDB_log.ldf
+C:\Users\Alex\Documents\GitHub\Healthcare-System\Healthcare-System-master\Healthcare_Systemnow\Healthcare_Systemnow\Healthcare_System\bin\Debug\Healthcare_System.exe.config
+C:\Users\Alex\Documents\GitHub\Healthcare-System\Healthcare-System-master\Healthcare_Systemnow\Healthcare_Systemnow\Healthcare_System\bin\Debug\Healthcare_System.exe
+C:\Users\Alex\Documents\GitHub\Healthcare-System\Healthcare-System-master\Healthcare_Systemnow\Healthcare_Systemnow\Healthcare_System\bin\Debug\Healthcare_System.pdb
+C:\Users\Alex\Documents\GitHub\Healthcare-System\Healthcare-System-master\Healthcare_Systemnow\Healthcare_Systemnow\Healthcare_System\bin\Debug\Google.Protobuf.dll
+C:\Users\Alex\Documents\GitHub\Healthcare-System\Healthcare-System-master\Healthcare_Systemnow\Healthcare_Systemnow\Healthcare_System\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Alex\Documents\GitHub\Healthcare-System\Healthcare-System-master\Healthcare_Systemnow\Healthcare_Systemnow\Healthcare_System\bin\Debug\MySql.Data.xml
+C:\Users\Alex\Documents\GitHub\Healthcare-System\Healthcare-System-master\Healthcare_Systemnow\Healthcare_Systemnow\Healthcare_System\obj\Debug\Healthcare_System.LoginView.resources
+C:\Users\Alex\Documents\GitHub\Healthcare-System\Healthcare-System-master\Healthcare_Systemnow\Healthcare_Systemnow\Healthcare_System\obj\Debug\Healthcare_System.CentralDeskView.resources
+C:\Users\Alex\Documents\GitHub\Healthcare-System\Healthcare-System-master\Healthcare_Systemnow\Healthcare_Systemnow\Healthcare_System\obj\Debug\Healthcare_System.Properties.Resources.resources
+C:\Users\Alex\Documents\GitHub\Healthcare-System\Healthcare-System-master\Healthcare_Systemnow\Healthcare_Systemnow\Healthcare_System\obj\Debug\Healthcare_System.ManagerialView.resources
+C:\Users\Alex\Documents\GitHub\Healthcare-System\Healthcare-System-master\Healthcare_Systemnow\Healthcare_Systemnow\Healthcare_System\obj\Debug\Healthcare_System.Views.PatientModuleView.resources
+C:\Users\Alex\Documents\GitHub\Healthcare-System\Healthcare-System-master\Healthcare_Systemnow\Healthcare_Systemnow\Healthcare_System\obj\Debug\Healthcare_System.csproj.GenerateResource.cache
+C:\Users\Alex\Documents\GitHub\Healthcare-System\Healthcare-System-master\Healthcare_Systemnow\Healthcare_Systemnow\Healthcare_System\obj\Debug\Healthcare_System.csproj.CopyComplete
