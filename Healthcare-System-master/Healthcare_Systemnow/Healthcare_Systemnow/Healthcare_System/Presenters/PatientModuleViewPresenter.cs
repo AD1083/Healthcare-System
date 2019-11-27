@@ -22,7 +22,6 @@ namespace Healthcare_System
         private Alarm patientAlarm;
         private AlarmRegistrationService _service;
         private Staff _staff;
-        private bool done = false;
 
         public PatientModuleViewPresenter(Patient patient, IPatientModuleView view, CentralDesk centralDesk, Staff staff, AlarmRegistrationService service)
         {
@@ -32,7 +31,7 @@ namespace Healthcare_System
             _staff = staff;
             _service = service;
             patientModuleList = _centralDesk.Patients.ElementAt(_patient.PatientID - 1).Modules;
-            
+
 
             _view.LoadPatientData += () => LoadPatientData();
             _view.SetPulseRate += () => SetPulseRate(_view.LowerPulseRate, _view.UpperPulseRate);
@@ -42,6 +41,8 @@ namespace Healthcare_System
 
             _view.GoBack += GoBack;
             _view.UpdatePatientModuleData += UpdatePatientModuleData;
+
+            _view.RectifyAlarm += _view_RectifyAlarm;
 
         }
 
@@ -53,12 +54,9 @@ namespace Healthcare_System
             patientModuleList.ElementAt(2).AlarmRectified = true;
             patientModuleList.ElementAt(3).AlarmRectified = true;
 
-            if (!done)
-            {
-                //register alarm data
-                _service.RegisterAlarmData(_staff, patientAlarm);
-                done = true;
-            }
+            //register alarm data
+            _service.RegisterAlarmData(_staff, patientAlarm);
+
         }
 
         private void UpdatePatientModuleData(object sender, EventArgs e)
@@ -79,8 +77,7 @@ namespace Healthcare_System
             if (!_patient.AlarmRectified)
             {
                 _view.BtnRectify.Show();
-                done = false;
-                _view.RectifyAlarm += _view_RectifyAlarm;
+
             }
             _view.RestartTimer();
         }
@@ -123,7 +120,7 @@ namespace Healthcare_System
         {
             //hide curr view
             _view.Hide();
-            
+
         }
 
         private void LoadPatientData()
