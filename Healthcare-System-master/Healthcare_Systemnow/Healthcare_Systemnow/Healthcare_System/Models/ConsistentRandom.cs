@@ -50,8 +50,7 @@ namespace Healthcare_System.Models
 
             else
             {
-                //CHANGE TO STATICICICICIC
-                //decide if patient values should be generallly increasing or decreasing
+                //decide if patient values should be generally increasing or decreasing
                 int chance = Random.Next(0, 10);
                 switch (chance)
                 {

@@ -22,6 +22,7 @@ namespace Healthcare_System
         private Alarm patientAlarm;
         private AlarmRegistrationService _service;
         private Staff _staff;
+        private bool done = false;
 
         public PatientModuleViewPresenter(Patient patient, IPatientModuleView view, CentralDesk centralDesk, Staff staff, AlarmRegistrationService service)
         {
@@ -46,19 +47,23 @@ namespace Healthcare_System
 
         private void _view_RectifyAlarm()
         {
+            _view.BtnRectify.Hide();
             patientModuleList.ElementAt(0).AlarmRectified = true;
             patientModuleList.ElementAt(1).AlarmRectified = true;
             patientModuleList.ElementAt(2).AlarmRectified = true;
             patientModuleList.ElementAt(3).AlarmRectified = true;
-            _view.BtnRectify.Hide();
-            //register alarm data
-            _service.RegisterAlarmData(_staff, patientAlarm);
-            _view.RestartTimer();
+
+            if (!done)
+            {
+                //register alarm data
+                _service.RegisterAlarmData(_staff, patientAlarm);
+                done = true;
+            }
         }
 
         private void UpdatePatientModuleData(object sender, EventArgs e)
-        {            
-
+        {
+            _view.StopTimer();
             _view.CurPulseRate = patientModuleList.ElementAt(0).CurrentReading.ToString();
             _view.CurBreathingRate = patientModuleList.ElementAt(1).CurrentReading.ToString();
             _view.CurBloodPressureRate = patientModuleList.ElementAt(2).CurrentReading.ToString();
@@ -73,10 +78,11 @@ namespace Healthcare_System
             //show rectify button
             if (!_patient.AlarmRectified)
             {
-                _view.StopTimer();
                 _view.BtnRectify.Show();
+                done = false;
                 _view.RectifyAlarm += _view_RectifyAlarm;
             }
+            _view.RestartTimer();
         }
 
         //private void DisplayCurrentReading(object sender, ElapsedEventArgs e)
@@ -118,10 +124,6 @@ namespace Healthcare_System
             //hide curr view
             _view.Hide();
             
-        }
-        private void RectifyAlarm()
-        {
-            //restart timer
         }
 
         private void LoadPatientData()
