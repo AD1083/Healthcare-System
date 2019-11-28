@@ -28,8 +28,8 @@ namespace Healthcare_System.Models
                 //create the patient
                 Patient patient = new Patient(i + 1);
 
-                //set the name of staff memeber responsible for this patient
-                patient.NameOfStaffInAttendance = $"{staff.FirstName} {staff.LastName}";
+                //set the staff memeber responsible for this patient
+                patient.StaffMember = staff;
 
                 //add each patient to the central desk list
                 patients.Add(patient);
@@ -38,7 +38,7 @@ namespace Healthcare_System.Models
             patientListSetup = true;
 
             //set the recipient of the email notifcatiopn singleton
-            EmailNotifications.Instance.ReceipientEmailAddress = staff.EmailAddress;
+            Notifications.Instance.ReceipientEmailAddress = staff.EmailAddress;
 
             //setup the backend timer used to read data from each patient's bedside modules
             SetupTimer();
@@ -53,7 +53,7 @@ namespace Healthcare_System.Models
         {
             patientTimer.Stop();
         }
-        
+
         /// <summary>
         /// Determines the colour that each patients panel should be on the central desk ui
         /// Determines this by seeing if the paient has an alarm 
@@ -65,7 +65,7 @@ namespace Healthcare_System.Models
 
             //can only check for alarms if the patient list esits
             //this is due to the use of a timer to change the panel colours
-            if (patientListSetup) 
+            if (patientListSetup)
             {
                 DisableTimer(); //pause the timer 
                 panelsColours = new List<Color>(); //declare new list
@@ -75,7 +75,7 @@ namespace Healthcare_System.Models
                 for (int i = 0; i < Patients.Capacity; i++)
                 {
                     //get patinet form list
-                    Patient patient = Patients.ElementAt(i); 
+                    Patient patient = Patients.ElementAt(i);
                     if (patient.PatientAlarm != null)
                     {
                         if (patient.PatientAlarm.SendAlarm)

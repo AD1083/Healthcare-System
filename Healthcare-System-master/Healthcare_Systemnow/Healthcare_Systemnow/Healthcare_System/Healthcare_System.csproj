@@ -76,8 +76,8 @@
     <Compile Include="Models\AlarmRegistrationService.cs" />
     <Compile Include="Models\CentralDesk.cs" />
     <Compile Include="Models\ConsistentRandom.cs" />
-    <Compile Include="Models\EmailNotifications.cs" />
     <Compile Include="Models\ManagerialService.cs" />
+    <Compile Include="Models\Notifications.cs" />
     <Compile Include="Models\PasswordEncryption.cs" />
     <Compile Include="Presenters\ManagerViewPresenter.cs" />
     <Compile Include="Views\IManagerView.cs" />

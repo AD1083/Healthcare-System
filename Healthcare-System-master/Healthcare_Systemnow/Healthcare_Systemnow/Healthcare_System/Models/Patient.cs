@@ -22,9 +22,9 @@ namespace Healthcare_System.Models
         public string Condition { get; private set; }
         public string DOB { get; private set; }
         public string Image { get; private set; }
-        public string NameOfStaffInAttendance { private get; set; } //which staff memeber is currently responsible for the patient's care
+        public Staff StaffMember { private get; set; } //which staff memeber is currently responsible for the patient's care
 
-        public bool AlarmRectified { get { return !sendPatientAlarm; }  }
+        public bool AlarmRectified { get { return !sendPatientAlarm; } }
 
         //property returns the patient alarm to the caller
         public Alarm PatientAlarm { get { return patientAlarm; } } //this alarm will contain all messages from each module alarm 
@@ -89,16 +89,8 @@ namespace Healthcare_System.Models
                 //create a patient alarm which contains all the messages raised in module alarms
                 patientAlarm = new Alarm(moduleMessages, true);
 
-                //fill out the alarm email body with the patient alarm message and the email trailer
-                EmailNotifications.Instance.EmailMessage = $"{NameOfStaffInAttendance}, \nAn emergency alarm requires your attention: {patientAlarm.AlarmMessage}" +
-                    $" \nPlease see to this patient immediately \nSent by: Anglia Healthcare Alarm System";
-               
-                /* Note:
-                 * the following code is commented out because of a system policy restriction at the university preventing
-                 * access to the secure SMTP port used in the EmailNotification class
-                 */
-                //send the email
-                //EmailNotifications.Instance.SendEmailNotification();
+                //send the alarm as a text or email
+                Notify();
 
 
             }
@@ -106,6 +98,33 @@ namespace Healthcare_System.Models
             {
                 //create a patient alarm which contains all the messages raised in module alarms
                 patientAlarm = new Alarm(moduleMessages, false);
+            }
+        }
+
+        private void Notify()
+        {
+            //fill out the alarm email body with the patient alarm message and the email trailer
+            string staffName = $"{StaffMember.FirstName} {StaffMember.LastName}";
+            Notifications.Instance.Message = $"{staffName}, \nAn emergency alarm requires your attention: {patientAlarm.AlarmMessage}" +
+                $" \nPlease see to this patient immediately \nSent by: Anglia Healthcare Alarm System";
+
+            if (StaffMember.Role.Equals("Nurse"))
+            {
+                /* Note:
+                * the following code is commented out because of a system policy restriction at the university preventing
+                * access to the secure SMTP port used in the EmailNotification class
+                */
+                //send the text
+                //Notifications.Instance.SendTextNotification();
+            }
+            else
+            {
+                /* Note:
+                * the following code is commented out because of a system policy restriction at the university preventing
+                * access to the secure SMTP port used in the EmailNotification class
+                */
+                //send the email
+                //Notifications.Instance.SendEmailNotification();
             }
         }
 
