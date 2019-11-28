@@ -15,7 +15,7 @@ namespace UnitTesting
             string[] staffIDs = { "2", "1", "grberfsgrt"};
             string[] passwords = { "1111", "abc", " "};
             string[] roles = { "Nurse", "Manager", "Consultant"};
-            bool[] results = { true, true, false };//, true, false };
+            bool[] results = { true, true, false };
 
             for (int i = 0; i < staffIDs.Length; i++)
             {

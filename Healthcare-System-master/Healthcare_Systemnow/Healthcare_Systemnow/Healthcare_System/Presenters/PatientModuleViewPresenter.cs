@@ -1,12 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Healthcare_System.Views;
 using Healthcare_System.Models;
-using Healthcare_System.Presenters;
-using System.Timers;
 using System.Drawing;
 using System.Windows.Forms;
 using System.IO;
@@ -81,14 +76,6 @@ namespace Healthcare_System
             }
             _view.RestartTimer();
         }
-
-        //private void DisplayCurrentReading(object sender, ElapsedEventArgs e)
-        //{
-        //    _view.CurPulseRate = patientModuleList.ElementAt(0).CurrentReading;
-        //    _view.CurBreathingRate = patientModuleList.ElementAt(1).CurrentReading;
-        //    _view.CurBloodPressureRate = patientModuleList.ElementAt(2).CurrentReading;
-        //    _view.CurTemperature = patientModuleList.ElementAt(3).CurrentReading;
-        //}
 
         private void SetBoundaries(string lowerBoundary, string upperBoundary, int modulePosition)
         {
