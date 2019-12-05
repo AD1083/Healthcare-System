@@ -51,7 +51,7 @@ namespace Healthcare_System.Models
             else
             {
                 //decide if patient values should be generally increasing or decreasing
-                int chance = Random.Next(0, 10);
+                int chance = Random.Next(0, 300);
                 switch (chance)
                 {
                     case 0:
