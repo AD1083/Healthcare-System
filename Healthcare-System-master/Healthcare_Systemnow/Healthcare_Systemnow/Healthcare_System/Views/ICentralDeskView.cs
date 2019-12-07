@@ -5,6 +5,7 @@ namespace Healthcare_System.Views
 {
     public interface ICentralDeskView
     {
+        //view events
         event Action ViewPatient1;
         event Action ViewPatient2;
         event Action ViewPatient3;
@@ -13,20 +14,20 @@ namespace Healthcare_System.Views
         event Action ViewPatient6;
         event Action ViewPatient7;
         event Action ViewPatient8;
-        
         event EventHandler SignOut;
         event EventHandler LoadData;
         event EventHandler ChangePanelColour;
 
-        void Show();
-        void Hide();
+        void Show();//show the view
+        void Hide();//hide the view
 
+        //properties for staff details
         string StaffID { set; }
         string StaffRole { set; }
         string StaffName { set; }
         string StartTime { set; }
 
-
+        //properties for patients' details
         string FirstNameRoom1 { set; }
         string LastNameRoom1 { set; }
         string ConditionRoom1 { set; }
@@ -67,6 +68,7 @@ namespace Healthcare_System.Views
         string ConditionRoom8 { set; }
         string Room8 { get; }
 
+        //properties for each patients panel colour change
         Panel PanelRoom1 { get; set; }
         Panel PanelRoom2 { get; set; }
         Panel PanelRoom3 { get; set; }

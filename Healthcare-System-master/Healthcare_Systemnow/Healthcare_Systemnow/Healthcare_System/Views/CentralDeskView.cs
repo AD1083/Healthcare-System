@@ -13,12 +13,17 @@ namespace Healthcare_System
 {
     public partial class CentralDeskView : Form, ICentralDeskView
     {
+        /// <summary>
+        /// View event listeners set
+        /// </summary>
         public CentralDeskView()
         {
             InitializeComponent();
-            this.Load += CentralDeskView_Load;
+            this.Load += CentralDeskView_Load;//triggered on form load
 
-            btnSignOut.Click += BtnSignOut_Click;
+            btnSignOut.Click += BtnSignOut_Click;// triggered on button 'Sign Out' click
+            
+            //triggered on patients' panels click
             btnRoom1.Click += (sender, args) => Invoke(ViewPatient1);
             btnRoom2.Click += (sender, args) => Invoke(ViewPatient2);
             btnRoom3.Click += (sender, args) => Invoke(ViewPatient3);
@@ -30,13 +35,13 @@ namespace Healthcare_System
 
         }
 
-        //properties
-
+        //properties for staff details
         public string StaffID { set { lblStaffID.Text = value; } }
         public string StaffName { set { lblStaffName.Text = value; } }
         public string StaffRole { set { lblStaffRole.Text = value; } }
         public string StartTime { set { lblStartTime.Text = value; } }
 
+        //properties for patients brief details
         public string FirstNameRoom1 { set { lblFirstNameRoom1.Text = value; } }
         public string LastNameRoom1 { set { lblSecondNameRoom1.Text = value; } }
         public string ConditionRoom1 { set { lblConditionRoom1.Text = value; } }
@@ -77,7 +82,7 @@ namespace Healthcare_System
         public string ConditionRoom8 { set { lblConditionRoom8.Text = value; } }
         public string Room8 { get { return lblRoom8.Text; } }
 
-
+        //properties for each patients panel colour change
         public Panel PanelRoom1 { get { return pnl1; } set { pnl1 = value; } }
         public Panel PanelRoom2 { get { return pnl2; } set { pnl2 = value; } }
         public Panel PanelRoom3 { get { return pnl3; } set { pnl3 = value; } }
@@ -87,11 +92,9 @@ namespace Healthcare_System
         public Panel PanelRoom7 { get { return pnl7; } set { pnl7 = value; } }
         public Panel PanelRoom8 { get { return pnl8; } set { pnl8 = value; } }
 
-        private void BtnSignOut_Click(object sender, EventArgs e)
-        {
-            if (SignOut != null) SignOut(this, EventArgs.Empty);
-        }
+       
 
+        // view events
         public event Action ViewPatient1;
         public event Action ViewPatient2;
         public event Action ViewPatient3;
@@ -104,39 +107,68 @@ namespace Healthcare_System
         public event EventHandler SignOut;
         public event EventHandler ChangePanelColour;
 
-
-        public new void Show()
-        {
-            this.ShowDialog();
-        }
-
-
         private void Invoke(Action action)
         {
             if (action != null) action();
         }
 
-
+        /// <summary>
+        /// Delegate fires LoadData event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CentralDeskView_Load(object sender, EventArgs e)
         {
             if (LoadData != null) LoadData(this, EventArgs.Empty);
 
         }
 
+        /// <summary>
+        /// Delegate fires SignOut event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnSignOut_Click(object sender, EventArgs e)
+        {
+            if (SignOut != null) SignOut(this, EventArgs.Empty);
+        }
 
+        /// <summary>
+        /// Show and update current time on timer 1000 ticks, fire ChangePanelColour event 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            DateTime dateTime = DateTime.UtcNow;//get current time
+            this.lblTime.Text = dateTime.ToString();//set label
+            if (ChangePanelColour != null) ChangePanelColour(this, EventArgs.Empty);
+        }
+
+        /// <summary>
+        /// On label 'X' click call BtnSignOut_Click delegate
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void label1_Click(object sender, EventArgs e)
         {
             BtnSignOut_Click(this, EventArgs.Empty);
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        /// <summary>
+        /// Show the view as dialog
+        /// </summary>
+        public new void Show()
         {
-            DateTime dateTime = DateTime.UtcNow;
-            this.lblTime.Text = dateTime.ToString();
-
-            if (ChangePanelColour != null) ChangePanelColour(this, EventArgs.Empty);
-
-
+            this.ShowDialog();
         }
+
+
+        
+
+
+        
+
+        
     }
 }
