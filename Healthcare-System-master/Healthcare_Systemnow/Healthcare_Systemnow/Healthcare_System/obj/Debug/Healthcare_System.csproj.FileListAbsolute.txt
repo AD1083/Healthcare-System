@@ -304,3 +304,4 @@ C:\Users\Alex\Documents\GitHub\Healthcare-System\Healthcare-System-master\Health
 C:\Users\Alex\Documents\GitHub\Healthcare-System\Healthcare-System-master\Healthcare_Systemnow\Healthcare_Systemnow\Healthcare_System\obj\Debug\Healthcare_System.Views.PatientModuleView.resources
 C:\Users\Alex\Documents\GitHub\Healthcare-System\Healthcare-System-master\Healthcare_Systemnow\Healthcare_Systemnow\Healthcare_System\obj\Debug\Healthcare_System.csproj.GenerateResource.cache
 C:\Users\Alex\Documents\GitHub\Healthcare-System\Healthcare-System-master\Healthcare_Systemnow\Healthcare_Systemnow\Healthcare_System\obj\Debug\Healthcare_System.csproj.CopyComplete
+C:\Users\Alex\Documents\GitHub\Healthcare-System\Healthcare-System-master\Healthcare_Systemnow\Healthcare_Systemnow\Healthcare_System\obj\Debug\Healthcare_System.csproj.CoreCompileInputs.cache
